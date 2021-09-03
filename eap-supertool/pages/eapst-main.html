@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<style type="text/css">
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+    }
+	tr:hover {background-color: yellow;}
+	.default {cursor: pointer;}
+    .floaterdiv {
+        float: left;
+        width: 50%;
+        height: 50%;
+        padding: 1px;
+        margin: 0px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        border: 1px solid blue;
+        font-family: "Lucida Console", "Courier New", monospace;
+        font-size: 0.8em;
+	overflow: auto;
+    }
+
+    .therest {
+        float: left;
+        width: 100%;
+        padding: 1px;
+        margin: 0px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        border: 1px solid cyan;
+        font-family: "Lucida Console", "Courier New", monospace;
+        font-size: 0.8em;
+	background-color: #abcdef;
+    }
+
+   .details {
+        float: left;
+        width: 100%;
+        padding: 1px;
+        margin: 0px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        border: 1px solid cyan;
+        font-family: "Lucida Console", "Courier New", monospace;
+        font-size: 0.8em;
+	background-color: #001122;
+	color: #ffffff;
+    }
+
+
+    .smolhalf {
+        float: left;
+        width: 50%;
+	height: 8%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        border: 1px solid green;
+        padding: 1px;
+        margin: 0px;
+    }
+
+    .smolhalf:hover {
+        background-color: yellow;
+    }
+
+   .smolthird {
+        float: left;
+        width: 33.33%;
+	height: 8%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        border: 1px solid green;
+        padding: 1px;
+        margin: 0px;
+    }
+
+    .smolthird:hover {
+        background-color: yellow;
+    }
+
+ 	.smoldyn {
+        float: left;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+		padding: 0px;
+        margin: 0px;
+		background-color: #cfffff;
+    }
+    .smoldyn:hover {
+        background-color: #ffccaa;
+    }
+  
+	.warning {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+		padding: 0px;
+        margin: 0px;
+		background-color: #aa0000;
+		color: #ffffff;
+    }
+    .warning:hover {
+        background-color: #008888;
+    }
+  
+    .smol {
+        float: left;
+        width: 100%;
+	height: 8%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        border: 1px solid green;
+        padding: 1px;
+        margin: 0px;
+    }
+
+    .smol:hover {
+        background-color: yellow;
+    }
+    .smol2 {
+        float: left;
+        width: 100%;
+	height: 7%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        border: 1px solid green;
+        padding: 1px;
+        margin: 0px;
+        background-color: red;
+    }
+    .smol2:hover {
+        background-color: yellow;
+    }
+</style>
+
+<script type="text/javascript">
+
+    function divupdate(request,divname,prefix="",postfix="",recurring=0){
+		if (divname !== null) {
+			var xreq = new XMLHttpRequest();
+			xreq.onreadystatechange = function () {
+				if(xreq.readyState === XMLHttpRequest.DONE) {
+					var status = xreq.status;
+					if (status === 0 || (status >= 200 && status < 400)) {
+						console.log(xreq.responseText);
+						if (divname > "") {
+							divid=document.getElementById(divname);
+							if (divid !== null) {
+								divid.innerHTML = prefix+xreq.responseText+postfix;
+							}
+						}
+					}
+				}
+			};
+			xreq.open("GET",request,true);
+			xreq.send();
+			if (recurring >= 1000) {
+				if (divid !== null) {
+					setTimeout(function(){ divupdate(request,divname,prefix,postfix,recurring)},recurring);
+				}
+			}
+		}
+    }
+
+    function svrupdate(request){
+		var xreq = new XMLHttpRequest();
+		xreq.onreadystatechange = function () {
+			if(xreq.readyState === XMLHttpRequest.DONE) {
+				var status = xreq.status;
+				if (status === 0 || (status >= 200 && status < 400)) {
+					console.log(xreq.responseText);
+				}
+			}
+		};
+		xreq.open("GET",request,true);
+		xreq.send();
+    }
+
+
+    function xmlreq(requestthis,opennew=false, refresh=0) {
+    	if (opennew===true) {
+	    	var newdiv=document.createElement('div');
+	    	idnumber=Math.floor(Math.random()*16777215).toString(16);
+	    	newdiv.id = 'div'+idnumber;
+	    	newdiv.className = "floaterdiv";
+	    	closebutton="<div class=\"smol2\" onclick=document.getElementById(\""+newdiv.id+"\").remove()>[Close]</div>";
+			divupdate(requestthis,newdiv.id,prefix=closebutton,"",recurring=refresh)
+	    	document.body.appendChild(newdiv)
+   		} else {
+			svrupdate(requestthis)
+		}
+	}
+
+
+    function updatedetails(){
+	  divupdate("getmaindetails","maindetails")
+      setTimeout(updatedetails, 2000);
+    }
+</script>
+
+
+<body onload="updatedetails()">
+    <div id="alwaysthere" class="floaterdiv">
+        <div class="smolhalf" onclick="xmlreq('loginnonprod',true)">login nonprod</div>
+        <div class="smolhalf" onclick="xmlreq('loginprod',true)">login prod</div>
+        <div class="smolthird" onclick="xmlreq('setregion_amers',false)">us-east-1</div>
+        <div class="smolthird" onclick="xmlreq('setregion_emea',false)">eu-west-1</div>
+        <div class="smolthird" onclick="xmlreq('setregion_sing',false)">ap-southeast-1</div>
+
+        <div class="smolhalf" onclick="xmlreq('setprofile_preprod',false)">NON-Prod</div>
+        <div class="smolhalf" onclick="xmlreq('setprofile_realprod',true)">PRODUCTION</div>
+
+        <div class="smolhalf" onclick="xmlreq('ec2',true)">EC2 Info</div>
+        <div class="smolhalf" onclick="xmlreq('alarm',true)">Alarms</div>
+	<div id="maindetails" class="details">details</div>
+    </div>
+</body>
+
+</html>

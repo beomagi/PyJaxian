@@ -1,0 +1,4769 @@
+[
+  {
+    "AmiLaunchIndex": 0,
+    "ImageId": "ami-06566d5310906468f",
+    "InstanceId": "i-09e3ed3fc240c8261",
+    "InstanceType": "m5.xlarge",
+    "KeyName": "eap-qa",
+    "LaunchTime": "2021-08-12 21:01:26+00:00",
+    "Monitoring": {
+      "State": "disabled"
+    },
+    "Placement": {
+      "AvailabilityZone": "ap-southeast-1b",
+      "GroupName": "",
+      "Tenancy": "default"
+    },
+    "Platform": "windows",
+    "PrivateDnsName": "ip-10-226-11-152.ap-southeast-1.compute.internal",
+    "PrivateIpAddress": "10.226.11.152",
+    "ProductCodes": [],
+    "PublicDnsName": "",
+    "State": {
+      "Code": 16,
+      "Name": "running"
+    },
+    "StateTransitionReason": "",
+    "SubnetId": "subnet-07c371bd1a6dcb25d",
+    "VpcId": "vpc-0a9558d98081cb0b6",
+    "Architecture": "x86_64",
+    "BlockDeviceMappings": [
+      {
+        "DeviceName": "/dev/sda1",
+        "Ebs": {
+          "AttachTime": "2021-08-12 21:01:27+00:00",
+          "DeleteOnTermination": true,
+          "Status": "attached",
+          "VolumeId": "vol-00065aba1c922c0ab"
+        }
+      }
+    ],
+    "ClientToken": "72c5ecf0-adc6-44a6-44ad-3c23e6644a12",
+    "EbsOptimized": false,
+    "EnaSupport": true,
+    "Hypervisor": "xen",
+    "IamInstanceProfile": {
+      "Arn": "arn:aws:iam::060725138335:instance-profile/eap-stg-ap-southeast-1-ecs-profile",
+      "Id": "AIPAQ4I4ACOP5IFY3BDDY"
+    },
+    "NetworkInterfaces": [
+      {
+        "Attachment": {
+          "AttachTime": "2021-08-12 21:01:26+00:00",
+          "AttachmentId": "eni-attach-06c7ca98bcdb5d036",
+          "DeleteOnTermination": true,
+          "DeviceIndex": 0,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "",
+        "Groups": [
+          {
+            "GroupName": "eap-stg-bastion",
+            "GroupId": "sg-0d592020eb0baa50c"
+          },
+          {
+            "GroupName": "eap-stg-windows-cluster",
+            "GroupId": "sg-088dcd24d4173c450"
+          },
+          {
+            "GroupName": "eap-stg-consul-client",
+            "GroupId": "sg-0077ee94ef3d00364"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "02:97:73:2b:1c:38",
+        "NetworkInterfaceId": "eni-054e98a588615118f",
+        "OwnerId": "060725138335",
+        "PrivateDnsName": "ip-10-226-11-152.ap-southeast-1.compute.internal",
+        "PrivateIpAddress": "10.226.11.152",
+        "PrivateIpAddresses": [
+          {
+            "Primary": true,
+            "PrivateDnsName": "ip-10-226-11-152.ap-southeast-1.compute.internal",
+            "PrivateIpAddress": "10.226.11.152"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-07c371bd1a6dcb25d",
+        "VpcId": "vpc-0a9558d98081cb0b6",
+        "InterfaceType": "interface"
+      }
+    ],
+    "RootDeviceName": "/dev/sda1",
+    "RootDeviceType": "ebs",
+    "SecurityGroups": [
+      {
+        "GroupName": "eap-stg-bastion",
+        "GroupId": "sg-0d592020eb0baa50c"
+      },
+      {
+        "GroupName": "eap-stg-windows-cluster",
+        "GroupId": "sg-088dcd24d4173c450"
+      },
+      {
+        "GroupName": "eap-stg-consul-client",
+        "GroupId": "sg-0077ee94ef3d00364"
+      }
+    ],
+    "SourceDestCheck": true,
+    "Tags": [
+      {
+        "Key": "aws:cloudformation:stack-name",
+        "Value": "eap-stg-infra-AutoscalingGroups-1MZYPD43W94G6"
+      },
+      {
+        "Key": "tr:environment-type",
+        "Value": "stg"
+      },
+      {
+        "Key": "tr:financial-identifier",
+        "Value": "525603408"
+      },
+      {
+        "Key": "tr:project-name",
+        "Value": "EAP"
+      },
+      {
+        "Key": "aws:cloudformation:logical-id",
+        "Value": "ServicesWindows"
+      },
+      {
+        "Key": "eap-cluster",
+        "Value": "eap-stg-services-windows"
+      },
+      {
+        "Key": "eap:environment-type",
+        "Value": "stg"
+      },
+      {
+        "Key": "tr:resource-owner",
+        "Value": "EapDevOps@thomson.com"
+      },
+      {
+        "Key": "Name",
+        "Value": "eap-stg-services-windows"
+      },
+      {
+        "Key": "aws:cloudformation:stack-id",
+        "Value": "arn:aws:cloudformation:ap-southeast-1:060725138335:stack/eap-stg-infra-AutoscalingGroups-1MZYPD43W94G6/8bfd46b0-04a8-11ea-b44f-02c6c7bea9ac"
+      },
+      {
+        "Key": "tr:application-asset-insight-id",
+        "Value": "204821"
+      },
+      {
+        "Key": "aws:autoscaling:groupName",
+        "Value": "eap-stg-infra-AutoscalingGroups-1MZYPD43W94G6-ServicesWindows-1Q4V7DPGVXSAT"
+      }
+    ],
+    "VirtualizationType": "hvm",
+    "CpuOptions": {
+      "CoreCount": 2,
+      "ThreadsPerCore": 2
+    },
+    "CapacityReservationSpecification": {
+      "CapacityReservationPreference": "open"
+    },
+    "HibernationOptions": {
+      "Configured": false
+    },
+    "MetadataOptions": {
+      "State": "applied",
+      "HttpTokens": "optional",
+      "HttpPutResponseHopLimit": 1,
+      "HttpEndpoint": "enabled"
+    },
+    "EnclaveOptions": {
+      "Enabled": false
+    }
+  },
+  {
+    "AmiLaunchIndex": 1,
+    "ImageId": "ami-06566d5310906468f",
+    "InstanceId": "i-06f8c15d8290cad4e",
+    "InstanceType": "m5.xlarge",
+    "KeyName": "eap-qa",
+    "LaunchTime": "2021-08-12 21:01:26+00:00",
+    "Monitoring": {
+      "State": "disabled"
+    },
+    "Placement": {
+      "AvailabilityZone": "ap-southeast-1b",
+      "GroupName": "",
+      "Tenancy": "default"
+    },
+    "Platform": "windows",
+    "PrivateDnsName": "ip-10-226-10-114.ap-southeast-1.compute.internal",
+    "PrivateIpAddress": "10.226.10.114",
+    "ProductCodes": [],
+    "PublicDnsName": "",
+    "State": {
+      "Code": 16,
+      "Name": "running"
+    },
+    "StateTransitionReason": "",
+    "SubnetId": "subnet-07c371bd1a6dcb25d",
+    "VpcId": "vpc-0a9558d98081cb0b6",
+    "Architecture": "x86_64",
+    "BlockDeviceMappings": [
+      {
+        "DeviceName": "/dev/sda1",
+        "Ebs": {
+          "AttachTime": "2021-08-12 21:01:27+00:00",
+          "DeleteOnTermination": true,
+          "Status": "attached",
+          "VolumeId": "vol-0231fb3914bf6e598"
+        }
+      }
+    ],
+    "ClientToken": "72c5ecf0-adc6-44a6-44ad-3c23e6644a12",
+    "EbsOptimized": false,
+    "EnaSupport": true,
+    "Hypervisor": "xen",
+    "IamInstanceProfile": {
+      "Arn": "arn:aws:iam::060725138335:instance-profile/eap-stg-ap-southeast-1-ecs-profile",
+      "Id": "AIPAQ4I4ACOP5IFY3BDDY"
+    },
+    "NetworkInterfaces": [
+      {
+        "Attachment": {
+          "AttachTime": "2021-08-12 21:01:26+00:00",
+          "AttachmentId": "eni-attach-0d936550372693db1",
+          "DeleteOnTermination": true,
+          "DeviceIndex": 0,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "",
+        "Groups": [
+          {
+            "GroupName": "eap-stg-bastion",
+            "GroupId": "sg-0d592020eb0baa50c"
+          },
+          {
+            "GroupName": "eap-stg-windows-cluster",
+            "GroupId": "sg-088dcd24d4173c450"
+          },
+          {
+            "GroupName": "eap-stg-consul-client",
+            "GroupId": "sg-0077ee94ef3d00364"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "02:28:01:03:5e:a8",
+        "NetworkInterfaceId": "eni-0badbf7485548b127",
+        "OwnerId": "060725138335",
+        "PrivateDnsName": "ip-10-226-10-114.ap-southeast-1.compute.internal",
+        "PrivateIpAddress": "10.226.10.114",
+        "PrivateIpAddresses": [
+          {
+            "Primary": true,
+            "PrivateDnsName": "ip-10-226-10-114.ap-southeast-1.compute.internal",
+            "PrivateIpAddress": "10.226.10.114"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-07c371bd1a6dcb25d",
+        "VpcId": "vpc-0a9558d98081cb0b6",
+        "InterfaceType": "interface"
+      }
+    ],
+    "RootDeviceName": "/dev/sda1",
+    "RootDeviceType": "ebs",
+    "SecurityGroups": [
+      {
+        "GroupName": "eap-stg-bastion",
+        "GroupId": "sg-0d592020eb0baa50c"
+      },
+      {
+        "GroupName": "eap-stg-windows-cluster",
+        "GroupId": "sg-088dcd24d4173c450"
+      },
+      {
+        "GroupName": "eap-stg-consul-client",
+        "GroupId": "sg-0077ee94ef3d00364"
+      }
+    ],
+    "SourceDestCheck": true,
+    "Tags": [
+      {
+        "Key": "aws:autoscaling:groupName",
+        "Value": "eap-stg-infra-AutoscalingGroups-1MZYPD43W94G6-ServicesWindows-1Q4V7DPGVXSAT"
+      },
+      {
+        "Key": "Name",
+        "Value": "eap-stg-services-windows"
+      },
+      {
+        "Key": "aws:cloudformation:stack-name",
+        "Value": "eap-stg-infra-AutoscalingGroups-1MZYPD43W94G6"
+      },
+      {
+        "Key": "aws:cloudformation:stack-id",
+        "Value": "arn:aws:cloudformation:ap-southeast-1:060725138335:stack/eap-stg-infra-AutoscalingGroups-1MZYPD43W94G6/8bfd46b0-04a8-11ea-b44f-02c6c7bea9ac"
+      },
+      {
+        "Key": "eap-cluster",
+        "Value": "eap-stg-services-windows"
+      },
+      {
+        "Key": "tr:application-asset-insight-id",
+        "Value": "204821"
+      },
+      {
+        "Key": "tr:resource-owner",
+        "Value": "EapDevOps@thomson.com"
+      },
+      {
+        "Key": "eap:environment-type",
+        "Value": "stg"
+      },
+      {
+        "Key": "tr:project-name",
+        "Value": "EAP"
+      },
+      {
+        "Key": "tr:financial-identifier",
+        "Value": "525603408"
+      },
+      {
+        "Key": "aws:cloudformation:logical-id",
+        "Value": "ServicesWindows"
+      },
+      {
+        "Key": "tr:environment-type",
+        "Value": "stg"
+      }
+    ],
+    "VirtualizationType": "hvm",
+    "CpuOptions": {
+      "CoreCount": 2,
+      "ThreadsPerCore": 2
+    },
+    "CapacityReservationSpecification": {
+      "CapacityReservationPreference": "open"
+    },
+    "HibernationOptions": {
+      "Configured": false
+    },
+    "MetadataOptions": {
+      "State": "applied",
+      "HttpTokens": "optional",
+      "HttpPutResponseHopLimit": 1,
+      "HttpEndpoint": "enabled"
+    },
+    "EnclaveOptions": {
+      "Enabled": false
+    }
+  },
+  {
+    "AmiLaunchIndex": 2,
+    "ImageId": "ami-06a1eec3c11dd7a06",
+    "InstanceId": "i-0e7bd5ca04d726caf",
+    "InstanceType": "m5.xlarge",
+    "KeyName": "eap-qa",
+    "LaunchTime": "2021-08-12 21:01:24+00:00",
+    "Monitoring": {
+      "State": "disabled"
+    },
+    "Placement": {
+      "AvailabilityZone": "ap-southeast-1b",
+      "GroupName": "",
+      "Tenancy": "default"
+    },
+    "PrivateDnsName": "ip-10-226-10-246.ap-southeast-1.compute.internal",
+    "PrivateIpAddress": "10.226.10.246",
+    "ProductCodes": [],
+    "PublicDnsName": "",
+    "State": {
+      "Code": 16,
+      "Name": "running"
+    },
+    "StateTransitionReason": "",
+    "SubnetId": "subnet-07c371bd1a6dcb25d",
+    "VpcId": "vpc-0a9558d98081cb0b6",
+    "Architecture": "x86_64",
+    "BlockDeviceMappings": [
+      {
+        "DeviceName": "/dev/xvda",
+        "Ebs": {
+          "AttachTime": "2021-08-12 21:01:25+00:00",
+          "DeleteOnTermination": true,
+          "Status": "attached",
+          "VolumeId": "vol-0d3090eda29978b85"
+        }
+      }
+    ],
+    "ClientToken": "4bc5ecf0-ada4-06f2-9354-9b6397bf8c14",
+    "EbsOptimized": false,
+    "EnaSupport": true,
+    "Hypervisor": "xen",
+    "IamInstanceProfile": {
+      "Arn": "arn:aws:iam::060725138335:instance-profile/eap-stg-ap-southeast-1-ecs-profile",
+      "Id": "AIPAQ4I4ACOP5IFY3BDDY"
+    },
+    "NetworkInterfaces": [
+      {
+        "Attachment": {
+          "AttachTime": "2021-08-12 21:01:24+00:00",
+          "AttachmentId": "eni-attach-0cb9c8bfe38d3f64b",
+          "DeleteOnTermination": true,
+          "DeviceIndex": 0,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "",
+        "Groups": [
+          {
+            "GroupName": "eap-stg-bastion",
+            "GroupId": "sg-0d592020eb0baa50c"
+          },
+          {
+            "GroupName": "eap-stg-consul-server",
+            "GroupId": "sg-04eeeb0d6fc225cbe"
+          },
+          {
+            "GroupName": "eap-stg-governance-cluster",
+            "GroupId": "sg-0a47722e5798268fa"
+          },
+          {
+            "GroupName": "eap-stg-consul-client",
+            "GroupId": "sg-0077ee94ef3d00364"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "02:69:f0:f1:e2:8c",
+        "NetworkInterfaceId": "eni-048e491e9296de853",
+        "OwnerId": "060725138335",
+        "PrivateDnsName": "ip-10-226-10-246.ap-southeast-1.compute.internal",
+        "PrivateIpAddress": "10.226.10.246",
+        "PrivateIpAddresses": [
+          {
+            "Primary": true,
+            "PrivateDnsName": "ip-10-226-10-246.ap-southeast-1.compute.internal",
+            "PrivateIpAddress": "10.226.10.246"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-07c371bd1a6dcb25d",
+        "VpcId": "vpc-0a9558d98081cb0b6",
+        "InterfaceType": "interface"
+      },
+      {
+        "Attachment": {
+          "AttachTime": "2021-08-12 21:07:51+00:00",
+          "AttachmentId": "eni-attach-0bcf50ec8d7337f88",
+          "DeleteOnTermination": false,
+          "DeviceIndex": 1,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "arn:aws:ecs:ap-southeast-1:060725138335:attachment/bac8278b-8e5c-4299-8dbc-0b3d38488264",
+        "Groups": [
+          {
+            "GroupName": "default",
+            "GroupId": "sg-062b567f7db6c90bd"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "02:60:7a:56:f4:d6",
+        "NetworkInterfaceId": "eni-085d4d10395adbc69",
+        "OwnerId": "060725138335",
+        "PrivateDnsName": "ip-10-226-10-200.ap-southeast-1.compute.internal",
+        "PrivateIpAddress": "10.226.10.200",
+        "PrivateIpAddresses": [
+          {
+            "Primary": true,
+            "PrivateDnsName": "ip-10-226-10-200.ap-southeast-1.compute.internal",
+            "PrivateIpAddress": "10.226.10.200"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-07c371bd1a6dcb25d",
+        "VpcId": "vpc-0a9558d98081cb0b6",
+        "InterfaceType": "trunk"
+      }
+    ],
+    "RootDeviceName": "/dev/xvda",
+    "RootDeviceType": "ebs",
+    "SecurityGroups": [
+      {
+        "GroupName": "eap-stg-bastion",
+        "GroupId": "sg-0d592020eb0baa50c"
+      },
+      {
+        "GroupName": "eap-stg-consul-server",
+        "GroupId": "sg-04eeeb0d6fc225cbe"
+      },
+      {
+        "GroupName": "eap-stg-governance-cluster",
+        "GroupId": "sg-0a47722e5798268fa"
+      },
+      {
+        "GroupName": "eap-stg-consul-client",
+        "GroupId": "sg-0077ee94ef3d00364"
+      }
+    ],
+    "SourceDestCheck": true,
+    "Tags": [
+      {
+        "Key": "aws:cloudformation:logical-id",
+        "Value": "GovernanceLinux"
+      },
+      {
+        "Key": "aws:cloudformation:stack-name",
+        "Value": "eap-stg-infra-AutoscalingGroups-1MZYPD43W94G6"
+      },
+      {
+        "Key": "tr:application-asset-insight-id",
+        "Value": "204821"
+      },
+      {
+        "Key": "tr:environment-type",
+        "Value": "stg"
+      },
+      {
+        "Key": "eap:es-domain",
+        "Value": "search-eap-stg-es-3bfvn3327ddqqoeebvu7ldqb64.ap-southeast-1.es.amazonaws.com"
+      },
+      {
+        "Key": "tr:financial-identifier",
+        "Value": "525603408"
+      },
+      {
+        "Key": "aws:cloudformation:stack-id",
+        "Value": "arn:aws:cloudformation:ap-southeast-1:060725138335:stack/eap-stg-infra-AutoscalingGroups-1MZYPD43W94G6/8bfd46b0-04a8-11ea-b44f-02c6c7bea9ac"
+      },
+      {
+        "Key": "Name",
+        "Value": "eap-stg-governance"
+      },
+      {
+        "Key": "eap-cluster",
+        "Value": "eap-stg-governance"
+      },
+      {
+        "Key": "tr:project-name",
+        "Value": "EAP"
+      },
+      {
+        "Key": "tr:resource-owner",
+        "Value": "EapDevOps@thomson.com"
+      },
+      {
+        "Key": "aws:autoscaling:groupName",
+        "Value": "eap-stg-infra-AutoscalingGroups-1MZYPD43W94G6-GovernanceLinux-G2CU806LWNZN"
+      },
+      {
+        "Key": "eap:top-stack-name",
+        "Value": "eap-stg-infra"
+      },
+      {
+        "Key": "eap:environment-type",
+        "Value": "stg"
+      }
+    ],
+    "VirtualizationType": "hvm",
+    "CpuOptions": {
+      "CoreCount": 2,
+      "ThreadsPerCore": 2
+    },
+    "CapacityReservationSpecification": {
+      "CapacityReservationPreference": "open"
+    },
+    "HibernationOptions": {
+      "Configured": false
+    },
+    "MetadataOptions": {
+      "State": "applied",
+      "HttpTokens": "optional",
+      "HttpPutResponseHopLimit": 1,
+      "HttpEndpoint": "enabled"
+    },
+    "EnclaveOptions": {
+      "Enabled": false
+    }
+  },
+  {
+    "AmiLaunchIndex": 0,
+    "ImageId": "ami-06a1eec3c11dd7a06",
+    "InstanceId": "i-0afd23f4b1b501aee",
+    "InstanceType": "m5.xlarge",
+    "KeyName": "eap-qa",
+    "LaunchTime": "2021-08-12 21:01:24+00:00",
+    "Monitoring": {
+      "State": "disabled"
+    },
+    "Placement": {
+      "AvailabilityZone": "ap-southeast-1b",
+      "GroupName": "",
+      "Tenancy": "default"
+    },
+    "PrivateDnsName": "ip-10-226-10-75.ap-southeast-1.compute.internal",
+    "PrivateIpAddress": "10.226.10.75",
+    "ProductCodes": [],
+    "PublicDnsName": "",
+    "State": {
+      "Code": 16,
+      "Name": "running"
+    },
+    "StateTransitionReason": "",
+    "SubnetId": "subnet-07c371bd1a6dcb25d",
+    "VpcId": "vpc-0a9558d98081cb0b6",
+    "Architecture": "x86_64",
+    "BlockDeviceMappings": [
+      {
+        "DeviceName": "/dev/xvda",
+        "Ebs": {
+          "AttachTime": "2021-08-12 21:01:25+00:00",
+          "DeleteOnTermination": true,
+          "Status": "attached",
+          "VolumeId": "vol-0b05e7a418854f3d5"
+        }
+      }
+    ],
+    "ClientToken": "4bc5ecf0-ada4-06f2-9354-9b6397bf8c14",
+    "EbsOptimized": false,
+    "EnaSupport": true,
+    "Hypervisor": "xen",
+    "IamInstanceProfile": {
+      "Arn": "arn:aws:iam::060725138335:instance-profile/eap-stg-ap-southeast-1-ecs-profile",
+      "Id": "AIPAQ4I4ACOP5IFY3BDDY"
+    },
+    "NetworkInterfaces": [
+      {
+        "Attachment": {
+          "AttachTime": "2021-08-12 21:01:24+00:00",
+          "AttachmentId": "eni-attach-00c63c70f994ef85f",
+          "DeleteOnTermination": true,
+          "DeviceIndex": 0,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "",
+        "Groups": [
+          {
+            "GroupName": "eap-stg-bastion",
+            "GroupId": "sg-0d592020eb0baa50c"
+          },
+          {
+            "GroupName": "eap-stg-consul-server",
+            "GroupId": "sg-04eeeb0d6fc225cbe"
+          },
+          {
+            "GroupName": "eap-stg-governance-cluster",
+            "GroupId": "sg-0a47722e5798268fa"
+          },
+          {
+            "GroupName": "eap-stg-consul-client",
+            "GroupId": "sg-0077ee94ef3d00364"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "02:32:f6:83:df:76",
+        "NetworkInterfaceId": "eni-01d1ee3888272fde9",
+        "OwnerId": "060725138335",
+        "PrivateDnsName": "ip-10-226-10-75.ap-southeast-1.compute.internal",
+        "PrivateIpAddress": "10.226.10.75",
+        "PrivateIpAddresses": [
+          {
+            "Primary": true,
+            "PrivateDnsName": "ip-10-226-10-75.ap-southeast-1.compute.internal",
+            "PrivateIpAddress": "10.226.10.75"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-07c371bd1a6dcb25d",
+        "VpcId": "vpc-0a9558d98081cb0b6",
+        "InterfaceType": "interface"
+      },
+      {
+        "Attachment": {
+          "AttachTime": "2021-08-12 21:07:51+00:00",
+          "AttachmentId": "eni-attach-002fcb863a69a98d8",
+          "DeleteOnTermination": false,
+          "DeviceIndex": 1,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "arn:aws:ecs:ap-southeast-1:060725138335:attachment/4eac4b2b-dccb-444b-8748-0ababbca1b20",
+        "Groups": [
+          {
+            "GroupName": "default",
+            "GroupId": "sg-062b567f7db6c90bd"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "02:0d:c2:61:36:06",
+        "NetworkInterfaceId": "eni-0a0bffaa87a6c088c",
+        "OwnerId": "060725138335",
+        "PrivateDnsName": "ip-10-226-11-42.ap-southeast-1.compute.internal",
+        "PrivateIpAddress": "10.226.11.42",
+        "PrivateIpAddresses": [
+          {
+            "Primary": true,
+            "PrivateDnsName": "ip-10-226-11-42.ap-southeast-1.compute.internal",
+            "PrivateIpAddress": "10.226.11.42"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-07c371bd1a6dcb25d",
+        "VpcId": "vpc-0a9558d98081cb0b6",
+        "InterfaceType": "trunk"
+      }
+    ],
+    "RootDeviceName": "/dev/xvda",
+    "RootDeviceType": "ebs",
+    "SecurityGroups": [
+      {
+        "GroupName": "eap-stg-bastion",
+        "GroupId": "sg-0d592020eb0baa50c"
+      },
+      {
+        "GroupName": "eap-stg-consul-server",
+        "GroupId": "sg-04eeeb0d6fc225cbe"
+      },
+      {
+        "GroupName": "eap-stg-governance-cluster",
+        "GroupId": "sg-0a47722e5798268fa"
+      },
+      {
+        "GroupName": "eap-stg-consul-client",
+        "GroupId": "sg-0077ee94ef3d00364"
+      }
+    ],
+    "SourceDestCheck": true,
+    "Tags": [
+      {
+        "Key": "eap:top-stack-name",
+        "Value": "eap-stg-infra"
+      },
+      {
+        "Key": "eap:environment-type",
+        "Value": "stg"
+      },
+      {
+        "Key": "aws:cloudformation:logical-id",
+        "Value": "GovernanceLinux"
+      },
+      {
+        "Key": "aws:cloudformation:stack-name",
+        "Value": "eap-stg-infra-AutoscalingGroups-1MZYPD43W94G6"
+      },
+      {
+        "Key": "tr:environment-type",
+        "Value": "stg"
+      },
+      {
+        "Key": "aws:cloudformation:stack-id",
+        "Value": "arn:aws:cloudformation:ap-southeast-1:060725138335:stack/eap-stg-infra-AutoscalingGroups-1MZYPD43W94G6/8bfd46b0-04a8-11ea-b44f-02c6c7bea9ac"
+      },
+      {
+        "Key": "tr:financial-identifier",
+        "Value": "525603408"
+      },
+      {
+        "Key": "aws:autoscaling:groupName",
+        "Value": "eap-stg-infra-AutoscalingGroups-1MZYPD43W94G6-GovernanceLinux-G2CU806LWNZN"
+      },
+      {
+        "Key": "eap:es-domain",
+        "Value": "search-eap-stg-es-3bfvn3327ddqqoeebvu7ldqb64.ap-southeast-1.es.amazonaws.com"
+      },
+      {
+        "Key": "Name",
+        "Value": "eap-stg-governance"
+      },
+      {
+        "Key": "eap-cluster",
+        "Value": "eap-stg-governance"
+      },
+      {
+        "Key": "tr:application-asset-insight-id",
+        "Value": "204821"
+      },
+      {
+        "Key": "tr:resource-owner",
+        "Value": "EapDevOps@thomson.com"
+      },
+      {
+        "Key": "tr:project-name",
+        "Value": "EAP"
+      }
+    ],
+    "VirtualizationType": "hvm",
+    "CpuOptions": {
+      "CoreCount": 2,
+      "ThreadsPerCore": 2
+    },
+    "CapacityReservationSpecification": {
+      "CapacityReservationPreference": "open"
+    },
+    "HibernationOptions": {
+      "Configured": false
+    },
+    "MetadataOptions": {
+      "State": "applied",
+      "HttpTokens": "optional",
+      "HttpPutResponseHopLimit": 1,
+      "HttpEndpoint": "enabled"
+    },
+    "EnclaveOptions": {
+      "Enabled": false
+    }
+  },
+  {
+    "AmiLaunchIndex": 1,
+    "ImageId": "ami-06a1eec3c11dd7a06",
+    "InstanceId": "i-0c188a8439bd9d4b6",
+    "InstanceType": "m5.xlarge",
+    "KeyName": "eap-qa",
+    "LaunchTime": "2021-08-12 21:01:24+00:00",
+    "Monitoring": {
+      "State": "disabled"
+    },
+    "Placement": {
+      "AvailabilityZone": "ap-southeast-1b",
+      "GroupName": "",
+      "Tenancy": "default"
+    },
+    "PrivateDnsName": "ip-10-226-10-196.ap-southeast-1.compute.internal",
+    "PrivateIpAddress": "10.226.10.196",
+    "ProductCodes": [],
+    "PublicDnsName": "",
+    "State": {
+      "Code": 16,
+      "Name": "running"
+    },
+    "StateTransitionReason": "",
+    "SubnetId": "subnet-07c371bd1a6dcb25d",
+    "VpcId": "vpc-0a9558d98081cb0b6",
+    "Architecture": "x86_64",
+    "BlockDeviceMappings": [
+      {
+        "DeviceName": "/dev/xvda",
+        "Ebs": {
+          "AttachTime": "2021-08-12 21:01:25+00:00",
+          "DeleteOnTermination": true,
+          "Status": "attached",
+          "VolumeId": "vol-06d6732a10de2ab86"
+        }
+      }
+    ],
+    "ClientToken": "4bc5ecf0-ada4-06f2-9354-9b6397bf8c14",
+    "EbsOptimized": false,
+    "EnaSupport": true,
+    "Hypervisor": "xen",
+    "IamInstanceProfile": {
+      "Arn": "arn:aws:iam::060725138335:instance-profile/eap-stg-ap-southeast-1-ecs-profile",
+      "Id": "AIPAQ4I4ACOP5IFY3BDDY"
+    },
+    "NetworkInterfaces": [
+      {
+        "Attachment": {
+          "AttachTime": "2021-08-12 21:01:24+00:00",
+          "AttachmentId": "eni-attach-03c1a491d180f9853",
+          "DeleteOnTermination": true,
+          "DeviceIndex": 0,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "",
+        "Groups": [
+          {
+            "GroupName": "eap-stg-bastion",
+            "GroupId": "sg-0d592020eb0baa50c"
+          },
+          {
+            "GroupName": "eap-stg-consul-server",
+            "GroupId": "sg-04eeeb0d6fc225cbe"
+          },
+          {
+            "GroupName": "eap-stg-governance-cluster",
+            "GroupId": "sg-0a47722e5798268fa"
+          },
+          {
+            "GroupName": "eap-stg-consul-client",
+            "GroupId": "sg-0077ee94ef3d00364"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "02:22:7f:48:de:ac",
+        "NetworkInterfaceId": "eni-0c83a44a1932ba7dc",
+        "OwnerId": "060725138335",
+        "PrivateDnsName": "ip-10-226-10-196.ap-southeast-1.compute.internal",
+        "PrivateIpAddress": "10.226.10.196",
+        "PrivateIpAddresses": [
+          {
+            "Primary": true,
+            "PrivateDnsName": "ip-10-226-10-196.ap-southeast-1.compute.internal",
+            "PrivateIpAddress": "10.226.10.196"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-07c371bd1a6dcb25d",
+        "VpcId": "vpc-0a9558d98081cb0b6",
+        "InterfaceType": "interface"
+      },
+      {
+        "Attachment": {
+          "AttachTime": "2021-08-12 21:07:51+00:00",
+          "AttachmentId": "eni-attach-0902771d65b2464a5",
+          "DeleteOnTermination": false,
+          "DeviceIndex": 1,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "arn:aws:ecs:ap-southeast-1:060725138335:attachment/d2cd20eb-a7df-4661-9748-6c94e3c101e8",
+        "Groups": [
+          {
+            "GroupName": "default",
+            "GroupId": "sg-062b567f7db6c90bd"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "02:60:51:5e:94:ae",
+        "NetworkInterfaceId": "eni-0a8e937f43ca817bc",
+        "OwnerId": "060725138335",
+        "PrivateDnsName": "ip-10-226-10-118.ap-southeast-1.compute.internal",
+        "PrivateIpAddress": "10.226.10.118",
+        "PrivateIpAddresses": [
+          {
+            "Primary": true,
+            "PrivateDnsName": "ip-10-226-10-118.ap-southeast-1.compute.internal",
+            "PrivateIpAddress": "10.226.10.118"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-07c371bd1a6dcb25d",
+        "VpcId": "vpc-0a9558d98081cb0b6",
+        "InterfaceType": "trunk"
+      }
+    ],
+    "RootDeviceName": "/dev/xvda",
+    "RootDeviceType": "ebs",
+    "SecurityGroups": [
+      {
+        "GroupName": "eap-stg-bastion",
+        "GroupId": "sg-0d592020eb0baa50c"
+      },
+      {
+        "GroupName": "eap-stg-consul-server",
+        "GroupId": "sg-04eeeb0d6fc225cbe"
+      },
+      {
+        "GroupName": "eap-stg-governance-cluster",
+        "GroupId": "sg-0a47722e5798268fa"
+      },
+      {
+        "GroupName": "eap-stg-consul-client",
+        "GroupId": "sg-0077ee94ef3d00364"
+      }
+    ],
+    "SourceDestCheck": true,
+    "Tags": [
+      {
+        "Key": "tr:project-name",
+        "Value": "EAP"
+      },
+      {
+        "Key": "aws:cloudformation:stack-id",
+        "Value": "arn:aws:cloudformation:ap-southeast-1:060725138335:stack/eap-stg-infra-AutoscalingGroups-1MZYPD43W94G6/8bfd46b0-04a8-11ea-b44f-02c6c7bea9ac"
+      },
+      {
+        "Key": "tr:financial-identifier",
+        "Value": "525603408"
+      },
+      {
+        "Key": "aws:cloudformation:stack-name",
+        "Value": "eap-stg-infra-AutoscalingGroups-1MZYPD43W94G6"
+      },
+      {
+        "Key": "tr:environment-type",
+        "Value": "stg"
+      },
+      {
+        "Key": "eap:environment-type",
+        "Value": "stg"
+      },
+      {
+        "Key": "eap:top-stack-name",
+        "Value": "eap-stg-infra"
+      },
+      {
+        "Key": "eap:es-domain",
+        "Value": "search-eap-stg-es-3bfvn3327ddqqoeebvu7ldqb64.ap-southeast-1.es.amazonaws.com"
+      },
+      {
+        "Key": "Name",
+        "Value": "eap-stg-governance"
+      },
+      {
+        "Key": "aws:autoscaling:groupName",
+        "Value": "eap-stg-infra-AutoscalingGroups-1MZYPD43W94G6-GovernanceLinux-G2CU806LWNZN"
+      },
+      {
+        "Key": "aws:cloudformation:logical-id",
+        "Value": "GovernanceLinux"
+      },
+      {
+        "Key": "tr:application-asset-insight-id",
+        "Value": "204821"
+      },
+      {
+        "Key": "eap-cluster",
+        "Value": "eap-stg-governance"
+      },
+      {
+        "Key": "tr:resource-owner",
+        "Value": "EapDevOps@thomson.com"
+      }
+    ],
+    "VirtualizationType": "hvm",
+    "CpuOptions": {
+      "CoreCount": 2,
+      "ThreadsPerCore": 2
+    },
+    "CapacityReservationSpecification": {
+      "CapacityReservationPreference": "open"
+    },
+    "HibernationOptions": {
+      "Configured": false
+    },
+    "MetadataOptions": {
+      "State": "applied",
+      "HttpTokens": "optional",
+      "HttpPutResponseHopLimit": 1,
+      "HttpEndpoint": "enabled"
+    },
+    "EnclaveOptions": {
+      "Enabled": false
+    }
+  },
+  {
+    "AmiLaunchIndex": 0,
+    "ImageId": "ami-06a1eec3c11dd7a06",
+    "InstanceId": "i-02183e6026325ade3",
+    "InstanceType": "m5.xlarge",
+    "KeyName": "eap-qa",
+    "LaunchTime": "2021-09-01 04:14:52+00:00",
+    "Monitoring": {
+      "State": "disabled"
+    },
+    "Placement": {
+      "AvailabilityZone": "ap-southeast-1b",
+      "GroupName": "",
+      "Tenancy": "default"
+    },
+    "PrivateDnsName": "ip-10-226-11-31.ap-southeast-1.compute.internal",
+    "PrivateIpAddress": "10.226.11.31",
+    "ProductCodes": [],
+    "PublicDnsName": "",
+    "State": {
+      "Code": 16,
+      "Name": "running"
+    },
+    "StateTransitionReason": "",
+    "SubnetId": "subnet-07c371bd1a6dcb25d",
+    "VpcId": "vpc-0a9558d98081cb0b6",
+    "Architecture": "x86_64",
+    "BlockDeviceMappings": [
+      {
+        "DeviceName": "/dev/xvda",
+        "Ebs": {
+          "AttachTime": "2021-08-12 21:01:46+00:00",
+          "DeleteOnTermination": true,
+          "Status": "attached",
+          "VolumeId": "vol-0255e3f75ff6bdfa8"
+        }
+      }
+    ],
+    "ClientToken": "4555ecf0-aed6-e01b-ecf8-be8467e6aad7",
+    "EbsOptimized": false,
+    "EnaSupport": true,
+    "Hypervisor": "xen",
+    "IamInstanceProfile": {
+      "Arn": "arn:aws:iam::060725138335:instance-profile/eap-stg-ap-southeast-1-ecs-profile",
+      "Id": "AIPAQ4I4ACOP5IFY3BDDY"
+    },
+    "NetworkInterfaces": [
+      {
+        "Attachment": {
+          "AttachTime": "2021-08-12 21:01:44+00:00",
+          "AttachmentId": "eni-attach-070e0f79517839d7f",
+          "DeleteOnTermination": true,
+          "DeviceIndex": 0,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "",
+        "Groups": [
+          {
+            "GroupName": "eap-stg-worker-cluster",
+            "GroupId": "sg-0eba6428d49801be7"
+          },
+          {
+            "GroupName": "eap-stg-bastion",
+            "GroupId": "sg-0d592020eb0baa50c"
+          },
+          {
+            "GroupName": "eap-stg-consul-client",
+            "GroupId": "sg-0077ee94ef3d00364"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "02:fa:9b:95:d5:88",
+        "NetworkInterfaceId": "eni-07d010923a1d5aa25",
+        "OwnerId": "060725138335",
+        "PrivateDnsName": "ip-10-226-11-31.ap-southeast-1.compute.internal",
+        "PrivateIpAddress": "10.226.11.31",
+        "PrivateIpAddresses": [
+          {
+            "Primary": true,
+            "PrivateDnsName": "ip-10-226-11-31.ap-southeast-1.compute.internal",
+            "PrivateIpAddress": "10.226.11.31"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-07c371bd1a6dcb25d",
+        "VpcId": "vpc-0a9558d98081cb0b6",
+        "InterfaceType": "interface"
+      },
+      {
+        "Attachment": {
+          "AttachTime": "2021-08-12 21:08:10+00:00",
+          "AttachmentId": "eni-attach-05a69e49222032b98",
+          "DeleteOnTermination": false,
+          "DeviceIndex": 1,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "arn:aws:ecs:ap-southeast-1:060725138335:attachment/f7f3f74b-9553-495c-8cc6-8f8720776cfb",
+        "Groups": [
+          {
+            "GroupName": "default",
+            "GroupId": "sg-062b567f7db6c90bd"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "02:5d:b2:1a:10:de",
+        "NetworkInterfaceId": "eni-0858f6db4fa8f1349",
+        "OwnerId": "060725138335",
+        "PrivateDnsName": "ip-10-226-11-0.ap-southeast-1.compute.internal",
+        "PrivateIpAddress": "10.226.11.0",
+        "PrivateIpAddresses": [
+          {
+            "Primary": true,
+            "PrivateDnsName": "ip-10-226-11-0.ap-southeast-1.compute.internal",
+            "PrivateIpAddress": "10.226.11.0"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-07c371bd1a6dcb25d",
+        "VpcId": "vpc-0a9558d98081cb0b6",
+        "InterfaceType": "trunk"
+      }
+    ],
+    "RootDeviceName": "/dev/xvda",
+    "RootDeviceType": "ebs",
+    "SecurityGroups": [
+      {
+        "GroupName": "eap-stg-worker-cluster",
+        "GroupId": "sg-0eba6428d49801be7"
+      },
+      {
+        "GroupName": "eap-stg-bastion",
+        "GroupId": "sg-0d592020eb0baa50c"
+      },
+      {
+        "GroupName": "eap-stg-consul-client",
+        "GroupId": "sg-0077ee94ef3d00364"
+      }
+    ],
+    "SourceDestCheck": true,
+    "Tags": [
+      {
+        "Key": "aws:cloudformation:stack-name",
+        "Value": "eap-stg-infra-AutoscalingGroups-1MZYPD43W94G6"
+      },
+      {
+        "Key": "tr:application-asset-insight-id",
+        "Value": "204821"
+      },
+      {
+        "Key": "Name",
+        "Value": "eap-stg-worker"
+      },
+      {
+        "Key": "aws:cloudformation:stack-id",
+        "Value": "arn:aws:cloudformation:ap-southeast-1:060725138335:stack/eap-stg-infra-AutoscalingGroups-1MZYPD43W94G6/8bfd46b0-04a8-11ea-b44f-02c6c7bea9ac"
+      },
+      {
+        "Key": "tr:environment-type",
+        "Value": "stg"
+      },
+      {
+        "Key": "tr:project-name",
+        "Value": "EAP"
+      },
+      {
+        "Key": "tr:resource-owner",
+        "Value": "EapDevOps@thomson.com"
+      },
+      {
+        "Key": "aws:autoscaling:groupName",
+        "Value": "eap-stg-infra-AutoscalingGroups-1MZYPD43W94G6-WorkerLinux-QRCSLPH6WQRO"
+      },
+      {
+        "Key": "eap-cluster",
+        "Value": "eap-stg-worker"
+      },
+      {
+        "Key": "tr:financial-identifier",
+        "Value": "525603408"
+      },
+      {
+        "Key": "aws:cloudformation:logical-id",
+        "Value": "WorkerLinux"
+      },
+      {
+        "Key": "eap:environment-type",
+        "Value": "stg"
+      }
+    ],
+    "VirtualizationType": "hvm",
+    "CpuOptions": {
+      "CoreCount": 2,
+      "ThreadsPerCore": 2
+    },
+    "CapacityReservationSpecification": {
+      "CapacityReservationPreference": "open"
+    },
+    "HibernationOptions": {
+      "Configured": false
+    },
+    "MetadataOptions": {
+      "State": "applied",
+      "HttpTokens": "optional",
+      "HttpPutResponseHopLimit": 1,
+      "HttpEndpoint": "enabled"
+    },
+    "EnclaveOptions": {
+      "Enabled": false
+    }
+  },
+  {
+    "AmiLaunchIndex": 1,
+    "ImageId": "ami-06a1eec3c11dd7a06",
+    "InstanceId": "i-0de9e7583f6789445",
+    "InstanceType": "m5.xlarge",
+    "KeyName": "eap-qa",
+    "LaunchTime": "2021-09-01 04:14:52+00:00",
+    "Monitoring": {
+      "State": "disabled"
+    },
+    "Placement": {
+      "AvailabilityZone": "ap-southeast-1b",
+      "GroupName": "",
+      "Tenancy": "default"
+    },
+    "PrivateDnsName": "ip-10-226-11-50.ap-southeast-1.compute.internal",
+    "PrivateIpAddress": "10.226.11.50",
+    "ProductCodes": [],
+    "PublicDnsName": "",
+    "State": {
+      "Code": 16,
+      "Name": "running"
+    },
+    "StateTransitionReason": "",
+    "SubnetId": "subnet-07c371bd1a6dcb25d",
+    "VpcId": "vpc-0a9558d98081cb0b6",
+    "Architecture": "x86_64",
+    "BlockDeviceMappings": [
+      {
+        "DeviceName": "/dev/xvda",
+        "Ebs": {
+          "AttachTime": "2021-08-12 21:01:46+00:00",
+          "DeleteOnTermination": true,
+          "Status": "attached",
+          "VolumeId": "vol-06ec6af3be21d44a2"
+        }
+      }
+    ],
+    "ClientToken": "4555ecf0-aed6-e01b-ecf8-be8467e6aad7",
+    "EbsOptimized": false,
+    "EnaSupport": true,
+    "Hypervisor": "xen",
+    "IamInstanceProfile": {
+      "Arn": "arn:aws:iam::060725138335:instance-profile/eap-stg-ap-southeast-1-ecs-profile",
+      "Id": "AIPAQ4I4ACOP5IFY3BDDY"
+    },
+    "NetworkInterfaces": [
+      {
+        "Attachment": {
+          "AttachTime": "2021-08-12 21:01:44+00:00",
+          "AttachmentId": "eni-attach-0e5d2d979ac557678",
+          "DeleteOnTermination": true,
+          "DeviceIndex": 0,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "",
+        "Groups": [
+          {
+            "GroupName": "eap-stg-worker-cluster",
+            "GroupId": "sg-0eba6428d49801be7"
+          },
+          {
+            "GroupName": "eap-stg-bastion",
+            "GroupId": "sg-0d592020eb0baa50c"
+          },
+          {
+            "GroupName": "eap-stg-consul-client",
+            "GroupId": "sg-0077ee94ef3d00364"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "02:f3:3a:4a:47:18",
+        "NetworkInterfaceId": "eni-0fb69e04f4cc013f9",
+        "OwnerId": "060725138335",
+        "PrivateDnsName": "ip-10-226-11-50.ap-southeast-1.compute.internal",
+        "PrivateIpAddress": "10.226.11.50",
+        "PrivateIpAddresses": [
+          {
+            "Primary": true,
+            "PrivateDnsName": "ip-10-226-11-50.ap-southeast-1.compute.internal",
+            "PrivateIpAddress": "10.226.11.50"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-07c371bd1a6dcb25d",
+        "VpcId": "vpc-0a9558d98081cb0b6",
+        "InterfaceType": "interface"
+      },
+      {
+        "Attachment": {
+          "AttachTime": "2021-08-12 21:08:14+00:00",
+          "AttachmentId": "eni-attach-0f6cd62e6d70766db",
+          "DeleteOnTermination": false,
+          "DeviceIndex": 1,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "arn:aws:ecs:ap-southeast-1:060725138335:attachment/43436148-44f7-4263-b5d8-ca271dff6e73",
+        "Groups": [
+          {
+            "GroupName": "default",
+            "GroupId": "sg-062b567f7db6c90bd"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "02:cd:5a:ae:da:76",
+        "NetworkInterfaceId": "eni-0bca486b719f961cd",
+        "OwnerId": "060725138335",
+        "PrivateDnsName": "ip-10-226-11-236.ap-southeast-1.compute.internal",
+        "PrivateIpAddress": "10.226.11.236",
+        "PrivateIpAddresses": [
+          {
+            "Primary": true,
+            "PrivateDnsName": "ip-10-226-11-236.ap-southeast-1.compute.internal",
+            "PrivateIpAddress": "10.226.11.236"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-07c371bd1a6dcb25d",
+        "VpcId": "vpc-0a9558d98081cb0b6",
+        "InterfaceType": "trunk"
+      }
+    ],
+    "RootDeviceName": "/dev/xvda",
+    "RootDeviceType": "ebs",
+    "SecurityGroups": [
+      {
+        "GroupName": "eap-stg-worker-cluster",
+        "GroupId": "sg-0eba6428d49801be7"
+      },
+      {
+        "GroupName": "eap-stg-bastion",
+        "GroupId": "sg-0d592020eb0baa50c"
+      },
+      {
+        "GroupName": "eap-stg-consul-client",
+        "GroupId": "sg-0077ee94ef3d00364"
+      }
+    ],
+    "SourceDestCheck": true,
+    "Tags": [
+      {
+        "Key": "tr:application-asset-insight-id",
+        "Value": "204821"
+      },
+      {
+        "Key": "aws:cloudformation:stack-id",
+        "Value": "arn:aws:cloudformation:ap-southeast-1:060725138335:stack/eap-stg-infra-AutoscalingGroups-1MZYPD43W94G6/8bfd46b0-04a8-11ea-b44f-02c6c7bea9ac"
+      },
+      {
+        "Key": "aws:cloudformation:logical-id",
+        "Value": "WorkerLinux"
+      },
+      {
+        "Key": "aws:cloudformation:stack-name",
+        "Value": "eap-stg-infra-AutoscalingGroups-1MZYPD43W94G6"
+      },
+      {
+        "Key": "eap:environment-type",
+        "Value": "stg"
+      },
+      {
+        "Key": "tr:financial-identifier",
+        "Value": "525603408"
+      },
+      {
+        "Key": "tr:environment-type",
+        "Value": "stg"
+      },
+      {
+        "Key": "tr:project-name",
+        "Value": "EAP"
+      },
+      {
+        "Key": "tr:resource-owner",
+        "Value": "EapDevOps@thomson.com"
+      },
+      {
+        "Key": "aws:autoscaling:groupName",
+        "Value": "eap-stg-infra-AutoscalingGroups-1MZYPD43W94G6-WorkerLinux-QRCSLPH6WQRO"
+      },
+      {
+        "Key": "eap-cluster",
+        "Value": "eap-stg-worker"
+      },
+      {
+        "Key": "Name",
+        "Value": "eap-stg-worker"
+      }
+    ],
+    "VirtualizationType": "hvm",
+    "CpuOptions": {
+      "CoreCount": 2,
+      "ThreadsPerCore": 2
+    },
+    "CapacityReservationSpecification": {
+      "CapacityReservationPreference": "open"
+    },
+    "HibernationOptions": {
+      "Configured": false
+    },
+    "MetadataOptions": {
+      "State": "applied",
+      "HttpTokens": "optional",
+      "HttpPutResponseHopLimit": 1,
+      "HttpEndpoint": "enabled"
+    },
+    "EnclaveOptions": {
+      "Enabled": false
+    }
+  },
+  {
+    "AmiLaunchIndex": 0,
+    "ImageId": "ami-06a1eec3c11dd7a06",
+    "InstanceId": "i-0f718d17d903dd931",
+    "InstanceType": "m5.xlarge",
+    "LaunchTime": "2021-08-13 16:39:06+00:00",
+    "Monitoring": {
+      "State": "disabled"
+    },
+    "Placement": {
+      "AvailabilityZone": "ap-southeast-1b",
+      "GroupName": "",
+      "Tenancy": "default"
+    },
+    "PrivateDnsName": "ip-10-226-10-125.ap-southeast-1.compute.internal",
+    "PrivateIpAddress": "10.226.10.125",
+    "ProductCodes": [],
+    "PublicDnsName": "",
+    "State": {
+      "Code": 16,
+      "Name": "running"
+    },
+    "StateTransitionReason": "",
+    "SubnetId": "subnet-07c371bd1a6dcb25d",
+    "VpcId": "vpc-0a9558d98081cb0b6",
+    "Architecture": "x86_64",
+    "BlockDeviceMappings": [
+      {
+        "DeviceName": "/dev/xvda",
+        "Ebs": {
+          "AttachTime": "2021-08-13 16:39:07+00:00",
+          "DeleteOnTermination": true,
+          "Status": "attached",
+          "VolumeId": "vol-054581e3f7060d649"
+        }
+      }
+    ],
+    "ClientToken": "15c5ed01-8689-d353-2cfc-dd4cb901a39b",
+    "EbsOptimized": false,
+    "EnaSupport": true,
+    "Hypervisor": "xen",
+    "IamInstanceProfile": {
+      "Arn": "arn:aws:iam::060725138335:instance-profile/a204821-turbo-stg-infra-IAMRoles-1526K7WVI6LVP-TurboInstanceProfile-199PS0DRWO1B4",
+      "Id": "AIPAQ4I4ACOPU3NBLEOOX"
+    },
+    "NetworkInterfaces": [
+      {
+        "Attachment": {
+          "AttachTime": "2021-08-13 16:39:06+00:00",
+          "AttachmentId": "eni-attach-003c2a235e61be365",
+          "DeleteOnTermination": true,
+          "DeviceIndex": 0,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "",
+        "Groups": [
+          {
+            "GroupName": "a204821-turbo-stg-services",
+            "GroupId": "sg-07277b6cdcaee1d3c"
+          },
+          {
+            "GroupName": "BastionSecurityGroups-fromBastionSSH-TPVFS6DZRCFR",
+            "GroupId": "sg-03ab76f259d4d6839"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "02:0a:9e:b6:ad:5c",
+        "NetworkInterfaceId": "eni-045adf3777ad0448d",
+        "OwnerId": "060725138335",
+        "PrivateDnsName": "ip-10-226-10-125.ap-southeast-1.compute.internal",
+        "PrivateIpAddress": "10.226.10.125",
+        "PrivateIpAddresses": [
+          {
+            "Primary": true,
+            "PrivateDnsName": "ip-10-226-10-125.ap-southeast-1.compute.internal",
+            "PrivateIpAddress": "10.226.10.125"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-07c371bd1a6dcb25d",
+        "VpcId": "vpc-0a9558d98081cb0b6",
+        "InterfaceType": "interface"
+      },
+      {
+        "Attachment": {
+          "AttachTime": "2021-08-13 16:45:11+00:00",
+          "AttachmentId": "eni-attach-09230f1084b6dd5fd",
+          "DeleteOnTermination": false,
+          "DeviceIndex": 1,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "arn:aws:ecs:ap-southeast-1:060725138335:attachment/de12dc82-da1b-42d1-b73b-0954dd959d37",
+        "Groups": [
+          {
+            "GroupName": "default",
+            "GroupId": "sg-062b567f7db6c90bd"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "02:cb:50:be:7f:e0",
+        "NetworkInterfaceId": "eni-0ae73f64b8ff24bbf",
+        "OwnerId": "060725138335",
+        "PrivateDnsName": "ip-10-226-11-177.ap-southeast-1.compute.internal",
+        "PrivateIpAddress": "10.226.11.177",
+        "PrivateIpAddresses": [
+          {
+            "Primary": true,
+            "PrivateDnsName": "ip-10-226-11-177.ap-southeast-1.compute.internal",
+            "PrivateIpAddress": "10.226.11.177"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-07c371bd1a6dcb25d",
+        "VpcId": "vpc-0a9558d98081cb0b6",
+        "InterfaceType": "trunk"
+      }
+    ],
+    "RootDeviceName": "/dev/xvda",
+    "RootDeviceType": "ebs",
+    "SecurityGroups": [
+      {
+        "GroupName": "a204821-turbo-stg-services",
+        "GroupId": "sg-07277b6cdcaee1d3c"
+      },
+      {
+        "GroupName": "BastionSecurityGroups-fromBastionSSH-TPVFS6DZRCFR",
+        "GroupId": "sg-03ab76f259d4d6839"
+      }
+    ],
+    "SourceDestCheck": true,
+    "Tags": [
+      {
+        "Key": "${reqPrefix}-turbo:top-stack-name",
+        "Value": "a204821-turbo-stg-infra"
+      },
+      {
+        "Key": "aws:cloudformation:stack-name",
+        "Value": "a204821-turbo-stg-infra-AutoscalingGroups-11J4JY4XEG660"
+      },
+      {
+        "Key": "aws:cloudformation:stack-id",
+        "Value": "arn:aws:cloudformation:ap-southeast-1:060725138335:stack/a204821-turbo-stg-infra-AutoscalingGroups-11J4JY4XEG660/0a773690-919d-11eb-9440-0aaad78a3afa"
+      },
+      {
+        "Key": "tr:financial-identifier",
+        "Value": "525603408"
+      },
+      {
+        "Key": "Name",
+        "Value": "a204821-turbo-stg-ml"
+      },
+      {
+        "Key": "tr:project-name",
+        "Value": "turbo"
+      },
+      {
+        "Key": "aws:autoscaling:groupName",
+        "Value": "a204821-turbo-stg-infra-AutoscalingGroups-11J4JY4XEG660-TurboMLLinuxASG-F7TUY1QAQJ4B"
+      },
+      {
+        "Key": "aws:cloudformation:logical-id",
+        "Value": "TurboMLLinuxASG"
+      },
+      {
+        "Key": "tr:resource-owner",
+        "Value": "EAPDevOps@thomson.com"
+      },
+      {
+        "Key": "tr:application-asset-insight-id",
+        "Value": "206596"
+      },
+      {
+        "Key": "tr:environment-type",
+        "Value": "nonprod"
+      }
+    ],
+    "VirtualizationType": "hvm",
+    "CpuOptions": {
+      "CoreCount": 2,
+      "ThreadsPerCore": 2
+    },
+    "CapacityReservationSpecification": {
+      "CapacityReservationPreference": "open"
+    },
+    "HibernationOptions": {
+      "Configured": false
+    },
+    "MetadataOptions": {
+      "State": "applied",
+      "HttpTokens": "optional",
+      "HttpPutResponseHopLimit": 1,
+      "HttpEndpoint": "enabled"
+    },
+    "EnclaveOptions": {
+      "Enabled": false
+    }
+  },
+  {
+    "AmiLaunchIndex": 2,
+    "ImageId": "ami-06a1eec3c11dd7a06",
+    "InstanceId": "i-0f93e8abe9a2c26dc",
+    "InstanceType": "m5.xlarge",
+    "LaunchTime": "2021-08-13 16:39:06+00:00",
+    "Monitoring": {
+      "State": "disabled"
+    },
+    "Placement": {
+      "AvailabilityZone": "ap-southeast-1b",
+      "GroupName": "",
+      "Tenancy": "default"
+    },
+    "PrivateDnsName": "ip-10-226-11-254.ap-southeast-1.compute.internal",
+    "PrivateIpAddress": "10.226.11.254",
+    "ProductCodes": [],
+    "PublicDnsName": "",
+    "State": {
+      "Code": 16,
+      "Name": "running"
+    },
+    "StateTransitionReason": "",
+    "SubnetId": "subnet-07c371bd1a6dcb25d",
+    "VpcId": "vpc-0a9558d98081cb0b6",
+    "Architecture": "x86_64",
+    "BlockDeviceMappings": [
+      {
+        "DeviceName": "/dev/xvda",
+        "Ebs": {
+          "AttachTime": "2021-08-13 16:39:06+00:00",
+          "DeleteOnTermination": true,
+          "Status": "attached",
+          "VolumeId": "vol-0df38fc0c39cb89af"
+        }
+      }
+    ],
+    "ClientToken": "5095ed01-867a-a4a2-a7ea-08115c4c51e1",
+    "EbsOptimized": false,
+    "EnaSupport": true,
+    "Hypervisor": "xen",
+    "IamInstanceProfile": {
+      "Arn": "arn:aws:iam::060725138335:instance-profile/a204821-turbo-stg-infra-IAMRoles-1526K7WVI6LVP-TurboInstanceProfile-199PS0DRWO1B4",
+      "Id": "AIPAQ4I4ACOPU3NBLEOOX"
+    },
+    "NetworkInterfaces": [
+      {
+        "Attachment": {
+          "AttachTime": "2021-08-13 16:39:06+00:00",
+          "AttachmentId": "eni-attach-03634e18fd58a9d5e",
+          "DeleteOnTermination": true,
+          "DeviceIndex": 0,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "",
+        "Groups": [
+          {
+            "GroupName": "a204821-turbo-stg-services",
+            "GroupId": "sg-07277b6cdcaee1d3c"
+          },
+          {
+            "GroupName": "BastionSecurityGroups-fromBastionSSH-TPVFS6DZRCFR",
+            "GroupId": "sg-03ab76f259d4d6839"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "02:4b:70:b7:a4:1e",
+        "NetworkInterfaceId": "eni-0cf59f3c9337f0cc6",
+        "OwnerId": "060725138335",
+        "PrivateDnsName": "ip-10-226-11-254.ap-southeast-1.compute.internal",
+        "PrivateIpAddress": "10.226.11.254",
+        "PrivateIpAddresses": [
+          {
+            "Primary": true,
+            "PrivateDnsName": "ip-10-226-11-254.ap-southeast-1.compute.internal",
+            "PrivateIpAddress": "10.226.11.254"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-07c371bd1a6dcb25d",
+        "VpcId": "vpc-0a9558d98081cb0b6",
+        "InterfaceType": "interface"
+      },
+      {
+        "Attachment": {
+          "AttachTime": "2021-08-13 16:45:11+00:00",
+          "AttachmentId": "eni-attach-0871561bc942c2064",
+          "DeleteOnTermination": false,
+          "DeviceIndex": 1,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "arn:aws:ecs:ap-southeast-1:060725138335:attachment/62ca75e5-031f-410f-bd82-082cd1885913",
+        "Groups": [
+          {
+            "GroupName": "default",
+            "GroupId": "sg-062b567f7db6c90bd"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "02:54:5b:80:fc:0a",
+        "NetworkInterfaceId": "eni-00b2760401ec00ba5",
+        "OwnerId": "060725138335",
+        "PrivateDnsName": "ip-10-226-10-169.ap-southeast-1.compute.internal",
+        "PrivateIpAddress": "10.226.10.169",
+        "PrivateIpAddresses": [
+          {
+            "Primary": true,
+            "PrivateDnsName": "ip-10-226-10-169.ap-southeast-1.compute.internal",
+            "PrivateIpAddress": "10.226.10.169"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-07c371bd1a6dcb25d",
+        "VpcId": "vpc-0a9558d98081cb0b6",
+        "InterfaceType": "trunk"
+      }
+    ],
+    "RootDeviceName": "/dev/xvda",
+    "RootDeviceType": "ebs",
+    "SecurityGroups": [
+      {
+        "GroupName": "a204821-turbo-stg-services",
+        "GroupId": "sg-07277b6cdcaee1d3c"
+      },
+      {
+        "GroupName": "BastionSecurityGroups-fromBastionSSH-TPVFS6DZRCFR",
+        "GroupId": "sg-03ab76f259d4d6839"
+      }
+    ],
+    "SourceDestCheck": true,
+    "Tags": [
+      {
+        "Key": "tr:application-asset-insight-id",
+        "Value": "206596"
+      },
+      {
+        "Key": "tr:financial-identifier",
+        "Value": "525603408"
+      },
+      {
+        "Key": "Name",
+        "Value": "a204821-turbo-stg-services"
+      },
+      {
+        "Key": "${reqPrefix}-turbo:top-stack-name",
+        "Value": "a204821-turbo-stg-infra"
+      },
+      {
+        "Key": "tr:resource-owner",
+        "Value": "EAPDevOps@thomson.com"
+      },
+      {
+        "Key": "aws:autoscaling:groupName",
+        "Value": "a204821-turbo-stg-infra-AutoscalingGroups-11J4JY4XEG660-TurboServicesLinuxASG-1W4LE64D6IRM5"
+      },
+      {
+        "Key": "tr:environment-type",
+        "Value": "nonprod"
+      },
+      {
+        "Key": "aws:cloudformation:logical-id",
+        "Value": "TurboServicesLinuxASG"
+      },
+      {
+        "Key": "aws:cloudformation:stack-id",
+        "Value": "arn:aws:cloudformation:ap-southeast-1:060725138335:stack/a204821-turbo-stg-infra-AutoscalingGroups-11J4JY4XEG660/0a773690-919d-11eb-9440-0aaad78a3afa"
+      },
+      {
+        "Key": "aws:cloudformation:stack-name",
+        "Value": "a204821-turbo-stg-infra-AutoscalingGroups-11J4JY4XEG660"
+      },
+      {
+        "Key": "tr:project-name",
+        "Value": "turbo"
+      }
+    ],
+    "VirtualizationType": "hvm",
+    "CpuOptions": {
+      "CoreCount": 2,
+      "ThreadsPerCore": 2
+    },
+    "CapacityReservationSpecification": {
+      "CapacityReservationPreference": "open"
+    },
+    "HibernationOptions": {
+      "Configured": false
+    },
+    "MetadataOptions": {
+      "State": "applied",
+      "HttpTokens": "optional",
+      "HttpPutResponseHopLimit": 1,
+      "HttpEndpoint": "enabled"
+    },
+    "EnclaveOptions": {
+      "Enabled": false
+    }
+  },
+  {
+    "AmiLaunchIndex": 0,
+    "ImageId": "ami-06a1eec3c11dd7a06",
+    "InstanceId": "i-07b9229d2176d8d8f",
+    "InstanceType": "m5.xlarge",
+    "LaunchTime": "2021-08-13 16:39:06+00:00",
+    "Monitoring": {
+      "State": "disabled"
+    },
+    "Placement": {
+      "AvailabilityZone": "ap-southeast-1b",
+      "GroupName": "",
+      "Tenancy": "default"
+    },
+    "PrivateDnsName": "ip-10-226-10-143.ap-southeast-1.compute.internal",
+    "PrivateIpAddress": "10.226.10.143",
+    "ProductCodes": [],
+    "PublicDnsName": "",
+    "State": {
+      "Code": 16,
+      "Name": "running"
+    },
+    "StateTransitionReason": "",
+    "SubnetId": "subnet-07c371bd1a6dcb25d",
+    "VpcId": "vpc-0a9558d98081cb0b6",
+    "Architecture": "x86_64",
+    "BlockDeviceMappings": [
+      {
+        "DeviceName": "/dev/xvda",
+        "Ebs": {
+          "AttachTime": "2021-08-13 16:39:07+00:00",
+          "DeleteOnTermination": true,
+          "Status": "attached",
+          "VolumeId": "vol-059e1c34478ebefc0"
+        }
+      }
+    ],
+    "ClientToken": "5095ed01-867a-a4a2-a7ea-08115c4c51e1",
+    "EbsOptimized": false,
+    "EnaSupport": true,
+    "Hypervisor": "xen",
+    "IamInstanceProfile": {
+      "Arn": "arn:aws:iam::060725138335:instance-profile/a204821-turbo-stg-infra-IAMRoles-1526K7WVI6LVP-TurboInstanceProfile-199PS0DRWO1B4",
+      "Id": "AIPAQ4I4ACOPU3NBLEOOX"
+    },
+    "NetworkInterfaces": [
+      {
+        "Attachment": {
+          "AttachTime": "2021-08-13 16:39:06+00:00",
+          "AttachmentId": "eni-attach-0047261c83dffa82f",
+          "DeleteOnTermination": true,
+          "DeviceIndex": 0,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "",
+        "Groups": [
+          {
+            "GroupName": "a204821-turbo-stg-services",
+            "GroupId": "sg-07277b6cdcaee1d3c"
+          },
+          {
+            "GroupName": "BastionSecurityGroups-fromBastionSSH-TPVFS6DZRCFR",
+            "GroupId": "sg-03ab76f259d4d6839"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "02:da:8f:c4:89:7a",
+        "NetworkInterfaceId": "eni-072adda44cad1f875",
+        "OwnerId": "060725138335",
+        "PrivateDnsName": "ip-10-226-10-143.ap-southeast-1.compute.internal",
+        "PrivateIpAddress": "10.226.10.143",
+        "PrivateIpAddresses": [
+          {
+            "Primary": true,
+            "PrivateDnsName": "ip-10-226-10-143.ap-southeast-1.compute.internal",
+            "PrivateIpAddress": "10.226.10.143"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-07c371bd1a6dcb25d",
+        "VpcId": "vpc-0a9558d98081cb0b6",
+        "InterfaceType": "interface"
+      },
+      {
+        "Attachment": {
+          "AttachTime": "2021-08-13 16:45:11+00:00",
+          "AttachmentId": "eni-attach-04eaa9d2c681c6862",
+          "DeleteOnTermination": false,
+          "DeviceIndex": 1,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "arn:aws:ecs:ap-southeast-1:060725138335:attachment/72bbd571-9685-4028-a2d8-07d1195caf74",
+        "Groups": [
+          {
+            "GroupName": "default",
+            "GroupId": "sg-062b567f7db6c90bd"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "02:7c:1a:c1:f5:36",
+        "NetworkInterfaceId": "eni-05e77b9f442bad93d",
+        "OwnerId": "060725138335",
+        "PrivateDnsName": "ip-10-226-11-85.ap-southeast-1.compute.internal",
+        "PrivateIpAddress": "10.226.11.85",
+        "PrivateIpAddresses": [
+          {
+            "Primary": true,
+            "PrivateDnsName": "ip-10-226-11-85.ap-southeast-1.compute.internal",
+            "PrivateIpAddress": "10.226.11.85"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-07c371bd1a6dcb25d",
+        "VpcId": "vpc-0a9558d98081cb0b6",
+        "InterfaceType": "trunk"
+      }
+    ],
+    "RootDeviceName": "/dev/xvda",
+    "RootDeviceType": "ebs",
+    "SecurityGroups": [
+      {
+        "GroupName": "a204821-turbo-stg-services",
+        "GroupId": "sg-07277b6cdcaee1d3c"
+      },
+      {
+        "GroupName": "BastionSecurityGroups-fromBastionSSH-TPVFS6DZRCFR",
+        "GroupId": "sg-03ab76f259d4d6839"
+      }
+    ],
+    "SourceDestCheck": true,
+    "Tags": [
+      {
+        "Key": "aws:cloudformation:logical-id",
+        "Value": "TurboServicesLinuxASG"
+      },
+      {
+        "Key": "aws:cloudformation:stack-name",
+        "Value": "a204821-turbo-stg-infra-AutoscalingGroups-11J4JY4XEG660"
+      },
+      {
+        "Key": "tr:project-name",
+        "Value": "turbo"
+      },
+      {
+        "Key": "aws:cloudformation:stack-id",
+        "Value": "arn:aws:cloudformation:ap-southeast-1:060725138335:stack/a204821-turbo-stg-infra-AutoscalingGroups-11J4JY4XEG660/0a773690-919d-11eb-9440-0aaad78a3afa"
+      },
+      {
+        "Key": "Name",
+        "Value": "a204821-turbo-stg-services"
+      },
+      {
+        "Key": "${reqPrefix}-turbo:top-stack-name",
+        "Value": "a204821-turbo-stg-infra"
+      },
+      {
+        "Key": "tr:application-asset-insight-id",
+        "Value": "206596"
+      },
+      {
+        "Key": "tr:environment-type",
+        "Value": "nonprod"
+      },
+      {
+        "Key": "tr:financial-identifier",
+        "Value": "525603408"
+      },
+      {
+        "Key": "tr:resource-owner",
+        "Value": "EAPDevOps@thomson.com"
+      },
+      {
+        "Key": "aws:autoscaling:groupName",
+        "Value": "a204821-turbo-stg-infra-AutoscalingGroups-11J4JY4XEG660-TurboServicesLinuxASG-1W4LE64D6IRM5"
+      }
+    ],
+    "VirtualizationType": "hvm",
+    "CpuOptions": {
+      "CoreCount": 2,
+      "ThreadsPerCore": 2
+    },
+    "CapacityReservationSpecification": {
+      "CapacityReservationPreference": "open"
+    },
+    "HibernationOptions": {
+      "Configured": false
+    },
+    "MetadataOptions": {
+      "State": "applied",
+      "HttpTokens": "optional",
+      "HttpPutResponseHopLimit": 1,
+      "HttpEndpoint": "enabled"
+    },
+    "EnclaveOptions": {
+      "Enabled": false
+    }
+  },
+  {
+    "AmiLaunchIndex": 1,
+    "ImageId": "ami-06a1eec3c11dd7a06",
+    "InstanceId": "i-06d653cc1dd6d4bcc",
+    "InstanceType": "m5.xlarge",
+    "LaunchTime": "2021-08-13 16:39:06+00:00",
+    "Monitoring": {
+      "State": "disabled"
+    },
+    "Placement": {
+      "AvailabilityZone": "ap-southeast-1b",
+      "GroupName": "",
+      "Tenancy": "default"
+    },
+    "PrivateDnsName": "ip-10-226-11-206.ap-southeast-1.compute.internal",
+    "PrivateIpAddress": "10.226.11.206",
+    "ProductCodes": [],
+    "PublicDnsName": "",
+    "State": {
+      "Code": 16,
+      "Name": "running"
+    },
+    "StateTransitionReason": "",
+    "SubnetId": "subnet-07c371bd1a6dcb25d",
+    "VpcId": "vpc-0a9558d98081cb0b6",
+    "Architecture": "x86_64",
+    "BlockDeviceMappings": [
+      {
+        "DeviceName": "/dev/xvda",
+        "Ebs": {
+          "AttachTime": "2021-08-13 16:39:06+00:00",
+          "DeleteOnTermination": true,
+          "Status": "attached",
+          "VolumeId": "vol-0bdc05cb545c2dfcd"
+        }
+      }
+    ],
+    "ClientToken": "5095ed01-867a-a4a2-a7ea-08115c4c51e1",
+    "EbsOptimized": false,
+    "EnaSupport": true,
+    "Hypervisor": "xen",
+    "IamInstanceProfile": {
+      "Arn": "arn:aws:iam::060725138335:instance-profile/a204821-turbo-stg-infra-IAMRoles-1526K7WVI6LVP-TurboInstanceProfile-199PS0DRWO1B4",
+      "Id": "AIPAQ4I4ACOPU3NBLEOOX"
+    },
+    "NetworkInterfaces": [
+      {
+        "Attachment": {
+          "AttachTime": "2021-08-13 16:39:06+00:00",
+          "AttachmentId": "eni-attach-0468050ed96c4888c",
+          "DeleteOnTermination": true,
+          "DeviceIndex": 0,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "",
+        "Groups": [
+          {
+            "GroupName": "a204821-turbo-stg-services",
+            "GroupId": "sg-07277b6cdcaee1d3c"
+          },
+          {
+            "GroupName": "BastionSecurityGroups-fromBastionSSH-TPVFS6DZRCFR",
+            "GroupId": "sg-03ab76f259d4d6839"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "02:ad:e5:8e:c9:70",
+        "NetworkInterfaceId": "eni-0eee9599afca2a73f",
+        "OwnerId": "060725138335",
+        "PrivateDnsName": "ip-10-226-11-206.ap-southeast-1.compute.internal",
+        "PrivateIpAddress": "10.226.11.206",
+        "PrivateIpAddresses": [
+          {
+            "Primary": true,
+            "PrivateDnsName": "ip-10-226-11-206.ap-southeast-1.compute.internal",
+            "PrivateIpAddress": "10.226.11.206"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-07c371bd1a6dcb25d",
+        "VpcId": "vpc-0a9558d98081cb0b6",
+        "InterfaceType": "interface"
+      },
+      {
+        "Attachment": {
+          "AttachTime": "2021-08-13 16:45:14+00:00",
+          "AttachmentId": "eni-attach-032b37afc531e108b",
+          "DeleteOnTermination": false,
+          "DeviceIndex": 1,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "arn:aws:ecs:ap-southeast-1:060725138335:attachment/1fb11997-559d-4772-a732-db915aba1250",
+        "Groups": [
+          {
+            "GroupName": "default",
+            "GroupId": "sg-062b567f7db6c90bd"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "02:7e:35:12:fd:6c",
+        "NetworkInterfaceId": "eni-0cf1e1324ee05ed8a",
+        "OwnerId": "060725138335",
+        "PrivateDnsName": "ip-10-226-10-162.ap-southeast-1.compute.internal",
+        "PrivateIpAddress": "10.226.10.162",
+        "PrivateIpAddresses": [
+          {
+            "Primary": true,
+            "PrivateDnsName": "ip-10-226-10-162.ap-southeast-1.compute.internal",
+            "PrivateIpAddress": "10.226.10.162"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-07c371bd1a6dcb25d",
+        "VpcId": "vpc-0a9558d98081cb0b6",
+        "InterfaceType": "trunk"
+      }
+    ],
+    "RootDeviceName": "/dev/xvda",
+    "RootDeviceType": "ebs",
+    "SecurityGroups": [
+      {
+        "GroupName": "a204821-turbo-stg-services",
+        "GroupId": "sg-07277b6cdcaee1d3c"
+      },
+      {
+        "GroupName": "BastionSecurityGroups-fromBastionSSH-TPVFS6DZRCFR",
+        "GroupId": "sg-03ab76f259d4d6839"
+      }
+    ],
+    "SourceDestCheck": true,
+    "Tags": [
+      {
+        "Key": "tr:financial-identifier",
+        "Value": "525603408"
+      },
+      {
+        "Key": "tr:project-name",
+        "Value": "turbo"
+      },
+      {
+        "Key": "tr:application-asset-insight-id",
+        "Value": "206596"
+      },
+      {
+        "Key": "Name",
+        "Value": "a204821-turbo-stg-services"
+      },
+      {
+        "Key": "aws:cloudformation:stack-name",
+        "Value": "a204821-turbo-stg-infra-AutoscalingGroups-11J4JY4XEG660"
+      },
+      {
+        "Key": "aws:autoscaling:groupName",
+        "Value": "a204821-turbo-stg-infra-AutoscalingGroups-11J4JY4XEG660-TurboServicesLinuxASG-1W4LE64D6IRM5"
+      },
+      {
+        "Key": "aws:cloudformation:stack-id",
+        "Value": "arn:aws:cloudformation:ap-southeast-1:060725138335:stack/a204821-turbo-stg-infra-AutoscalingGroups-11J4JY4XEG660/0a773690-919d-11eb-9440-0aaad78a3afa"
+      },
+      {
+        "Key": "tr:environment-type",
+        "Value": "nonprod"
+      },
+      {
+        "Key": "aws:cloudformation:logical-id",
+        "Value": "TurboServicesLinuxASG"
+      },
+      {
+        "Key": "tr:resource-owner",
+        "Value": "EAPDevOps@thomson.com"
+      },
+      {
+        "Key": "${reqPrefix}-turbo:top-stack-name",
+        "Value": "a204821-turbo-stg-infra"
+      }
+    ],
+    "VirtualizationType": "hvm",
+    "CpuOptions": {
+      "CoreCount": 2,
+      "ThreadsPerCore": 2
+    },
+    "CapacityReservationSpecification": {
+      "CapacityReservationPreference": "open"
+    },
+    "HibernationOptions": {
+      "Configured": false
+    },
+    "MetadataOptions": {
+      "State": "applied",
+      "HttpTokens": "optional",
+      "HttpPutResponseHopLimit": 1,
+      "HttpEndpoint": "enabled"
+    },
+    "EnclaveOptions": {
+      "Enabled": false
+    }
+  },
+  {
+    "AmiLaunchIndex": 0,
+    "ImageId": "ami-06a1eec3c11dd7a06",
+    "InstanceId": "i-007b7ee26210bbc30",
+    "InstanceType": "m5.2xlarge",
+    "KeyName": "eap-qa",
+    "LaunchTime": "2021-09-01 09:15:20+00:00",
+    "Monitoring": {
+      "State": "disabled"
+    },
+    "Placement": {
+      "AvailabilityZone": "ap-southeast-1b",
+      "GroupName": "",
+      "Tenancy": "default"
+    },
+    "PrivateDnsName": "ip-10-226-10-177.ap-southeast-1.compute.internal",
+    "PrivateIpAddress": "10.226.10.177",
+    "ProductCodes": [],
+    "PublicDnsName": "",
+    "State": {
+      "Code": 16,
+      "Name": "running"
+    },
+    "StateTransitionReason": "",
+    "SubnetId": "subnet-07c371bd1a6dcb25d",
+    "VpcId": "vpc-0a9558d98081cb0b6",
+    "Architecture": "x86_64",
+    "BlockDeviceMappings": [
+      {
+        "DeviceName": "/dev/xvda",
+        "Ebs": {
+          "AttachTime": "2021-08-13 19:22:16+00:00",
+          "DeleteOnTermination": true,
+          "Status": "attached",
+          "VolumeId": "vol-04c98e259824ed663"
+        }
+      }
+    ],
+    "ClientToken": "b165ed03-dbf6-d0ae-ecd7-cf6f03ec4450",
+    "EbsOptimized": false,
+    "EnaSupport": true,
+    "Hypervisor": "xen",
+    "IamInstanceProfile": {
+      "Arn": "arn:aws:iam::060725138335:instance-profile/a204821-eapww-stg-infra-IAMRoles-7HU8YA79N82-WorkerInstanceProfile-1JWD2TMVYIAZX",
+      "Id": "AIPAQ4I4ACOPRMG7SVIEM"
+    },
+    "NetworkInterfaces": [
+      {
+        "Attachment": {
+          "AttachTime": "2021-08-13 19:22:15+00:00",
+          "AttachmentId": "eni-attach-06cccf6d25fb1e783",
+          "DeleteOnTermination": true,
+          "DeviceIndex": 0,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "",
+        "Groups": [
+          {
+            "GroupName": "a204821-eapww-stg-trustedinstnace",
+            "GroupId": "sg-04dde3097deb5ca51"
+          },
+          {
+            "GroupName": "a204821-eapww-stg-outbound",
+            "GroupId": "sg-0f6075363724ffce1"
+          },
+          {
+            "GroupName": "BastionSecurityGroups-fromBastionSSH-TPVFS6DZRCFR",
+            "GroupId": "sg-03ab76f259d4d6839"
+          },
+          {
+            "GroupName": "eap-stg-consul-client",
+            "GroupId": "sg-0077ee94ef3d00364"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "02:0d:a8:27:1e:aa",
+        "NetworkInterfaceId": "eni-0d24509eb89208c20",
+        "OwnerId": "060725138335",
+        "PrivateDnsName": "ip-10-226-10-177.ap-southeast-1.compute.internal",
+        "PrivateIpAddress": "10.226.10.177",
+        "PrivateIpAddresses": [
+          {
+            "Primary": true,
+            "PrivateDnsName": "ip-10-226-10-177.ap-southeast-1.compute.internal",
+            "PrivateIpAddress": "10.226.10.177"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-07c371bd1a6dcb25d",
+        "VpcId": "vpc-0a9558d98081cb0b6",
+        "InterfaceType": "interface"
+      },
+      {
+        "Attachment": {
+          "AttachTime": "2021-08-13 19:28:14+00:00",
+          "AttachmentId": "eni-attach-0a27d2314385ca2cd",
+          "DeleteOnTermination": false,
+          "DeviceIndex": 1,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "arn:aws:ecs:ap-southeast-1:060725138335:attachment/b8cdb602-7c13-45f3-b2b5-b09df1de32e3",
+        "Groups": [
+          {
+            "GroupName": "default",
+            "GroupId": "sg-062b567f7db6c90bd"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "02:e2:fe:60:84:00",
+        "NetworkInterfaceId": "eni-0d14ac05290e0041d",
+        "OwnerId": "060725138335",
+        "PrivateDnsName": "ip-10-226-10-223.ap-southeast-1.compute.internal",
+        "PrivateIpAddress": "10.226.10.223",
+        "PrivateIpAddresses": [
+          {
+            "Primary": true,
+            "PrivateDnsName": "ip-10-226-10-223.ap-southeast-1.compute.internal",
+            "PrivateIpAddress": "10.226.10.223"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-07c371bd1a6dcb25d",
+        "VpcId": "vpc-0a9558d98081cb0b6",
+        "InterfaceType": "trunk"
+      }
+    ],
+    "RootDeviceName": "/dev/xvda",
+    "RootDeviceType": "ebs",
+    "SecurityGroups": [
+      {
+        "GroupName": "a204821-eapww-stg-trustedinstnace",
+        "GroupId": "sg-04dde3097deb5ca51"
+      },
+      {
+        "GroupName": "a204821-eapww-stg-outbound",
+        "GroupId": "sg-0f6075363724ffce1"
+      },
+      {
+        "GroupName": "BastionSecurityGroups-fromBastionSSH-TPVFS6DZRCFR",
+        "GroupId": "sg-03ab76f259d4d6839"
+      },
+      {
+        "GroupName": "eap-stg-consul-client",
+        "GroupId": "sg-0077ee94ef3d00364"
+      }
+    ],
+    "SourceDestCheck": true,
+    "Tags": [
+      {
+        "Key": "tr:project-name",
+        "Value": "EAP"
+      },
+      {
+        "Key": "aws:cloudformation:stack-id",
+        "Value": "arn:aws:cloudformation:ap-southeast-1:060725138335:stack/a204821-eapww-stg-infra-AutoscalingGroups-FLNM48942HWD/0a96b680-7543-11eb-9df8-0a36958102b6"
+      },
+      {
+        "Key": "tr:disable-fireeye",
+        "Value": "True"
+      },
+      {
+        "Key": "tr:financial-identifier",
+        "Value": "525603408"
+      },
+      {
+        "Key": "tr:environment-type",
+        "Value": "nonprod"
+      },
+      {
+        "Key": "aws:cloudformation:stack-name",
+        "Value": "a204821-eapww-stg-infra-AutoscalingGroups-FLNM48942HWD"
+      },
+      {
+        "Key": "a204821-eapww:top-stack-name",
+        "Value": "a204821-eapww-stg-infra"
+      },
+      {
+        "Key": "aws:autoscaling:groupName",
+        "Value": "a204821-eapww-stg-infra-AutoscalingGroups-FLNM48942HWD-WWWorkerLinux-7SEDL7TTSL8E"
+      },
+      {
+        "Key": "Name",
+        "Value": "a204821-eapww-stg-wwworker"
+      },
+      {
+        "Key": "eap:environment-type",
+        "Value": "stg"
+      },
+      {
+        "Key": "a204821-eapww-cluster",
+        "Value": "a204821-eapww-stg-wwworker"
+      },
+      {
+        "Key": "tr:service-name",
+        "Value": "WW"
+      },
+      {
+        "Key": "tr:resource-owner",
+        "Value": "EAPDevOps@thomson.com"
+      },
+      {
+        "Key": "aws:cloudformation:logical-id",
+        "Value": "WWWorkerLinux"
+      },
+      {
+        "Key": "tr:application-asset-insight-id",
+        "Value": "204821"
+      }
+    ],
+    "VirtualizationType": "hvm",
+    "CpuOptions": {
+      "CoreCount": 4,
+      "ThreadsPerCore": 2
+    },
+    "CapacityReservationSpecification": {
+      "CapacityReservationPreference": "open"
+    },
+    "HibernationOptions": {
+      "Configured": false
+    },
+    "MetadataOptions": {
+      "State": "applied",
+      "HttpTokens": "optional",
+      "HttpPutResponseHopLimit": 1,
+      "HttpEndpoint": "enabled"
+    },
+    "EnclaveOptions": {
+      "Enabled": false
+    }
+  },
+  {
+    "AmiLaunchIndex": 1,
+    "ImageId": "ami-06a1eec3c11dd7a06",
+    "InstanceId": "i-0b142b1e87180c89e",
+    "InstanceType": "m5.xlarge",
+    "KeyName": "eap-qa",
+    "LaunchTime": "2021-09-01 04:14:52+00:00",
+    "Monitoring": {
+      "State": "disabled"
+    },
+    "Placement": {
+      "AvailabilityZone": "ap-southeast-1a",
+      "GroupName": "",
+      "Tenancy": "default"
+    },
+    "PrivateDnsName": "ip-10-226-8-240.ap-southeast-1.compute.internal",
+    "PrivateIpAddress": "10.226.8.240",
+    "ProductCodes": [],
+    "PublicDnsName": "",
+    "State": {
+      "Code": 16,
+      "Name": "running"
+    },
+    "StateTransitionReason": "",
+    "SubnetId": "subnet-0bdbfa63c579cc59d",
+    "VpcId": "vpc-0a9558d98081cb0b6",
+    "Architecture": "x86_64",
+    "BlockDeviceMappings": [
+      {
+        "DeviceName": "/dev/xvda",
+        "Ebs": {
+          "AttachTime": "2021-08-12 21:01:44+00:00",
+          "DeleteOnTermination": true,
+          "Status": "attached",
+          "VolumeId": "vol-00912edb840481418"
+        }
+      }
+    ],
+    "ClientToken": "6b05ecf0-aed5-98a3-4b10-0989f5ea28a1",
+    "EbsOptimized": false,
+    "EnaSupport": true,
+    "Hypervisor": "xen",
+    "IamInstanceProfile": {
+      "Arn": "arn:aws:iam::060725138335:instance-profile/eap-stg-ap-southeast-1-ecs-profile",
+      "Id": "AIPAQ4I4ACOP5IFY3BDDY"
+    },
+    "NetworkInterfaces": [
+      {
+        "Attachment": {
+          "AttachTime": "2021-08-12 21:01:44+00:00",
+          "AttachmentId": "eni-attach-01724c0f01bd0d7fc",
+          "DeleteOnTermination": true,
+          "DeviceIndex": 0,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "",
+        "Groups": [
+          {
+            "GroupName": "eap-stg-worker-cluster",
+            "GroupId": "sg-0eba6428d49801be7"
+          },
+          {
+            "GroupName": "eap-stg-bastion",
+            "GroupId": "sg-0d592020eb0baa50c"
+          },
+          {
+            "GroupName": "eap-stg-consul-client",
+            "GroupId": "sg-0077ee94ef3d00364"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "06:92:8c:9d:1e:06",
+        "NetworkInterfaceId": "eni-00894e3591e15c903",
+        "OwnerId": "060725138335",
+        "PrivateDnsName": "ip-10-226-8-240.ap-southeast-1.compute.internal",
+        "PrivateIpAddress": "10.226.8.240",
+        "PrivateIpAddresses": [
+          {
+            "Primary": true,
+            "PrivateDnsName": "ip-10-226-8-240.ap-southeast-1.compute.internal",
+            "PrivateIpAddress": "10.226.8.240"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-0bdbfa63c579cc59d",
+        "VpcId": "vpc-0a9558d98081cb0b6",
+        "InterfaceType": "interface"
+      },
+      {
+        "Attachment": {
+          "AttachTime": "2021-08-12 21:08:11+00:00",
+          "AttachmentId": "eni-attach-00149d3fb6b462bca",
+          "DeleteOnTermination": false,
+          "DeviceIndex": 1,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "arn:aws:ecs:ap-southeast-1:060725138335:attachment/6e6e477b-44de-42b4-b861-a7ba0722111b",
+        "Groups": [
+          {
+            "GroupName": "default",
+            "GroupId": "sg-062b567f7db6c90bd"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "06:23:c6:39:4b:ee",
+        "NetworkInterfaceId": "eni-077dbbab414a4d70e",
+        "OwnerId": "060725138335",
+        "PrivateDnsName": "ip-10-226-9-167.ap-southeast-1.compute.internal",
+        "PrivateIpAddress": "10.226.9.167",
+        "PrivateIpAddresses": [
+          {
+            "Primary": true,
+            "PrivateDnsName": "ip-10-226-9-167.ap-southeast-1.compute.internal",
+            "PrivateIpAddress": "10.226.9.167"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-0bdbfa63c579cc59d",
+        "VpcId": "vpc-0a9558d98081cb0b6",
+        "InterfaceType": "trunk"
+      }
+    ],
+    "RootDeviceName": "/dev/xvda",
+    "RootDeviceType": "ebs",
+    "SecurityGroups": [
+      {
+        "GroupName": "eap-stg-worker-cluster",
+        "GroupId": "sg-0eba6428d49801be7"
+      },
+      {
+        "GroupName": "eap-stg-bastion",
+        "GroupId": "sg-0d592020eb0baa50c"
+      },
+      {
+        "GroupName": "eap-stg-consul-client",
+        "GroupId": "sg-0077ee94ef3d00364"
+      }
+    ],
+    "SourceDestCheck": true,
+    "Tags": [
+      {
+        "Key": "tr:financial-identifier",
+        "Value": "525603408"
+      },
+      {
+        "Key": "eap-cluster",
+        "Value": "eap-stg-worker"
+      },
+      {
+        "Key": "eap:environment-type",
+        "Value": "stg"
+      },
+      {
+        "Key": "tr:resource-owner",
+        "Value": "EapDevOps@thomson.com"
+      },
+      {
+        "Key": "tr:environment-type",
+        "Value": "stg"
+      },
+      {
+        "Key": "Name",
+        "Value": "eap-stg-worker"
+      },
+      {
+        "Key": "aws:autoscaling:groupName",
+        "Value": "eap-stg-infra-AutoscalingGroups-1MZYPD43W94G6-WorkerLinux-QRCSLPH6WQRO"
+      },
+      {
+        "Key": "tr:project-name",
+        "Value": "EAP"
+      },
+      {
+        "Key": "tr:application-asset-insight-id",
+        "Value": "204821"
+      },
+      {
+        "Key": "aws:cloudformation:stack-id",
+        "Value": "arn:aws:cloudformation:ap-southeast-1:060725138335:stack/eap-stg-infra-AutoscalingGroups-1MZYPD43W94G6/8bfd46b0-04a8-11ea-b44f-02c6c7bea9ac"
+      },
+      {
+        "Key": "aws:cloudformation:logical-id",
+        "Value": "WorkerLinux"
+      },
+      {
+        "Key": "aws:cloudformation:stack-name",
+        "Value": "eap-stg-infra-AutoscalingGroups-1MZYPD43W94G6"
+      }
+    ],
+    "VirtualizationType": "hvm",
+    "CpuOptions": {
+      "CoreCount": 2,
+      "ThreadsPerCore": 2
+    },
+    "CapacityReservationSpecification": {
+      "CapacityReservationPreference": "open"
+    },
+    "HibernationOptions": {
+      "Configured": false
+    },
+    "MetadataOptions": {
+      "State": "applied",
+      "HttpTokens": "optional",
+      "HttpPutResponseHopLimit": 1,
+      "HttpEndpoint": "enabled"
+    },
+    "EnclaveOptions": {
+      "Enabled": false
+    }
+  },
+  {
+    "AmiLaunchIndex": 0,
+    "ImageId": "ami-06a1eec3c11dd7a06",
+    "InstanceId": "i-07ca6f1d15a740ce9",
+    "InstanceType": "m5.xlarge",
+    "KeyName": "eap-qa",
+    "LaunchTime": "2021-09-01 04:14:52+00:00",
+    "Monitoring": {
+      "State": "disabled"
+    },
+    "Placement": {
+      "AvailabilityZone": "ap-southeast-1a",
+      "GroupName": "",
+      "Tenancy": "default"
+    },
+    "PrivateDnsName": "ip-10-226-8-106.ap-southeast-1.compute.internal",
+    "PrivateIpAddress": "10.226.8.106",
+    "ProductCodes": [],
+    "PublicDnsName": "",
+    "State": {
+      "Code": 16,
+      "Name": "running"
+    },
+    "StateTransitionReason": "",
+    "SubnetId": "subnet-0bdbfa63c579cc59d",
+    "VpcId": "vpc-0a9558d98081cb0b6",
+    "Architecture": "x86_64",
+    "BlockDeviceMappings": [
+      {
+        "DeviceName": "/dev/xvda",
+        "Ebs": {
+          "AttachTime": "2021-08-12 21:01:45+00:00",
+          "DeleteOnTermination": true,
+          "Status": "attached",
+          "VolumeId": "vol-0916fba27ca59172a"
+        }
+      }
+    ],
+    "ClientToken": "6b05ecf0-aed5-98a3-4b10-0989f5ea28a1",
+    "EbsOptimized": false,
+    "EnaSupport": true,
+    "Hypervisor": "xen",
+    "IamInstanceProfile": {
+      "Arn": "arn:aws:iam::060725138335:instance-profile/eap-stg-ap-southeast-1-ecs-profile",
+      "Id": "AIPAQ4I4ACOP5IFY3BDDY"
+    },
+    "NetworkInterfaces": [
+      {
+        "Attachment": {
+          "AttachTime": "2021-08-12 21:08:10+00:00",
+          "AttachmentId": "eni-attach-0ac08c50bd3f76ed2",
+          "DeleteOnTermination": false,
+          "DeviceIndex": 1,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "arn:aws:ecs:ap-southeast-1:060725138335:attachment/2cf4d739-a736-42c6-9ffa-f956dddec7ba",
+        "Groups": [
+          {
+            "GroupName": "default",
+            "GroupId": "sg-062b567f7db6c90bd"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "06:3a:94:db:ca:82",
+        "NetworkInterfaceId": "eni-03825d6bcbbede7d8",
+        "OwnerId": "060725138335",
+        "PrivateDnsName": "ip-10-226-9-183.ap-southeast-1.compute.internal",
+        "PrivateIpAddress": "10.226.9.183",
+        "PrivateIpAddresses": [
+          {
+            "Primary": true,
+            "PrivateDnsName": "ip-10-226-9-183.ap-southeast-1.compute.internal",
+            "PrivateIpAddress": "10.226.9.183"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-0bdbfa63c579cc59d",
+        "VpcId": "vpc-0a9558d98081cb0b6",
+        "InterfaceType": "trunk"
+      },
+      {
+        "Attachment": {
+          "AttachTime": "2021-08-12 21:01:44+00:00",
+          "AttachmentId": "eni-attach-08fba443f9b71d08c",
+          "DeleteOnTermination": true,
+          "DeviceIndex": 0,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "",
+        "Groups": [
+          {
+            "GroupName": "eap-stg-worker-cluster",
+            "GroupId": "sg-0eba6428d49801be7"
+          },
+          {
+            "GroupName": "eap-stg-bastion",
+            "GroupId": "sg-0d592020eb0baa50c"
+          },
+          {
+            "GroupName": "eap-stg-consul-client",
+            "GroupId": "sg-0077ee94ef3d00364"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "06:55:b5:4c:4d:70",
+        "NetworkInterfaceId": "eni-05c3678cac31e00f1",
+        "OwnerId": "060725138335",
+        "PrivateDnsName": "ip-10-226-8-106.ap-southeast-1.compute.internal",
+        "PrivateIpAddress": "10.226.8.106",
+        "PrivateIpAddresses": [
+          {
+            "Primary": true,
+            "PrivateDnsName": "ip-10-226-8-106.ap-southeast-1.compute.internal",
+            "PrivateIpAddress": "10.226.8.106"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-0bdbfa63c579cc59d",
+        "VpcId": "vpc-0a9558d98081cb0b6",
+        "InterfaceType": "interface"
+      }
+    ],
+    "RootDeviceName": "/dev/xvda",
+    "RootDeviceType": "ebs",
+    "SecurityGroups": [
+      {
+        "GroupName": "eap-stg-worker-cluster",
+        "GroupId": "sg-0eba6428d49801be7"
+      },
+      {
+        "GroupName": "eap-stg-bastion",
+        "GroupId": "sg-0d592020eb0baa50c"
+      },
+      {
+        "GroupName": "eap-stg-consul-client",
+        "GroupId": "sg-0077ee94ef3d00364"
+      }
+    ],
+    "SourceDestCheck": true,
+    "Tags": [
+      {
+        "Key": "tr:financial-identifier",
+        "Value": "525603408"
+      },
+      {
+        "Key": "tr:environment-type",
+        "Value": "stg"
+      },
+      {
+        "Key": "eap-cluster",
+        "Value": "eap-stg-worker"
+      },
+      {
+        "Key": "Name",
+        "Value": "eap-stg-worker"
+      },
+      {
+        "Key": "tr:resource-owner",
+        "Value": "EapDevOps@thomson.com"
+      },
+      {
+        "Key": "tr:project-name",
+        "Value": "EAP"
+      },
+      {
+        "Key": "aws:cloudformation:stack-id",
+        "Value": "arn:aws:cloudformation:ap-southeast-1:060725138335:stack/eap-stg-infra-AutoscalingGroups-1MZYPD43W94G6/8bfd46b0-04a8-11ea-b44f-02c6c7bea9ac"
+      },
+      {
+        "Key": "tr:application-asset-insight-id",
+        "Value": "204821"
+      },
+      {
+        "Key": "aws:cloudformation:stack-name",
+        "Value": "eap-stg-infra-AutoscalingGroups-1MZYPD43W94G6"
+      },
+      {
+        "Key": "aws:autoscaling:groupName",
+        "Value": "eap-stg-infra-AutoscalingGroups-1MZYPD43W94G6-WorkerLinux-QRCSLPH6WQRO"
+      },
+      {
+        "Key": "aws:cloudformation:logical-id",
+        "Value": "WorkerLinux"
+      },
+      {
+        "Key": "eap:environment-type",
+        "Value": "stg"
+      }
+    ],
+    "VirtualizationType": "hvm",
+    "CpuOptions": {
+      "CoreCount": 2,
+      "ThreadsPerCore": 2
+    },
+    "CapacityReservationSpecification": {
+      "CapacityReservationPreference": "open"
+    },
+    "HibernationOptions": {
+      "Configured": false
+    },
+    "MetadataOptions": {
+      "State": "applied",
+      "HttpTokens": "optional",
+      "HttpPutResponseHopLimit": 1,
+      "HttpEndpoint": "enabled"
+    },
+    "EnclaveOptions": {
+      "Enabled": false
+    }
+  },
+  {
+    "AmiLaunchIndex": 0,
+    "ImageId": "ami-06a1eec3c11dd7a06",
+    "InstanceId": "i-0999ec1509b2a7130",
+    "InstanceType": "m5.xlarge",
+    "KeyName": "eap-qa",
+    "LaunchTime": "2021-08-12 21:01:24+00:00",
+    "Monitoring": {
+      "State": "disabled"
+    },
+    "Placement": {
+      "AvailabilityZone": "ap-southeast-1a",
+      "GroupName": "",
+      "Tenancy": "default"
+    },
+    "PrivateDnsName": "ip-10-226-9-251.ap-southeast-1.compute.internal",
+    "PrivateIpAddress": "10.226.9.251",
+    "ProductCodes": [],
+    "PublicDnsName": "",
+    "State": {
+      "Code": 16,
+      "Name": "running"
+    },
+    "StateTransitionReason": "",
+    "SubnetId": "subnet-0bdbfa63c579cc59d",
+    "VpcId": "vpc-0a9558d98081cb0b6",
+    "Architecture": "x86_64",
+    "BlockDeviceMappings": [
+      {
+        "DeviceName": "/dev/xvda",
+        "Ebs": {
+          "AttachTime": "2021-08-12 21:01:25+00:00",
+          "DeleteOnTermination": true,
+          "Status": "attached",
+          "VolumeId": "vol-0bf9ff9ed22fcc331"
+        }
+      }
+    ],
+    "ClientToken": "97d5ecf0-ada2-be82-3e05-f22c14c0c220",
+    "EbsOptimized": false,
+    "EnaSupport": true,
+    "Hypervisor": "xen",
+    "IamInstanceProfile": {
+      "Arn": "arn:aws:iam::060725138335:instance-profile/eap-stg-ap-southeast-1-ecs-profile",
+      "Id": "AIPAQ4I4ACOP5IFY3BDDY"
+    },
+    "NetworkInterfaces": [
+      {
+        "Attachment": {
+          "AttachTime": "2021-08-12 21:01:24+00:00",
+          "AttachmentId": "eni-attach-078365c8c0692a152",
+          "DeleteOnTermination": true,
+          "DeviceIndex": 0,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "",
+        "Groups": [
+          {
+            "GroupName": "eap-stg-bastion",
+            "GroupId": "sg-0d592020eb0baa50c"
+          },
+          {
+            "GroupName": "eap-stg-consul-server",
+            "GroupId": "sg-04eeeb0d6fc225cbe"
+          },
+          {
+            "GroupName": "eap-stg-governance-cluster",
+            "GroupId": "sg-0a47722e5798268fa"
+          },
+          {
+            "GroupName": "eap-stg-consul-client",
+            "GroupId": "sg-0077ee94ef3d00364"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "06:a3:aa:8b:37:38",
+        "NetworkInterfaceId": "eni-0151ca7669bc1d0b4",
+        "OwnerId": "060725138335",
+        "PrivateDnsName": "ip-10-226-9-251.ap-southeast-1.compute.internal",
+        "PrivateIpAddress": "10.226.9.251",
+        "PrivateIpAddresses": [
+          {
+            "Primary": true,
+            "PrivateDnsName": "ip-10-226-9-251.ap-southeast-1.compute.internal",
+            "PrivateIpAddress": "10.226.9.251"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-0bdbfa63c579cc59d",
+        "VpcId": "vpc-0a9558d98081cb0b6",
+        "InterfaceType": "interface"
+      },
+      {
+        "Attachment": {
+          "AttachTime": "2021-08-12 21:07:51+00:00",
+          "AttachmentId": "eni-attach-003b93c076441acec",
+          "DeleteOnTermination": false,
+          "DeviceIndex": 1,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "arn:aws:ecs:ap-southeast-1:060725138335:attachment/fc7b4d6a-82e8-470c-a19a-ea1224238ed5",
+        "Groups": [
+          {
+            "GroupName": "default",
+            "GroupId": "sg-062b567f7db6c90bd"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "06:9d:9f:ff:f5:94",
+        "NetworkInterfaceId": "eni-04a73b44b0c35ddb3",
+        "OwnerId": "060725138335",
+        "PrivateDnsName": "ip-10-226-9-154.ap-southeast-1.compute.internal",
+        "PrivateIpAddress": "10.226.9.154",
+        "PrivateIpAddresses": [
+          {
+            "Primary": true,
+            "PrivateDnsName": "ip-10-226-9-154.ap-southeast-1.compute.internal",
+            "PrivateIpAddress": "10.226.9.154"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-0bdbfa63c579cc59d",
+        "VpcId": "vpc-0a9558d98081cb0b6",
+        "InterfaceType": "trunk"
+      }
+    ],
+    "RootDeviceName": "/dev/xvda",
+    "RootDeviceType": "ebs",
+    "SecurityGroups": [
+      {
+        "GroupName": "eap-stg-bastion",
+        "GroupId": "sg-0d592020eb0baa50c"
+      },
+      {
+        "GroupName": "eap-stg-consul-server",
+        "GroupId": "sg-04eeeb0d6fc225cbe"
+      },
+      {
+        "GroupName": "eap-stg-governance-cluster",
+        "GroupId": "sg-0a47722e5798268fa"
+      },
+      {
+        "GroupName": "eap-stg-consul-client",
+        "GroupId": "sg-0077ee94ef3d00364"
+      }
+    ],
+    "SourceDestCheck": true,
+    "Tags": [
+      {
+        "Key": "tr:financial-identifier",
+        "Value": "525603408"
+      },
+      {
+        "Key": "aws:autoscaling:groupName",
+        "Value": "eap-stg-infra-AutoscalingGroups-1MZYPD43W94G6-GovernanceLinux-G2CU806LWNZN"
+      },
+      {
+        "Key": "eap:top-stack-name",
+        "Value": "eap-stg-infra"
+      },
+      {
+        "Key": "aws:cloudformation:stack-name",
+        "Value": "eap-stg-infra-AutoscalingGroups-1MZYPD43W94G6"
+      },
+      {
+        "Key": "tr:environment-type",
+        "Value": "stg"
+      },
+      {
+        "Key": "eap-cluster",
+        "Value": "eap-stg-governance"
+      },
+      {
+        "Key": "eap:environment-type",
+        "Value": "stg"
+      },
+      {
+        "Key": "aws:cloudformation:stack-id",
+        "Value": "arn:aws:cloudformation:ap-southeast-1:060725138335:stack/eap-stg-infra-AutoscalingGroups-1MZYPD43W94G6/8bfd46b0-04a8-11ea-b44f-02c6c7bea9ac"
+      },
+      {
+        "Key": "tr:application-asset-insight-id",
+        "Value": "204821"
+      },
+      {
+        "Key": "aws:cloudformation:logical-id",
+        "Value": "GovernanceLinux"
+      },
+      {
+        "Key": "Name",
+        "Value": "eap-stg-governance"
+      },
+      {
+        "Key": "tr:project-name",
+        "Value": "EAP"
+      },
+      {
+        "Key": "eap:es-domain",
+        "Value": "search-eap-stg-es-3bfvn3327ddqqoeebvu7ldqb64.ap-southeast-1.es.amazonaws.com"
+      },
+      {
+        "Key": "tr:resource-owner",
+        "Value": "EapDevOps@thomson.com"
+      }
+    ],
+    "VirtualizationType": "hvm",
+    "CpuOptions": {
+      "CoreCount": 2,
+      "ThreadsPerCore": 2
+    },
+    "CapacityReservationSpecification": {
+      "CapacityReservationPreference": "open"
+    },
+    "HibernationOptions": {
+      "Configured": false
+    },
+    "MetadataOptions": {
+      "State": "applied",
+      "HttpTokens": "optional",
+      "HttpPutResponseHopLimit": 1,
+      "HttpEndpoint": "enabled"
+    },
+    "EnclaveOptions": {
+      "Enabled": false
+    }
+  },
+  {
+    "AmiLaunchIndex": 1,
+    "ImageId": "ami-06a1eec3c11dd7a06",
+    "InstanceId": "i-0b1552c303efc6185",
+    "InstanceType": "m5.xlarge",
+    "KeyName": "eap-qa",
+    "LaunchTime": "2021-08-12 21:01:24+00:00",
+    "Monitoring": {
+      "State": "disabled"
+    },
+    "Placement": {
+      "AvailabilityZone": "ap-southeast-1a",
+      "GroupName": "",
+      "Tenancy": "default"
+    },
+    "PrivateDnsName": "ip-10-226-8-197.ap-southeast-1.compute.internal",
+    "PrivateIpAddress": "10.226.8.197",
+    "ProductCodes": [],
+    "PublicDnsName": "",
+    "State": {
+      "Code": 16,
+      "Name": "running"
+    },
+    "StateTransitionReason": "",
+    "SubnetId": "subnet-0bdbfa63c579cc59d",
+    "VpcId": "vpc-0a9558d98081cb0b6",
+    "Architecture": "x86_64",
+    "BlockDeviceMappings": [
+      {
+        "DeviceName": "/dev/xvda",
+        "Ebs": {
+          "AttachTime": "2021-08-12 21:01:25+00:00",
+          "DeleteOnTermination": true,
+          "Status": "attached",
+          "VolumeId": "vol-0c062132d7705af4d"
+        }
+      }
+    ],
+    "ClientToken": "97d5ecf0-ada2-be82-3e05-f22c14c0c220",
+    "EbsOptimized": false,
+    "EnaSupport": true,
+    "Hypervisor": "xen",
+    "IamInstanceProfile": {
+      "Arn": "arn:aws:iam::060725138335:instance-profile/eap-stg-ap-southeast-1-ecs-profile",
+      "Id": "AIPAQ4I4ACOP5IFY3BDDY"
+    },
+    "NetworkInterfaces": [
+      {
+        "Attachment": {
+          "AttachTime": "2021-08-12 21:07:55+00:00",
+          "AttachmentId": "eni-attach-093531eec3c49cfcd",
+          "DeleteOnTermination": false,
+          "DeviceIndex": 1,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "arn:aws:ecs:ap-southeast-1:060725138335:attachment/751fbf18-8a50-401b-a653-c50c6879dd31",
+        "Groups": [
+          {
+            "GroupName": "default",
+            "GroupId": "sg-062b567f7db6c90bd"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "06:ad:92:07:1d:88",
+        "NetworkInterfaceId": "eni-02a6fe37d32843372",
+        "OwnerId": "060725138335",
+        "PrivateDnsName": "ip-10-226-8-72.ap-southeast-1.compute.internal",
+        "PrivateIpAddress": "10.226.8.72",
+        "PrivateIpAddresses": [
+          {
+            "Primary": true,
+            "PrivateDnsName": "ip-10-226-8-72.ap-southeast-1.compute.internal",
+            "PrivateIpAddress": "10.226.8.72"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-0bdbfa63c579cc59d",
+        "VpcId": "vpc-0a9558d98081cb0b6",
+        "InterfaceType": "trunk"
+      },
+      {
+        "Attachment": {
+          "AttachTime": "2021-08-12 21:01:24+00:00",
+          "AttachmentId": "eni-attach-0debc121e85955bee",
+          "DeleteOnTermination": true,
+          "DeviceIndex": 0,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "",
+        "Groups": [
+          {
+            "GroupName": "eap-stg-bastion",
+            "GroupId": "sg-0d592020eb0baa50c"
+          },
+          {
+            "GroupName": "eap-stg-consul-server",
+            "GroupId": "sg-04eeeb0d6fc225cbe"
+          },
+          {
+            "GroupName": "eap-stg-governance-cluster",
+            "GroupId": "sg-0a47722e5798268fa"
+          },
+          {
+            "GroupName": "eap-stg-consul-client",
+            "GroupId": "sg-0077ee94ef3d00364"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "06:ba:20:a2:11:d8",
+        "NetworkInterfaceId": "eni-032523b51d99ac66f",
+        "OwnerId": "060725138335",
+        "PrivateDnsName": "ip-10-226-8-197.ap-southeast-1.compute.internal",
+        "PrivateIpAddress": "10.226.8.197",
+        "PrivateIpAddresses": [
+          {
+            "Primary": true,
+            "PrivateDnsName": "ip-10-226-8-197.ap-southeast-1.compute.internal",
+            "PrivateIpAddress": "10.226.8.197"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-0bdbfa63c579cc59d",
+        "VpcId": "vpc-0a9558d98081cb0b6",
+        "InterfaceType": "interface"
+      }
+    ],
+    "RootDeviceName": "/dev/xvda",
+    "RootDeviceType": "ebs",
+    "SecurityGroups": [
+      {
+        "GroupName": "eap-stg-bastion",
+        "GroupId": "sg-0d592020eb0baa50c"
+      },
+      {
+        "GroupName": "eap-stg-consul-server",
+        "GroupId": "sg-04eeeb0d6fc225cbe"
+      },
+      {
+        "GroupName": "eap-stg-governance-cluster",
+        "GroupId": "sg-0a47722e5798268fa"
+      },
+      {
+        "GroupName": "eap-stg-consul-client",
+        "GroupId": "sg-0077ee94ef3d00364"
+      }
+    ],
+    "SourceDestCheck": true,
+    "Tags": [
+      {
+        "Key": "eap:top-stack-name",
+        "Value": "eap-stg-infra"
+      },
+      {
+        "Key": "tr:application-asset-insight-id",
+        "Value": "204821"
+      },
+      {
+        "Key": "tr:resource-owner",
+        "Value": "EapDevOps@thomson.com"
+      },
+      {
+        "Key": "aws:autoscaling:groupName",
+        "Value": "eap-stg-infra-AutoscalingGroups-1MZYPD43W94G6-GovernanceLinux-G2CU806LWNZN"
+      },
+      {
+        "Key": "eap:es-domain",
+        "Value": "search-eap-stg-es-3bfvn3327ddqqoeebvu7ldqb64.ap-southeast-1.es.amazonaws.com"
+      },
+      {
+        "Key": "Name",
+        "Value": "eap-stg-governance"
+      },
+      {
+        "Key": "eap-cluster",
+        "Value": "eap-stg-governance"
+      },
+      {
+        "Key": "eap:environment-type",
+        "Value": "stg"
+      },
+      {
+        "Key": "aws:cloudformation:logical-id",
+        "Value": "GovernanceLinux"
+      },
+      {
+        "Key": "aws:cloudformation:stack-id",
+        "Value": "arn:aws:cloudformation:ap-southeast-1:060725138335:stack/eap-stg-infra-AutoscalingGroups-1MZYPD43W94G6/8bfd46b0-04a8-11ea-b44f-02c6c7bea9ac"
+      },
+      {
+        "Key": "tr:project-name",
+        "Value": "EAP"
+      },
+      {
+        "Key": "tr:environment-type",
+        "Value": "stg"
+      },
+      {
+        "Key": "aws:cloudformation:stack-name",
+        "Value": "eap-stg-infra-AutoscalingGroups-1MZYPD43W94G6"
+      },
+      {
+        "Key": "tr:financial-identifier",
+        "Value": "525603408"
+      }
+    ],
+    "VirtualizationType": "hvm",
+    "CpuOptions": {
+      "CoreCount": 2,
+      "ThreadsPerCore": 2
+    },
+    "CapacityReservationSpecification": {
+      "CapacityReservationPreference": "open"
+    },
+    "HibernationOptions": {
+      "Configured": false
+    },
+    "MetadataOptions": {
+      "State": "applied",
+      "HttpTokens": "optional",
+      "HttpPutResponseHopLimit": 1,
+      "HttpEndpoint": "enabled"
+    },
+    "EnclaveOptions": {
+      "Enabled": false
+    }
+  },
+  {
+    "AmiLaunchIndex": 1,
+    "ImageId": "ami-06566d5310906468f",
+    "InstanceId": "i-0800a71cae7731da2",
+    "InstanceType": "m5.xlarge",
+    "KeyName": "eap-qa",
+    "LaunchTime": "2021-08-12 21:01:26+00:00",
+    "Monitoring": {
+      "State": "disabled"
+    },
+    "Placement": {
+      "AvailabilityZone": "ap-southeast-1a",
+      "GroupName": "",
+      "Tenancy": "default"
+    },
+    "Platform": "windows",
+    "PrivateDnsName": "ip-10-226-9-164.ap-southeast-1.compute.internal",
+    "PrivateIpAddress": "10.226.9.164",
+    "ProductCodes": [],
+    "PublicDnsName": "",
+    "State": {
+      "Code": 16,
+      "Name": "running"
+    },
+    "StateTransitionReason": "",
+    "SubnetId": "subnet-0bdbfa63c579cc59d",
+    "VpcId": "vpc-0a9558d98081cb0b6",
+    "Architecture": "x86_64",
+    "BlockDeviceMappings": [
+      {
+        "DeviceName": "/dev/sda1",
+        "Ebs": {
+          "AttachTime": "2021-08-12 21:01:27+00:00",
+          "DeleteOnTermination": true,
+          "Status": "attached",
+          "VolumeId": "vol-01b37acc2d733323c"
+        }
+      }
+    ],
+    "ClientToken": "8a25ecf0-adc5-533a-6964-fe69805bca36",
+    "EbsOptimized": false,
+    "EnaSupport": true,
+    "Hypervisor": "xen",
+    "IamInstanceProfile": {
+      "Arn": "arn:aws:iam::060725138335:instance-profile/eap-stg-ap-southeast-1-ecs-profile",
+      "Id": "AIPAQ4I4ACOP5IFY3BDDY"
+    },
+    "NetworkInterfaces": [
+      {
+        "Attachment": {
+          "AttachTime": "2021-08-12 21:01:26+00:00",
+          "AttachmentId": "eni-attach-04ed1f9133f075d69",
+          "DeleteOnTermination": true,
+          "DeviceIndex": 0,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "",
+        "Groups": [
+          {
+            "GroupName": "eap-stg-bastion",
+            "GroupId": "sg-0d592020eb0baa50c"
+          },
+          {
+            "GroupName": "eap-stg-windows-cluster",
+            "GroupId": "sg-088dcd24d4173c450"
+          },
+          {
+            "GroupName": "eap-stg-consul-client",
+            "GroupId": "sg-0077ee94ef3d00364"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "06:91:56:1f:82:ea",
+        "NetworkInterfaceId": "eni-03e2cc49c35c8b2e1",
+        "OwnerId": "060725138335",
+        "PrivateDnsName": "ip-10-226-9-164.ap-southeast-1.compute.internal",
+        "PrivateIpAddress": "10.226.9.164",
+        "PrivateIpAddresses": [
+          {
+            "Primary": true,
+            "PrivateDnsName": "ip-10-226-9-164.ap-southeast-1.compute.internal",
+            "PrivateIpAddress": "10.226.9.164"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-0bdbfa63c579cc59d",
+        "VpcId": "vpc-0a9558d98081cb0b6",
+        "InterfaceType": "interface"
+      }
+    ],
+    "RootDeviceName": "/dev/sda1",
+    "RootDeviceType": "ebs",
+    "SecurityGroups": [
+      {
+        "GroupName": "eap-stg-bastion",
+        "GroupId": "sg-0d592020eb0baa50c"
+      },
+      {
+        "GroupName": "eap-stg-windows-cluster",
+        "GroupId": "sg-088dcd24d4173c450"
+      },
+      {
+        "GroupName": "eap-stg-consul-client",
+        "GroupId": "sg-0077ee94ef3d00364"
+      }
+    ],
+    "SourceDestCheck": true,
+    "Tags": [
+      {
+        "Key": "tr:application-asset-insight-id",
+        "Value": "204821"
+      },
+      {
+        "Key": "aws:cloudformation:stack-id",
+        "Value": "arn:aws:cloudformation:ap-southeast-1:060725138335:stack/eap-stg-infra-AutoscalingGroups-1MZYPD43W94G6/8bfd46b0-04a8-11ea-b44f-02c6c7bea9ac"
+      },
+      {
+        "Key": "aws:cloudformation:stack-name",
+        "Value": "eap-stg-infra-AutoscalingGroups-1MZYPD43W94G6"
+      },
+      {
+        "Key": "aws:cloudformation:logical-id",
+        "Value": "ServicesWindows"
+      },
+      {
+        "Key": "eap:environment-type",
+        "Value": "stg"
+      },
+      {
+        "Key": "tr:financial-identifier",
+        "Value": "525603408"
+      },
+      {
+        "Key": "tr:project-name",
+        "Value": "EAP"
+      },
+      {
+        "Key": "eap-cluster",
+        "Value": "eap-stg-services-windows"
+      },
+      {
+        "Key": "tr:environment-type",
+        "Value": "stg"
+      },
+      {
+        "Key": "tr:resource-owner",
+        "Value": "EapDevOps@thomson.com"
+      },
+      {
+        "Key": "Name",
+        "Value": "eap-stg-services-windows"
+      },
+      {
+        "Key": "aws:autoscaling:groupName",
+        "Value": "eap-stg-infra-AutoscalingGroups-1MZYPD43W94G6-ServicesWindows-1Q4V7DPGVXSAT"
+      }
+    ],
+    "VirtualizationType": "hvm",
+    "CpuOptions": {
+      "CoreCount": 2,
+      "ThreadsPerCore": 2
+    },
+    "CapacityReservationSpecification": {
+      "CapacityReservationPreference": "open"
+    },
+    "HibernationOptions": {
+      "Configured": false
+    },
+    "MetadataOptions": {
+      "State": "applied",
+      "HttpTokens": "optional",
+      "HttpPutResponseHopLimit": 1,
+      "HttpEndpoint": "enabled"
+    },
+    "EnclaveOptions": {
+      "Enabled": false
+    }
+  },
+  {
+    "AmiLaunchIndex": 0,
+    "ImageId": "ami-06566d5310906468f",
+    "InstanceId": "i-0bd1b4c6bea72e454",
+    "InstanceType": "m5.xlarge",
+    "KeyName": "eap-qa",
+    "LaunchTime": "2021-08-12 21:01:26+00:00",
+    "Monitoring": {
+      "State": "disabled"
+    },
+    "Placement": {
+      "AvailabilityZone": "ap-southeast-1a",
+      "GroupName": "",
+      "Tenancy": "default"
+    },
+    "Platform": "windows",
+    "PrivateDnsName": "ip-10-226-8-27.ap-southeast-1.compute.internal",
+    "PrivateIpAddress": "10.226.8.27",
+    "ProductCodes": [],
+    "PublicDnsName": "",
+    "State": {
+      "Code": 16,
+      "Name": "running"
+    },
+    "StateTransitionReason": "",
+    "SubnetId": "subnet-0bdbfa63c579cc59d",
+    "VpcId": "vpc-0a9558d98081cb0b6",
+    "Architecture": "x86_64",
+    "BlockDeviceMappings": [
+      {
+        "DeviceName": "/dev/sda1",
+        "Ebs": {
+          "AttachTime": "2021-08-12 21:01:27+00:00",
+          "DeleteOnTermination": true,
+          "Status": "attached",
+          "VolumeId": "vol-04034f0c50745a078"
+        }
+      }
+    ],
+    "ClientToken": "8a25ecf0-adc5-533a-6964-fe69805bca36",
+    "EbsOptimized": false,
+    "EnaSupport": true,
+    "Hypervisor": "xen",
+    "IamInstanceProfile": {
+      "Arn": "arn:aws:iam::060725138335:instance-profile/eap-stg-ap-southeast-1-ecs-profile",
+      "Id": "AIPAQ4I4ACOP5IFY3BDDY"
+    },
+    "NetworkInterfaces": [
+      {
+        "Attachment": {
+          "AttachTime": "2021-08-12 21:01:26+00:00",
+          "AttachmentId": "eni-attach-0761b311b96a02a51",
+          "DeleteOnTermination": true,
+          "DeviceIndex": 0,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "",
+        "Groups": [
+          {
+            "GroupName": "eap-stg-bastion",
+            "GroupId": "sg-0d592020eb0baa50c"
+          },
+          {
+            "GroupName": "eap-stg-windows-cluster",
+            "GroupId": "sg-088dcd24d4173c450"
+          },
+          {
+            "GroupName": "eap-stg-consul-client",
+            "GroupId": "sg-0077ee94ef3d00364"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "06:b9:de:68:1b:f6",
+        "NetworkInterfaceId": "eni-0afdbd70482814a4b",
+        "OwnerId": "060725138335",
+        "PrivateDnsName": "ip-10-226-8-27.ap-southeast-1.compute.internal",
+        "PrivateIpAddress": "10.226.8.27",
+        "PrivateIpAddresses": [
+          {
+            "Primary": true,
+            "PrivateDnsName": "ip-10-226-8-27.ap-southeast-1.compute.internal",
+            "PrivateIpAddress": "10.226.8.27"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-0bdbfa63c579cc59d",
+        "VpcId": "vpc-0a9558d98081cb0b6",
+        "InterfaceType": "interface"
+      }
+    ],
+    "RootDeviceName": "/dev/sda1",
+    "RootDeviceType": "ebs",
+    "SecurityGroups": [
+      {
+        "GroupName": "eap-stg-bastion",
+        "GroupId": "sg-0d592020eb0baa50c"
+      },
+      {
+        "GroupName": "eap-stg-windows-cluster",
+        "GroupId": "sg-088dcd24d4173c450"
+      },
+      {
+        "GroupName": "eap-stg-consul-client",
+        "GroupId": "sg-0077ee94ef3d00364"
+      }
+    ],
+    "SourceDestCheck": true,
+    "Tags": [
+      {
+        "Key": "aws:autoscaling:groupName",
+        "Value": "eap-stg-infra-AutoscalingGroups-1MZYPD43W94G6-ServicesWindows-1Q4V7DPGVXSAT"
+      },
+      {
+        "Key": "aws:cloudformation:stack-name",
+        "Value": "eap-stg-infra-AutoscalingGroups-1MZYPD43W94G6"
+      },
+      {
+        "Key": "Name",
+        "Value": "eap-stg-services-windows"
+      },
+      {
+        "Key": "aws:cloudformation:stack-id",
+        "Value": "arn:aws:cloudformation:ap-southeast-1:060725138335:stack/eap-stg-infra-AutoscalingGroups-1MZYPD43W94G6/8bfd46b0-04a8-11ea-b44f-02c6c7bea9ac"
+      },
+      {
+        "Key": "eap-cluster",
+        "Value": "eap-stg-services-windows"
+      },
+      {
+        "Key": "eap:environment-type",
+        "Value": "stg"
+      },
+      {
+        "Key": "tr:financial-identifier",
+        "Value": "525603408"
+      },
+      {
+        "Key": "tr:resource-owner",
+        "Value": "EapDevOps@thomson.com"
+      },
+      {
+        "Key": "aws:cloudformation:logical-id",
+        "Value": "ServicesWindows"
+      },
+      {
+        "Key": "tr:environment-type",
+        "Value": "stg"
+      },
+      {
+        "Key": "tr:application-asset-insight-id",
+        "Value": "204821"
+      },
+      {
+        "Key": "tr:project-name",
+        "Value": "EAP"
+      }
+    ],
+    "VirtualizationType": "hvm",
+    "CpuOptions": {
+      "CoreCount": 2,
+      "ThreadsPerCore": 2
+    },
+    "CapacityReservationSpecification": {
+      "CapacityReservationPreference": "open"
+    },
+    "HibernationOptions": {
+      "Configured": false
+    },
+    "MetadataOptions": {
+      "State": "applied",
+      "HttpTokens": "optional",
+      "HttpPutResponseHopLimit": 1,
+      "HttpEndpoint": "enabled"
+    },
+    "EnclaveOptions": {
+      "Enabled": false
+    }
+  },
+  {
+    "AmiLaunchIndex": 0,
+    "ImageId": "ami-06a1eec3c11dd7a06",
+    "InstanceId": "i-01a868fd82649d988",
+    "InstanceType": "m5.xlarge",
+    "LaunchTime": "2021-08-13 16:39:05+00:00",
+    "Monitoring": {
+      "State": "disabled"
+    },
+    "Placement": {
+      "AvailabilityZone": "ap-southeast-1a",
+      "GroupName": "",
+      "Tenancy": "default"
+    },
+    "PrivateDnsName": "ip-10-226-8-153.ap-southeast-1.compute.internal",
+    "PrivateIpAddress": "10.226.8.153",
+    "ProductCodes": [],
+    "PublicDnsName": "",
+    "State": {
+      "Code": 16,
+      "Name": "running"
+    },
+    "StateTransitionReason": "",
+    "SubnetId": "subnet-0bdbfa63c579cc59d",
+    "VpcId": "vpc-0a9558d98081cb0b6",
+    "Architecture": "x86_64",
+    "BlockDeviceMappings": [
+      {
+        "DeviceName": "/dev/xvda",
+        "Ebs": {
+          "AttachTime": "2021-08-13 16:39:06+00:00",
+          "DeleteOnTermination": true,
+          "Status": "attached",
+          "VolumeId": "vol-09f5cb08d5f4785d3"
+        }
+      }
+    ],
+    "ClientToken": "3ed5ed01-8679-ad03-3ffc-6d3afe7dc869",
+    "EbsOptimized": false,
+    "EnaSupport": true,
+    "Hypervisor": "xen",
+    "IamInstanceProfile": {
+      "Arn": "arn:aws:iam::060725138335:instance-profile/a204821-turbo-stg-infra-IAMRoles-1526K7WVI6LVP-TurboInstanceProfile-199PS0DRWO1B4",
+      "Id": "AIPAQ4I4ACOPU3NBLEOOX"
+    },
+    "NetworkInterfaces": [
+      {
+        "Attachment": {
+          "AttachTime": "2021-08-13 16:39:05+00:00",
+          "AttachmentId": "eni-attach-07d1d82518d1209bb",
+          "DeleteOnTermination": true,
+          "DeviceIndex": 0,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "",
+        "Groups": [
+          {
+            "GroupName": "a204821-turbo-stg-services",
+            "GroupId": "sg-07277b6cdcaee1d3c"
+          },
+          {
+            "GroupName": "BastionSecurityGroups-fromBastionSSH-TPVFS6DZRCFR",
+            "GroupId": "sg-03ab76f259d4d6839"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "06:90:b0:d5:25:68",
+        "NetworkInterfaceId": "eni-00473c8e5627c2485",
+        "OwnerId": "060725138335",
+        "PrivateDnsName": "ip-10-226-8-153.ap-southeast-1.compute.internal",
+        "PrivateIpAddress": "10.226.8.153",
+        "PrivateIpAddresses": [
+          {
+            "Primary": true,
+            "PrivateDnsName": "ip-10-226-8-153.ap-southeast-1.compute.internal",
+            "PrivateIpAddress": "10.226.8.153"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-0bdbfa63c579cc59d",
+        "VpcId": "vpc-0a9558d98081cb0b6",
+        "InterfaceType": "interface"
+      },
+      {
+        "Attachment": {
+          "AttachTime": "2021-08-13 16:45:12+00:00",
+          "AttachmentId": "eni-attach-0a44f75fd1b5db98b",
+          "DeleteOnTermination": false,
+          "DeviceIndex": 1,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "arn:aws:ecs:ap-southeast-1:060725138335:attachment/51546de8-cc28-4f66-b768-c16acb4ac6ca",
+        "Groups": [
+          {
+            "GroupName": "default",
+            "GroupId": "sg-062b567f7db6c90bd"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "06:1e:f5:7a:e0:02",
+        "NetworkInterfaceId": "eni-04930f81c8c175977",
+        "OwnerId": "060725138335",
+        "PrivateDnsName": "ip-10-226-9-158.ap-southeast-1.compute.internal",
+        "PrivateIpAddress": "10.226.9.158",
+        "PrivateIpAddresses": [
+          {
+            "Primary": true,
+            "PrivateDnsName": "ip-10-226-9-158.ap-southeast-1.compute.internal",
+            "PrivateIpAddress": "10.226.9.158"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-0bdbfa63c579cc59d",
+        "VpcId": "vpc-0a9558d98081cb0b6",
+        "InterfaceType": "trunk"
+      }
+    ],
+    "RootDeviceName": "/dev/xvda",
+    "RootDeviceType": "ebs",
+    "SecurityGroups": [
+      {
+        "GroupName": "a204821-turbo-stg-services",
+        "GroupId": "sg-07277b6cdcaee1d3c"
+      },
+      {
+        "GroupName": "BastionSecurityGroups-fromBastionSSH-TPVFS6DZRCFR",
+        "GroupId": "sg-03ab76f259d4d6839"
+      }
+    ],
+    "SourceDestCheck": true,
+    "Tags": [
+      {
+        "Key": "Name",
+        "Value": "a204821-turbo-stg-services"
+      },
+      {
+        "Key": "tr:project-name",
+        "Value": "turbo"
+      },
+      {
+        "Key": "tr:financial-identifier",
+        "Value": "525603408"
+      },
+      {
+        "Key": "tr:application-asset-insight-id",
+        "Value": "206596"
+      },
+      {
+        "Key": "tr:environment-type",
+        "Value": "nonprod"
+      },
+      {
+        "Key": "aws:autoscaling:groupName",
+        "Value": "a204821-turbo-stg-infra-AutoscalingGroups-11J4JY4XEG660-TurboServicesLinuxASG-1W4LE64D6IRM5"
+      },
+      {
+        "Key": "tr:resource-owner",
+        "Value": "EAPDevOps@thomson.com"
+      },
+      {
+        "Key": "${reqPrefix}-turbo:top-stack-name",
+        "Value": "a204821-turbo-stg-infra"
+      },
+      {
+        "Key": "aws:cloudformation:logical-id",
+        "Value": "TurboServicesLinuxASG"
+      },
+      {
+        "Key": "aws:cloudformation:stack-name",
+        "Value": "a204821-turbo-stg-infra-AutoscalingGroups-11J4JY4XEG660"
+      },
+      {
+        "Key": "aws:cloudformation:stack-id",
+        "Value": "arn:aws:cloudformation:ap-southeast-1:060725138335:stack/a204821-turbo-stg-infra-AutoscalingGroups-11J4JY4XEG660/0a773690-919d-11eb-9440-0aaad78a3afa"
+      }
+    ],
+    "VirtualizationType": "hvm",
+    "CpuOptions": {
+      "CoreCount": 2,
+      "ThreadsPerCore": 2
+    },
+    "CapacityReservationSpecification": {
+      "CapacityReservationPreference": "open"
+    },
+    "HibernationOptions": {
+      "Configured": false
+    },
+    "MetadataOptions": {
+      "State": "applied",
+      "HttpTokens": "optional",
+      "HttpPutResponseHopLimit": 1,
+      "HttpEndpoint": "enabled"
+    },
+    "EnclaveOptions": {
+      "Enabled": false
+    }
+  },
+  {
+    "AmiLaunchIndex": 1,
+    "ImageId": "ami-06a1eec3c11dd7a06",
+    "InstanceId": "i-07c62412278365333",
+    "InstanceType": "m5.xlarge",
+    "LaunchTime": "2021-08-13 16:39:05+00:00",
+    "Monitoring": {
+      "State": "disabled"
+    },
+    "Placement": {
+      "AvailabilityZone": "ap-southeast-1a",
+      "GroupName": "",
+      "Tenancy": "default"
+    },
+    "PrivateDnsName": "ip-10-226-8-48.ap-southeast-1.compute.internal",
+    "PrivateIpAddress": "10.226.8.48",
+    "ProductCodes": [],
+    "PublicDnsName": "",
+    "State": {
+      "Code": 16,
+      "Name": "running"
+    },
+    "StateTransitionReason": "",
+    "SubnetId": "subnet-0bdbfa63c579cc59d",
+    "VpcId": "vpc-0a9558d98081cb0b6",
+    "Architecture": "x86_64",
+    "BlockDeviceMappings": [
+      {
+        "DeviceName": "/dev/xvda",
+        "Ebs": {
+          "AttachTime": "2021-08-13 16:39:06+00:00",
+          "DeleteOnTermination": true,
+          "Status": "attached",
+          "VolumeId": "vol-0d5d966d06b31216c"
+        }
+      }
+    ],
+    "ClientToken": "3ed5ed01-8679-ad03-3ffc-6d3afe7dc869",
+    "EbsOptimized": false,
+    "EnaSupport": true,
+    "Hypervisor": "xen",
+    "IamInstanceProfile": {
+      "Arn": "arn:aws:iam::060725138335:instance-profile/a204821-turbo-stg-infra-IAMRoles-1526K7WVI6LVP-TurboInstanceProfile-199PS0DRWO1B4",
+      "Id": "AIPAQ4I4ACOPU3NBLEOOX"
+    },
+    "NetworkInterfaces": [
+      {
+        "Attachment": {
+          "AttachTime": "2021-08-13 16:39:05+00:00",
+          "AttachmentId": "eni-attach-0fe277ce19bb24ccb",
+          "DeleteOnTermination": true,
+          "DeviceIndex": 0,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "",
+        "Groups": [
+          {
+            "GroupName": "a204821-turbo-stg-services",
+            "GroupId": "sg-07277b6cdcaee1d3c"
+          },
+          {
+            "GroupName": "BastionSecurityGroups-fromBastionSSH-TPVFS6DZRCFR",
+            "GroupId": "sg-03ab76f259d4d6839"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "06:07:d8:5f:2b:c2",
+        "NetworkInterfaceId": "eni-00f36de77ae12f4b6",
+        "OwnerId": "060725138335",
+        "PrivateDnsName": "ip-10-226-8-48.ap-southeast-1.compute.internal",
+        "PrivateIpAddress": "10.226.8.48",
+        "PrivateIpAddresses": [
+          {
+            "Primary": true,
+            "PrivateDnsName": "ip-10-226-8-48.ap-southeast-1.compute.internal",
+            "PrivateIpAddress": "10.226.8.48"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-0bdbfa63c579cc59d",
+        "VpcId": "vpc-0a9558d98081cb0b6",
+        "InterfaceType": "interface"
+      },
+      {
+        "Attachment": {
+          "AttachTime": "2021-08-13 16:45:11+00:00",
+          "AttachmentId": "eni-attach-0cf859c871071ddc6",
+          "DeleteOnTermination": false,
+          "DeviceIndex": 1,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "arn:aws:ecs:ap-southeast-1:060725138335:attachment/a9b6e3a7-ea85-4ea2-8b6c-f6f8a536e671",
+        "Groups": [
+          {
+            "GroupName": "default",
+            "GroupId": "sg-062b567f7db6c90bd"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "06:9a:2c:6f:41:6c",
+        "NetworkInterfaceId": "eni-03a75b30ef448bf2f",
+        "OwnerId": "060725138335",
+        "PrivateDnsName": "ip-10-226-8-65.ap-southeast-1.compute.internal",
+        "PrivateIpAddress": "10.226.8.65",
+        "PrivateIpAddresses": [
+          {
+            "Primary": true,
+            "PrivateDnsName": "ip-10-226-8-65.ap-southeast-1.compute.internal",
+            "PrivateIpAddress": "10.226.8.65"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-0bdbfa63c579cc59d",
+        "VpcId": "vpc-0a9558d98081cb0b6",
+        "InterfaceType": "trunk"
+      }
+    ],
+    "RootDeviceName": "/dev/xvda",
+    "RootDeviceType": "ebs",
+    "SecurityGroups": [
+      {
+        "GroupName": "a204821-turbo-stg-services",
+        "GroupId": "sg-07277b6cdcaee1d3c"
+      },
+      {
+        "GroupName": "BastionSecurityGroups-fromBastionSSH-TPVFS6DZRCFR",
+        "GroupId": "sg-03ab76f259d4d6839"
+      }
+    ],
+    "SourceDestCheck": true,
+    "Tags": [
+      {
+        "Key": "aws:autoscaling:groupName",
+        "Value": "a204821-turbo-stg-infra-AutoscalingGroups-11J4JY4XEG660-TurboServicesLinuxASG-1W4LE64D6IRM5"
+      },
+      {
+        "Key": "aws:cloudformation:stack-id",
+        "Value": "arn:aws:cloudformation:ap-southeast-1:060725138335:stack/a204821-turbo-stg-infra-AutoscalingGroups-11J4JY4XEG660/0a773690-919d-11eb-9440-0aaad78a3afa"
+      },
+      {
+        "Key": "tr:environment-type",
+        "Value": "nonprod"
+      },
+      {
+        "Key": "aws:cloudformation:logical-id",
+        "Value": "TurboServicesLinuxASG"
+      },
+      {
+        "Key": "tr:resource-owner",
+        "Value": "EAPDevOps@thomson.com"
+      },
+      {
+        "Key": "${reqPrefix}-turbo:top-stack-name",
+        "Value": "a204821-turbo-stg-infra"
+      },
+      {
+        "Key": "tr:financial-identifier",
+        "Value": "525603408"
+      },
+      {
+        "Key": "tr:project-name",
+        "Value": "turbo"
+      },
+      {
+        "Key": "tr:application-asset-insight-id",
+        "Value": "206596"
+      },
+      {
+        "Key": "Name",
+        "Value": "a204821-turbo-stg-services"
+      },
+      {
+        "Key": "aws:cloudformation:stack-name",
+        "Value": "a204821-turbo-stg-infra-AutoscalingGroups-11J4JY4XEG660"
+      }
+    ],
+    "VirtualizationType": "hvm",
+    "CpuOptions": {
+      "CoreCount": 2,
+      "ThreadsPerCore": 2
+    },
+    "CapacityReservationSpecification": {
+      "CapacityReservationPreference": "open"
+    },
+    "HibernationOptions": {
+      "Configured": false
+    },
+    "MetadataOptions": {
+      "State": "applied",
+      "HttpTokens": "optional",
+      "HttpPutResponseHopLimit": 1,
+      "HttpEndpoint": "enabled"
+    },
+    "EnclaveOptions": {
+      "Enabled": false
+    }
+  },
+  {
+    "AmiLaunchIndex": 0,
+    "ImageId": "ami-06a1eec3c11dd7a06",
+    "InstanceId": "i-0918e676896b41664",
+    "InstanceType": "m5.xlarge",
+    "LaunchTime": "2021-08-13 16:39:06+00:00",
+    "Monitoring": {
+      "State": "disabled"
+    },
+    "Placement": {
+      "AvailabilityZone": "ap-southeast-1a",
+      "GroupName": "",
+      "Tenancy": "default"
+    },
+    "PrivateDnsName": "ip-10-226-8-26.ap-southeast-1.compute.internal",
+    "PrivateIpAddress": "10.226.8.26",
+    "ProductCodes": [],
+    "PublicDnsName": "",
+    "State": {
+      "Code": 16,
+      "Name": "running"
+    },
+    "StateTransitionReason": "",
+    "SubnetId": "subnet-0bdbfa63c579cc59d",
+    "VpcId": "vpc-0a9558d98081cb0b6",
+    "Architecture": "x86_64",
+    "BlockDeviceMappings": [
+      {
+        "DeviceName": "/dev/xvda",
+        "Ebs": {
+          "AttachTime": "2021-08-13 16:39:07+00:00",
+          "DeleteOnTermination": true,
+          "Status": "attached",
+          "VolumeId": "vol-003db2391e6c789ea"
+        }
+      }
+    ],
+    "ClientToken": "b6c5ed01-8688-deec-5aa9-c3e72a960184",
+    "EbsOptimized": false,
+    "EnaSupport": true,
+    "Hypervisor": "xen",
+    "IamInstanceProfile": {
+      "Arn": "arn:aws:iam::060725138335:instance-profile/a204821-turbo-stg-infra-IAMRoles-1526K7WVI6LVP-TurboInstanceProfile-199PS0DRWO1B4",
+      "Id": "AIPAQ4I4ACOPU3NBLEOOX"
+    },
+    "NetworkInterfaces": [
+      {
+        "Attachment": {
+          "AttachTime": "2021-08-13 16:39:06+00:00",
+          "AttachmentId": "eni-attach-08e6e5b8b9ded5463",
+          "DeleteOnTermination": true,
+          "DeviceIndex": 0,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "",
+        "Groups": [
+          {
+            "GroupName": "a204821-turbo-stg-services",
+            "GroupId": "sg-07277b6cdcaee1d3c"
+          },
+          {
+            "GroupName": "BastionSecurityGroups-fromBastionSSH-TPVFS6DZRCFR",
+            "GroupId": "sg-03ab76f259d4d6839"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "06:47:d7:51:a4:40",
+        "NetworkInterfaceId": "eni-0ff485194c47c0212",
+        "OwnerId": "060725138335",
+        "PrivateDnsName": "ip-10-226-8-26.ap-southeast-1.compute.internal",
+        "PrivateIpAddress": "10.226.8.26",
+        "PrivateIpAddresses": [
+          {
+            "Primary": true,
+            "PrivateDnsName": "ip-10-226-8-26.ap-southeast-1.compute.internal",
+            "PrivateIpAddress": "10.226.8.26"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-0bdbfa63c579cc59d",
+        "VpcId": "vpc-0a9558d98081cb0b6",
+        "InterfaceType": "interface"
+      },
+      {
+        "Attachment": {
+          "AttachTime": "2021-08-13 16:45:11+00:00",
+          "AttachmentId": "eni-attach-00ecb84d30a0328e2",
+          "DeleteOnTermination": false,
+          "DeviceIndex": 1,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "arn:aws:ecs:ap-southeast-1:060725138335:attachment/d65e30d0-2cd6-4fbb-b526-22014729430b",
+        "Groups": [
+          {
+            "GroupName": "default",
+            "GroupId": "sg-062b567f7db6c90bd"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "06:f4:91:6d:e3:5e",
+        "NetworkInterfaceId": "eni-03ab4a1bb1c9a0f05",
+        "OwnerId": "060725138335",
+        "PrivateDnsName": "ip-10-226-9-142.ap-southeast-1.compute.internal",
+        "PrivateIpAddress": "10.226.9.142",
+        "PrivateIpAddresses": [
+          {
+            "Primary": true,
+            "PrivateDnsName": "ip-10-226-9-142.ap-southeast-1.compute.internal",
+            "PrivateIpAddress": "10.226.9.142"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-0bdbfa63c579cc59d",
+        "VpcId": "vpc-0a9558d98081cb0b6",
+        "InterfaceType": "trunk"
+      }
+    ],
+    "RootDeviceName": "/dev/xvda",
+    "RootDeviceType": "ebs",
+    "SecurityGroups": [
+      {
+        "GroupName": "a204821-turbo-stg-services",
+        "GroupId": "sg-07277b6cdcaee1d3c"
+      },
+      {
+        "GroupName": "BastionSecurityGroups-fromBastionSSH-TPVFS6DZRCFR",
+        "GroupId": "sg-03ab76f259d4d6839"
+      }
+    ],
+    "SourceDestCheck": true,
+    "Tags": [
+      {
+        "Key": "tr:financial-identifier",
+        "Value": "525603408"
+      },
+      {
+        "Key": "tr:application-asset-insight-id",
+        "Value": "206596"
+      },
+      {
+        "Key": "Name",
+        "Value": "a204821-turbo-stg-ml"
+      },
+      {
+        "Key": "tr:project-name",
+        "Value": "turbo"
+      },
+      {
+        "Key": "aws:cloudformation:stack-id",
+        "Value": "arn:aws:cloudformation:ap-southeast-1:060725138335:stack/a204821-turbo-stg-infra-AutoscalingGroups-11J4JY4XEG660/0a773690-919d-11eb-9440-0aaad78a3afa"
+      },
+      {
+        "Key": "aws:cloudformation:stack-name",
+        "Value": "a204821-turbo-stg-infra-AutoscalingGroups-11J4JY4XEG660"
+      },
+      {
+        "Key": "${reqPrefix}-turbo:top-stack-name",
+        "Value": "a204821-turbo-stg-infra"
+      },
+      {
+        "Key": "tr:environment-type",
+        "Value": "nonprod"
+      },
+      {
+        "Key": "tr:resource-owner",
+        "Value": "EAPDevOps@thomson.com"
+      },
+      {
+        "Key": "aws:autoscaling:groupName",
+        "Value": "a204821-turbo-stg-infra-AutoscalingGroups-11J4JY4XEG660-TurboMLLinuxASG-F7TUY1QAQJ4B"
+      },
+      {
+        "Key": "aws:cloudformation:logical-id",
+        "Value": "TurboMLLinuxASG"
+      }
+    ],
+    "VirtualizationType": "hvm",
+    "CpuOptions": {
+      "CoreCount": 2,
+      "ThreadsPerCore": 2
+    },
+    "CapacityReservationSpecification": {
+      "CapacityReservationPreference": "open"
+    },
+    "HibernationOptions": {
+      "Configured": false
+    },
+    "MetadataOptions": {
+      "State": "applied",
+      "HttpTokens": "optional",
+      "HttpPutResponseHopLimit": 1,
+      "HttpEndpoint": "enabled"
+    },
+    "EnclaveOptions": {
+      "Enabled": false
+    }
+  },
+  {
+    "AmiLaunchIndex": 0,
+    "ImageId": "ami-06a1eec3c11dd7a06",
+    "InstanceId": "i-0b0fe0b0c3891b157",
+    "InstanceType": "m5.2xlarge",
+    "KeyName": "eap-qa",
+    "LaunchTime": "2021-09-01 09:15:20+00:00",
+    "Monitoring": {
+      "State": "disabled"
+    },
+    "Placement": {
+      "AvailabilityZone": "ap-southeast-1a",
+      "GroupName": "",
+      "Tenancy": "default"
+    },
+    "PrivateDnsName": "ip-10-226-8-163.ap-southeast-1.compute.internal",
+    "PrivateIpAddress": "10.226.8.163",
+    "ProductCodes": [],
+    "PublicDnsName": "",
+    "State": {
+      "Code": 16,
+      "Name": "running"
+    },
+    "StateTransitionReason": "",
+    "SubnetId": "subnet-0bdbfa63c579cc59d",
+    "VpcId": "vpc-0a9558d98081cb0b6",
+    "Architecture": "x86_64",
+    "BlockDeviceMappings": [
+      {
+        "DeviceName": "/dev/xvda",
+        "Ebs": {
+          "AttachTime": "2021-08-13 19:20:12+00:00",
+          "DeleteOnTermination": true,
+          "Status": "attached",
+          "VolumeId": "vol-05cef705293636597"
+        }
+      }
+    ],
+    "ClientToken": "3645ed03-d471-09d0-c0ab-02972d78007e",
+    "EbsOptimized": false,
+    "EnaSupport": true,
+    "Hypervisor": "xen",
+    "IamInstanceProfile": {
+      "Arn": "arn:aws:iam::060725138335:instance-profile/a204821-eapww-stg-infra-IAMRoles-7HU8YA79N82-WorkerInstanceProfile-1JWD2TMVYIAZX",
+      "Id": "AIPAQ4I4ACOPRMG7SVIEM"
+    },
+    "NetworkInterfaces": [
+      {
+        "Attachment": {
+          "AttachTime": "2021-08-13 19:20:12+00:00",
+          "AttachmentId": "eni-attach-07955454b0bc6697d",
+          "DeleteOnTermination": true,
+          "DeviceIndex": 0,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "",
+        "Groups": [
+          {
+            "GroupName": "a204821-eapww-stg-trustedinstnace",
+            "GroupId": "sg-04dde3097deb5ca51"
+          },
+          {
+            "GroupName": "a204821-eapww-stg-outbound",
+            "GroupId": "sg-0f6075363724ffce1"
+          },
+          {
+            "GroupName": "BastionSecurityGroups-fromBastionSSH-TPVFS6DZRCFR",
+            "GroupId": "sg-03ab76f259d4d6839"
+          },
+          {
+            "GroupName": "eap-stg-consul-client",
+            "GroupId": "sg-0077ee94ef3d00364"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "06:a4:ec:06:3b:e4",
+        "NetworkInterfaceId": "eni-05923246bd9e866ce",
+        "OwnerId": "060725138335",
+        "PrivateDnsName": "ip-10-226-8-163.ap-southeast-1.compute.internal",
+        "PrivateIpAddress": "10.226.8.163",
+        "PrivateIpAddresses": [
+          {
+            "Primary": true,
+            "PrivateDnsName": "ip-10-226-8-163.ap-southeast-1.compute.internal",
+            "PrivateIpAddress": "10.226.8.163"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-0bdbfa63c579cc59d",
+        "VpcId": "vpc-0a9558d98081cb0b6",
+        "InterfaceType": "interface"
+      },
+      {
+        "Attachment": {
+          "AttachTime": "2021-08-13 19:26:17+00:00",
+          "AttachmentId": "eni-attach-02fc1b36c645bcdaf",
+          "DeleteOnTermination": false,
+          "DeviceIndex": 1,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "arn:aws:ecs:ap-southeast-1:060725138335:attachment/c76223d0-0579-4e3c-a471-72405265eade",
+        "Groups": [
+          {
+            "GroupName": "default",
+            "GroupId": "sg-062b567f7db6c90bd"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "06:af:a6:fb:1a:46",
+        "NetworkInterfaceId": "eni-04d02d3d797daf214",
+        "OwnerId": "060725138335",
+        "PrivateDnsName": "ip-10-226-8-61.ap-southeast-1.compute.internal",
+        "PrivateIpAddress": "10.226.8.61",
+        "PrivateIpAddresses": [
+          {
+            "Primary": true,
+            "PrivateDnsName": "ip-10-226-8-61.ap-southeast-1.compute.internal",
+            "PrivateIpAddress": "10.226.8.61"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-0bdbfa63c579cc59d",
+        "VpcId": "vpc-0a9558d98081cb0b6",
+        "InterfaceType": "trunk"
+      }
+    ],
+    "RootDeviceName": "/dev/xvda",
+    "RootDeviceType": "ebs",
+    "SecurityGroups": [
+      {
+        "GroupName": "a204821-eapww-stg-trustedinstnace",
+        "GroupId": "sg-04dde3097deb5ca51"
+      },
+      {
+        "GroupName": "a204821-eapww-stg-outbound",
+        "GroupId": "sg-0f6075363724ffce1"
+      },
+      {
+        "GroupName": "BastionSecurityGroups-fromBastionSSH-TPVFS6DZRCFR",
+        "GroupId": "sg-03ab76f259d4d6839"
+      },
+      {
+        "GroupName": "eap-stg-consul-client",
+        "GroupId": "sg-0077ee94ef3d00364"
+      }
+    ],
+    "SourceDestCheck": true,
+    "Tags": [
+      {
+        "Key": "tr:project-name",
+        "Value": "EAP"
+      },
+      {
+        "Key": "tr:financial-identifier",
+        "Value": "525603408"
+      },
+      {
+        "Key": "aws:cloudformation:stack-id",
+        "Value": "arn:aws:cloudformation:ap-southeast-1:060725138335:stack/a204821-eapww-stg-infra-AutoscalingGroups-FLNM48942HWD/0a96b680-7543-11eb-9df8-0a36958102b6"
+      },
+      {
+        "Key": "tr:disable-fireeye",
+        "Value": "True"
+      },
+      {
+        "Key": "aws:cloudformation:logical-id",
+        "Value": "WWWorkerLinux"
+      },
+      {
+        "Key": "tr:resource-owner",
+        "Value": "EAPDevOps@thomson.com"
+      },
+      {
+        "Key": "tr:application-asset-insight-id",
+        "Value": "204821"
+      },
+      {
+        "Key": "eap:environment-type",
+        "Value": "stg"
+      },
+      {
+        "Key": "a204821-eapww-cluster",
+        "Value": "a204821-eapww-stg-wwworker"
+      },
+      {
+        "Key": "Name",
+        "Value": "a204821-eapww-stg-wwworker"
+      },
+      {
+        "Key": "tr:service-name",
+        "Value": "WW"
+      },
+      {
+        "Key": "tr:environment-type",
+        "Value": "nonprod"
+      },
+      {
+        "Key": "aws:cloudformation:stack-name",
+        "Value": "a204821-eapww-stg-infra-AutoscalingGroups-FLNM48942HWD"
+      },
+      {
+        "Key": "a204821-eapww:top-stack-name",
+        "Value": "a204821-eapww-stg-infra"
+      },
+      {
+        "Key": "aws:autoscaling:groupName",
+        "Value": "a204821-eapww-stg-infra-AutoscalingGroups-FLNM48942HWD-WWWorkerLinux-7SEDL7TTSL8E"
+      }
+    ],
+    "VirtualizationType": "hvm",
+    "CpuOptions": {
+      "CoreCount": 4,
+      "ThreadsPerCore": 2
+    },
+    "CapacityReservationSpecification": {
+      "CapacityReservationPreference": "open"
+    },
+    "HibernationOptions": {
+      "Configured": false
+    },
+    "MetadataOptions": {
+      "State": "applied",
+      "HttpTokens": "optional",
+      "HttpPutResponseHopLimit": 1,
+      "HttpEndpoint": "enabled"
+    },
+    "EnclaveOptions": {
+      "Enabled": false
+    }
+  },
+  {
+    "AmiLaunchIndex": 0,
+    "ImageId": "ami-0e8d6fe7310b7808b",
+    "InstanceId": "i-0f16a9693245e0403",
+    "InstanceType": "t3.small",
+    "LaunchTime": "2021-08-13 09:10:28+00:00",
+    "Monitoring": {
+      "State": "disabled"
+    },
+    "Placement": {
+      "AvailabilityZone": "ap-southeast-1c",
+      "GroupName": "",
+      "Tenancy": "default"
+    },
+    "PrivateDnsName": "ip-10-226-13-89.ap-southeast-1.compute.internal",
+    "PrivateIpAddress": "10.226.13.89",
+    "ProductCodes": [],
+    "PublicDnsName": "",
+    "State": {
+      "Code": 16,
+      "Name": "running"
+    },
+    "StateTransitionReason": "",
+    "SubnetId": "subnet-043667abb41348af6",
+    "VpcId": "vpc-0a9558d98081cb0b6",
+    "Architecture": "x86_64",
+    "BlockDeviceMappings": [
+      {
+        "DeviceName": "/dev/xvda",
+        "Ebs": {
+          "AttachTime": "2021-08-13 09:10:28+00:00",
+          "DeleteOnTermination": true,
+          "Status": "attached",
+          "VolumeId": "vol-06074729fbdc6cea7"
+        }
+      }
+    ],
+    "ClientToken": "eb65ecfb-1b89-4b10-6dd3-d18b6158d805",
+    "EbsOptimized": false,
+    "EnaSupport": true,
+    "Hypervisor": "xen",
+    "IamInstanceProfile": {
+      "Arn": "arn:aws:iam::060725138335:instance-profile/tr-deploy-bastion-iam-role-bastionEc2InstanceProfile-J0SE0NNK5DTH",
+      "Id": "AIPAIYPN5YSR73FDXORZE"
+    },
+    "NetworkInterfaces": [
+      {
+        "Attachment": {
+          "AttachTime": "2021-08-13 09:10:28+00:00",
+          "AttachmentId": "eni-attach-0f15a2e66bb162a1a",
+          "DeleteOnTermination": true,
+          "DeviceIndex": 0,
+          "Status": "attached",
+          "NetworkCardIndex": 0
+        },
+        "Description": "",
+        "Groups": [
+          {
+            "GroupName": "BastionSecurityGroups-bastionHost-1JXNOU070D2AF",
+            "GroupId": "sg-06bad4af236de39af"
+          }
+        ],
+        "Ipv6Addresses": [],
+        "MacAddress": "0a:39:e5:c1:48:50",
+        "NetworkInterfaceId": "eni-02320bcb842f74852",
+        "OwnerId": "060725138335",
+        "PrivateDnsName": "ip-10-226-13-89.ap-southeast-1.compute.internal",
+        "PrivateIpAddress": "10.226.13.89",
+        "PrivateIpAddresses": [
+          {
+            "Primary": true,
+            "PrivateDnsName": "ip-10-226-13-89.ap-southeast-1.compute.internal",
+            "PrivateIpAddress": "10.226.13.89"
+          }
+        ],
+        "SourceDestCheck": true,
+        "Status": "in-use",
+        "SubnetId": "subnet-043667abb41348af6",
+        "VpcId": "vpc-0a9558d98081cb0b6",
+        "InterfaceType": "interface"
+      }
+    ],
+    "RootDeviceName": "/dev/xvda",
+    "RootDeviceType": "ebs",
+    "SecurityGroups": [
+      {
+        "GroupName": "BastionSecurityGroups-bastionHost-1JXNOU070D2AF",
+        "GroupId": "sg-06bad4af236de39af"
+      }
+    ],
+    "SourceDestCheck": true,
+    "Tags": [
+      {
+        "Key": "aws:cloudformation:stack-id",
+        "Value": "arn:aws:cloudformation:ap-southeast-1:060725138335:stack/tr-deploy-bastion-service/210d1790-c227-11e9-bb47-0285c5482420"
+      },
+      {
+        "Key": "tr:environment-type",
+        "Value": "PRE-PRODUCTION"
+      },
+      {
+        "Key": "aws:cloudformation:logical-id",
+        "Value": "TrBastionASG"
+      },
+      {
+        "Key": "aws:ec2launchtemplate:id",
+        "Value": "lt-057010cc8fdf95cfc"
+      },
+      {
+        "Key": "tr:application-asset-insight-id",
+        "Value": "205257"
+      },
+      {
+        "Key": "aws:autoscaling:groupName",
+        "Value": "tr-deploy-bastion-service-TrBastionASG-5DGQ55RWH4J6"
+      },
+      {
+        "Key": "aws:ec2launchtemplate:version",
+        "Value": "20"
+      },
+      {
+        "Key": "tr:service-name",
+        "Value": "TR-Bastion-v2"
+      },
+      {
+        "Key": "aws:cloudformation:stack-name",
+        "Value": "tr-deploy-bastion-service"
+      },
+      {
+        "Key": "tr:resource-owner",
+        "Value": "ENTERPRISE-CLOUD-OPS-TR@thomsonreuters.com"
+      },
+      {
+        "Key": "Name",
+        "Value": "TrBastionASG"
+      },
+      {
+        "Key": "tr:financial-identifier",
+        "Value": "0000066497"
+      },
+      {
+        "Key": "datadog-account",
+        "Value": "dco-shared-services"
+      }
+    ],
+    "VirtualizationType": "hvm",
+    "CpuOptions": {
+      "CoreCount": 1,
+      "ThreadsPerCore": 2
+    },
+    "CapacityReservationSpecification": {
+      "CapacityReservationPreference": "open"
+    },
+    "HibernationOptions": {
+      "Configured": false
+    },
+    "MetadataOptions": {
+      "State": "applied",
+      "HttpTokens": "optional",
+      "HttpPutResponseHopLimit": 1,
+      "HttpEndpoint": "enabled"
+    },
+    "EnclaveOptions": {
+      "Enabled": false
+    }
+  }
+]
