@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="dragging.js"></script>
+
+<link rel="stylesheet" href="conmgr.css" media="screen" type="text/css">
+
+<html>
+	<body>
+		<div id='canvasdiv1' class='dwindow'>
+			Apa
+		</div>
+		<div id='canvasdiv2' class='dwindow'>
+			Apa
+		</div>
+		<div id='canvasdiv3' class='dwindow'>
+			Apa
+		</div>
+		<div id='canvasdiv4' class='dwindow'>
+			Apa
+		</div>
+   	</body>
+	<script>
+		$('#canvasdiv1').css({"top":"20px","left":"20px","background-color":"#222222"})
+		$('#canvasdiv2').css({"top":"40px","left":"40px","background-color":"#331111"})
+		$('#canvasdiv3').css({"top":"60px","left":"60px","background-color":"#113311"})
+		$('#canvasdiv4').css({"top":"80px","left":"80px","background-color":"#111133"})
+		candrag($('#canvasdiv1'));
+		candrag($('#canvasdiv2'));
+		candrag($('#canvasdiv3'));
+		candrag($('#canvasdiv4'));
+		$('#canvasdiv1').on('click',function(){
+			draggers_cascade(windowlist)
+		});
+	</script>
+</html>
