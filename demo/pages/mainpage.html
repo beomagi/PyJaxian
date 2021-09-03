@@ -6,6 +6,7 @@
         height: 100%;
         margin: 0px;
     }
+
 	tr:hover {background-color: yellow;}
 	.default {cursor: pointer;}
     .floaterdiv {
@@ -13,13 +14,14 @@
         width: 50%;
         height: 50%;
         padding: 1px;
-        margin: 0px;
+        margin: 1px;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
         border: 1px solid blue;
         font-family: "Lucida Console", "Courier New", monospace;
         font-size: 0.8em;
+        background-color: #fbfdef;
 	overflow: auto;
     }
 
@@ -145,7 +147,8 @@
 
 <script type="text/javascript">
 
-    function divupdate(request,divname,prefix="",postfix="",recurring=0){
+    function DivUpdateContinuous(request,divname,prefix="",postfix="",recurring=0){
+        //continually update a div every "recurring" milliseconds
 		if (divname !== null) {
 			var xreq = new XMLHttpRequest();
 			xreq.onreadystatechange = function () {
@@ -157,22 +160,21 @@
 							divid=document.getElementById(divname);
 							if (divid !== null) {
 								divid.innerHTML = prefix+xreq.responseText+postfix;
-							}
+                                if (recurring >= 1000) {			
+					                setTimeout(function(){ divupdate(request,divname,prefix,postfix,recurring)},recurring);
+				                }
+			                }						
 						}
 					}
 				}
-			};
+			}
 			xreq.open("GET",request,true);
 			xreq.send();
-			if (recurring >= 1000) {
-				if (divid !== null) {
-					setTimeout(function(){ divupdate(request,divname,prefix,postfix,recurring)},recurring);
-				}
-			}
 		}
     }
 
-    function svrupdate(request){
+    function SendAndCallback(request,callbackfunction=null){
+        //to sent a request to the server and NOT trigger and run a callback function
 		var xreq = new XMLHttpRequest();
 		xreq.onreadystatechange = function () {
 			if(xreq.readyState === XMLHttpRequest.DONE) {
@@ -180,32 +182,15 @@
 				if (status === 0 || (status >= 200 && status < 400)) {
 					console.log(xreq.responseText);
 				}
+                if (callbackfunction!==null){
+                    callbackfunction(xreq.responseText);
+                }
 			}
 		};
 		xreq.open("GET",request,true);
 		xreq.send();
     }
 
-
-    function xmlreq(requestthis,opennew=false, refresh=0) {
-    	if (opennew===true) {
-	    	var newdiv=document.createElement('div');
-	    	idnumber=Math.floor(Math.random()*16777215).toString(16);
-	    	newdiv.id = 'div'+idnumber;
-	    	newdiv.className = "floaterdiv";
-	    	closebutton="<div class=\"smol2\" onclick=document.getElementById(\""+newdiv.id+"\").remove()>[Close]</div>";
-			divupdate(requestthis,newdiv.id,prefix=closebutton,"",recurring=refresh)
-	    	document.body.appendChild(newdiv)
-   		} else {
-			svrupdate(requestthis)
-		}
-	}
-
-
-    function updatedetails(){
-	  divupdate("getmaindetails","maindetails")
-      setTimeout(updatedetails, 2000);
-    }
 </script>
 
 
