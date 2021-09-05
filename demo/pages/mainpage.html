@@ -8,67 +8,67 @@
 <script src="dragging.js"></script>
 <script type="text/javascript">
 
-    function DivUpdateContinuous(request,divname,prefix="",postfix="",recurring=0){
+    function DivUpdateContinuous(request,divname,recurring=0){
         //continually update a div every "recurring" milliseconds
-		if (divname !== null) {
-			var xreq = new XMLHttpRequest();
-			xreq.onreadystatechange = function () {
-				if(xreq.readyState === XMLHttpRequest.DONE) {
-					var status = xreq.status;
-					if (status === 0 || (status >= 200 && status < 400)) {
-						console.log(xreq.responseText);
-						if (divname > "") {
-							divid=document.getElementById(divname);
-							if (divid !== null) {
-								divid.innerHTML = prefix+xreq.responseText+postfix;
-                                if (recurring >= 1000) {			
-					                setTimeout(function(){ divupdate(request,divname,prefix,postfix,recurring)},recurring);
-				                }
-			                }						
-						}
-					}
-				}
-			}
-			xreq.open("GET",request,true);
-			xreq.send();
-		}
+        if (divname !== null) {
+            var xreq = new XMLHttpRequest();
+            xreq.onreadystatechange = function () {
+                if(xreq.readyState === XMLHttpRequest.DONE) {
+                    var status = xreq.status;
+                    if (status === 0 || (status >= 200 && status < 400)) {
+                        console.log(xreq.responseText);
+                        if (divname > "") {
+                            divid=document.getElementById(divname);
+                            if (divid !== null) {
+                                divid.innerHTML = xreq.responseText;
+                                if (recurring >= 1000) {            
+                                    setTimeout(function(){ divupdate(request,divname,recurring)},recurring);
+                                }
+                            }                        
+                        }
+                    }
+                }
+            }
+            xreq.open("GET",request,true);
+            xreq.send();
+        }
     }
 
     function SendAndCallback(request,callbackfunction=null){
         //to sent a request to the server and NOT trigger and run a callback function
-		var xreq = new XMLHttpRequest();
-		xreq.onreadystatechange = function () {
-			if(xreq.readyState === XMLHttpRequest.DONE) {
-				var status = xreq.status;
-				if (status === 0 || (status >= 200 && status < 400)) {
-					console.log(xreq.responseText);
-				}
+        var xreq = new XMLHttpRequest();
+        xreq.onreadystatechange = function () {
+            if(xreq.readyState === XMLHttpRequest.DONE) {
+                var status = xreq.status;
+                if (status === 0 || (status >= 200 && status < 400)) {
+                    console.log(xreq.responseText);
+                }
                 if (callbackfunction!==null){
                     callbackfunction(xreq.responseText);
                 }
-			}
-		};
-		xreq.open("GET",request,true);
-		xreq.send();
+            }
+        };
+        xreq.open("GET",request,true);
+        xreq.send();
     }
 
 </script>
 
 
-<body onload="candrag($('#alwaysthere'))">
+<body onload="candrag2('alwaysthere','alwaysthere_drag')">
+    <div class="cascadediv" onclick="draggers_cascade()">C</div>
     <div id="alwaysthere" class="floaterdiv">
-        <div class="smolhalf" onclick="xmlreq('loginnonprod',true)">login nonprod</div>
-        <div class="smolhalf" onclick="xmlreq('loginprod',true)">login prod</div>
-        <div class="smolthird" onclick="xmlreq('setregion_amers',false)">us-east-1</div>
-        <div class="smolthird" onclick="xmlreq('setregion_emea',false)">eu-west-1</div>
-        <div class="smolthird" onclick="xmlreq('setregion_sing',false)">ap-southeast-1</div>
-
-        <div class="smolhalf" onclick="xmlreq('setprofile_preprod',false)">NON-Prod</div>
-        <div class="smolhalf" onclick="xmlreq('setprofile_realprod',true)">PRODUCTION</div>
-
-        <div class="smolhalf" onclick="xmlreq('ec2',true)">EC2 Info</div>
-        <div class="smolhalf" onclick="xmlreq('alarm',true)">Alarms</div>
-	<div id="maindetails" class="details">details</div>
+    <div class="titlebar" id="alwaysthere_drag">Main Menu</div>
+    <div class="smolhalf" onclick="newDivWindow('test','newtitle')">login nonprod</div>
+    <div class="smolhalf" onclick="xmlreq('loginprod',true)">login prod</div>
+    <div class="smolthird" onclick="xmlreq('setregion_amers',false)">us-east-1</div>
+    <div class="smolthird" onclick="xmlreq('setregion_emea',false)">eu-west-1</div>
+    <div class="smolthird" onclick="xmlreq('setregion_sing',false)">ap-southeast-1</div>
+    <div class="smolhalf" onclick="xmlreq('setprofile_preprod',false)">NON-Prod</div>
+    <div class="smolhalf" onclick="xmlreq('setprofile_realprod',true)">PRODUCTION</div>
+    <div class="smolhalf" onclick="xmlreq('ec2',true)">EC2 Info</div>
+    <div class="smolhalf" onclick="xmlreq('alarm',true)">Alarms</div>
+    <div id="maindetails" class="details">details</div>
     </div>
 </body>
 
