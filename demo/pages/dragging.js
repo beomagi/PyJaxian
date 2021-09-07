@@ -92,14 +92,26 @@ function draggers_cascade(){
     dragscount=windowlist.length
     for (var i=0;i<windowcount;i++){
             $("#"+windowlist[i]).css('z-index',1);
-            xpoint=(1+i*20) % document.body.clientWidth;
-            ypoint=(1+i*20) % document.body.clientHeight;
+            var increment=Math.min(document.body.clientWidth,document.body.clientHeight);
+            xpoint=(1+i*increment*0.05) % (document.body.clientWidth/2);
+            ypoint=(1+i*increment*0.05) % (document.body.clientHeight/2);
             $("#"+windowlist[i]).animate({ top: ypoint, left: xpoint },250);
     }
 }
 
 
 function newDivWindow(idname,titletext){
+    
+    if (windowlist.includes(idname)) {
+        var switchto = $("#"+idname);
+        oldz=switchto.css('z-index');
+        if (oldz < __dmaxz) {
+            __dmaxz+=1;
+            switchto.css('z-index',__dmaxz);
+        };
+        return;
+    };
+
     var tempdiv = document.createElement("div");
     tempdiv.id = idname;
     tempdiv.className = "floaterdiv";
@@ -114,10 +126,15 @@ function newDivWindow(idname,titletext){
     tempdivX.id = idname+"_close";
     tempdivX.className = "titleX"
     tempdivX.innerHTML = "X";
-    tempdivX.onclick = function(){document.getElementById(idname).remove();};
+    tempdivX.onclick = function(){document.getElementById(idname).remove();cleanNullWindows();};
+
+    var tempdivcontent=document.createElement("div");
+    tempdivcontent.id = idname+"_content";
+    tempdivcontent.className = "windowcontent";
 
     tempdiv.appendChild(tempdivtitle);
     tempdiv.appendChild(tempdivX);
+    tempdiv.appendChild(tempdivcontent);
     document.body.appendChild(tempdiv);
     tempdiv.style.top="10%";
     tempdiv.style.left="10%";

@@ -3,7 +3,7 @@ html, body {
     height: 100%;
     margin: 0px;
     cursor: pointer;
-	background-color: #001030;
+	background-color: #151005;
 	overflow : hidden;
 }
 
@@ -19,13 +19,13 @@ tr:hover {background-color: yellow;}
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    border: 1px solid #000000;
+    border: 1px solid #ffffff;
     font-family: "Lucida Console", "Courier New", monospace;
     font-size: 0.8em;
-    background-color: #fbfdef;
+    background-color: #204060;
 	overflow: auto;
+    border-radius: 10px;
 }
-
 
 .titlebar {
     float: left;
@@ -34,12 +34,13 @@ tr:hover {background-color: yellow;}
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    border: 1px solid green;
-    padding: 1px;
+    border: 0px;
+    padding: 7px;
     margin: 0px;
-	background-color: #1020ff;
+	background-color: #1020cf;
 	color: #ffffff;
 	text-align: center;
+    font-weight:700;
 }
 .titlebar:hover {
 	background-color: #3070ff;
@@ -52,17 +53,35 @@ tr:hover {background-color: yellow;}
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    border: 1px solid green;
-    padding: 1px;
+    border: 0px;
+    padding: 7px;
     margin: 0px;
 	background-color: #f0200f;
 	color: #002040;
 	text-align: center;
+    font-weight: 900;
 }
 .titleX:hover {
 	background-color: #f06090;
 }
 
+.windowcontent {
+    float: right;
+    width: 100%;
+    height: 94%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 0px;
+    padding: 1px;
+    margin: 0px;
+	background-color: #000010;
+	color: #aabbff;
+	text-align: left;
+}
+.windowcontent:hover {
+	background-color: #080815;
+}
 
 .cascadediv {
     width: 2%;
@@ -104,40 +123,46 @@ background-color: #abcdef;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    border: 1px solid cyan;
+    border: 0px;
     font-family: "Lucida Console", "Courier New", monospace;
     font-size: 0.8em;
-background-color: #001122;
-color: #ffffff;
+    background-color: #001122;
+    color: #ffffff;
 }
 
 
 .smolhalf {
     float: left;
-    width: 50%;
-    height: 8%;
+    width: 49%;
+    height: 6%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    border: 1px solid green;
-    padding: 1px;
-    margin: 0px;
+    border: 0px;
+    padding: 8px;
+    margin: 0.5%;
+    border-radius: 10px;
+    background-color: #a0c0f0;
+    font-weight: 900;
 }
 .smolhalf:hover {
-    background-color: yellow;
+    background-color: #a0ffd0;
 }
 
 .smolthird {
     float: left;
-    width: 33.33%;
-height: 8%;
+    width: 32.33%;
+    height: 6%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    border: 1px solid green;
-    padding: 1px;
-    margin: 0px;
+    border: 0px;
+    padding: 8px;
+    margin: 0.5%;
+    border-radius: 10px;
+    background-color: #a0c0f0;
+    font-weight: 900;
 }
 .smolthird:hover {
-    background-color: yellow;
+    background-color: #a0ffd0;
 }
