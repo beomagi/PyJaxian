@@ -11,6 +11,7 @@ var __draggingnow=0;
 var __dragitem;
 
 var windowlist = new Array();
+var wininfo = new Object();
 var windowcount = 0;
 var newwinx=10;
 var newwiny=10;
@@ -95,7 +96,14 @@ function draggers_cascade(){
             var increment=Math.min(document.body.clientWidth,document.body.clientHeight);
             xpoint=(1+i*increment*0.05) % (document.body.clientWidth/2);
             ypoint=(1+i*increment*0.05) % (document.body.clientHeight/2);
-            $("#"+windowlist[i]).animate({ top: ypoint, left: xpoint },250);
+	    if ($("#"+windowlist[i])[0].style.width==='100%'){
+                $("#"+windowlist[i]).animate({ top: ypoint, left: xpoint, 
+		width:wininfo[windowlist[i]].width,
+		height:wininfo[windowlist[i]].height
+		},250);
+	    } else {
+                $("#"+windowlist[i]).animate({ top: ypoint, left: xpoint },250);
+	    }
     }
 }
 
@@ -120,7 +128,36 @@ function newDivWindow(idname,titletext){
     tempdivtitle.id = idname+"_drag";
     tempdivtitle.className = "titlebar";
     tempdivtitle.innerHTML = titletext;
-    tempdivtitle.style.width = '97%';
+    tempdivtitle.style.width = '93.99%';
+    tcol_r=String(Math.floor(Math.random()*8));
+    tcol_g=String(Math.floor(Math.random()*8));
+    tcol_b=String(Math.floor(Math.random()*8));
+    t_col="#"+tcol_r+"0"+tcol_g+"0"+tcol_b+"0";
+    tempdivtitle.style.backgroundColor = t_col;
+
+    var tempdivF = document.createElement("div");
+    tempdivF.id = idname+"_full";
+    tempdivF.className = "titleF"
+    tempdivF.innerHTML = "0";
+    tempdivF.onclick = function(){
+	if ($("#"+idname)[0].style.width==='100%'){
+            $("#"+idname).animate({
+	        top:wininfo[idname].top,
+		left: wininfo[idname].left,
+		width:wininfo[idname].width,
+		height:wininfo[idname].height 
+	    },250);
+	} else {
+	    wininfo[idname]={
+                "left":$("#"+idname)[0].style.left,
+                "top":$("#"+idname)[0].style.top,
+                "width":$("#"+idname).width(),
+                "height":$("#"+idname).height()
+	    };
+            $("#"+idname).animate({ top: 0, left: 0, width:'100%',height:'100%' },250);
+	}
+	cleanNullWindows();
+    };
 
     var tempdivX = document.createElement("div");
     tempdivX.id = idname+"_close";
@@ -132,6 +169,7 @@ function newDivWindow(idname,titletext){
     tempdivcontent.id = idname+"_content";
     tempdivcontent.className = "windowcontent";
 
+    tempdiv.appendChild(tempdivF);
     tempdiv.appendChild(tempdivtitle);
     tempdiv.appendChild(tempdivX);
     tempdiv.appendChild(tempdivcontent);

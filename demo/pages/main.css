@@ -3,8 +3,8 @@ html, body {
     height: 100%;
     margin: 0px;
     cursor: pointer;
-	background-color: #151005;
-	overflow : hidden;
+    background-color: #151005;
+    overflow : hidden;
 }
 
 tr:hover {background-color: yellow;}
@@ -14,16 +14,16 @@ tr:hover {background-color: yellow;}
     position: absolute;
     width: 50%;
     height: 50%;
-    padding: 1px;
-    margin: 1px;
+    padding: 0px;
+    margin: 0px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    border: 1px solid #ffffff;
+    border: 0px solid #ffffff;
     font-family: "Lucida Console", "Courier New", monospace;
     font-size: 0.8em;
     background-color: #204060;
-	overflow: auto;
+    overflow: hidden;
     border-radius: 10px;
 }
 
@@ -35,34 +35,53 @@ tr:hover {background-color: yellow;}
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     border: 0px;
-    padding: 7px;
+    padding: 4px;
     margin: 0px;
-	background-color: #1020cf;
-	color: #ffffff;
-	text-align: center;
+    background-color: #1020cf;
+    color: #ffffff;
+    text-align: center;
     font-weight:700;
 }
 .titlebar:hover {
-	background-color: #3070ff;
+    background-color: #3070ff;
 }
 
-.titleX {
-    float: right;
+.titleF {
+    float: left;
     width: 3%;
     height: 6%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     border: 0px;
-    padding: 7px;
+    padding: 4px;
     margin: 0px;
-	background-color: #f0200f;
-	color: #002040;
-	text-align: center;
+    background-color: #55f00f;
+    color: #002040;
+    text-align: center;
+    font-weight: 900;
+}
+.titleF:hover {
+    background-color: #f06090;
+}
+
+.titleX {
+    float: left;
+    width: 3%;
+    height: 6%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 0px;
+    padding: 4px;
+    margin: 0px;
+    background-color: #f0200f;
+    color: #002040;
+    text-align: center;
     font-weight: 900;
 }
 .titleX:hover {
-	background-color: #f06090;
+    background-color: #f06090;
 }
 
 .windowcontent {
@@ -75,30 +94,30 @@ tr:hover {background-color: yellow;}
     border: 0px;
     padding: 1px;
     margin: 0px;
-	background-color: #000010;
-	color: #aabbff;
-	text-align: left;
+    background-color: #000010;
+    color: #aabbff;
+    text-align: left;
 }
 .windowcontent:hover {
-	background-color: #080815;
+    background-color: #080815;
 }
 
 .cascadediv {
     width: 2%;
-	height: 2%;
-	margin: 0.5%;
+    height: 2%;
+    margin: 0.5%;
     padding: 1px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     border: 3px solid #000000;
     font-family: "Lucida Console", "Courier New", monospace;
-	text-align: center;
+    text-align: center;
     font-size: 0.8em;
     background-color: #ff88ff;
-	float: none;
-	position: absolute;
-	z-index: 32767;
+    float: none;
+    position: absolute;
+    z-index: 32767;
 }
 
 .therest {
@@ -112,7 +131,7 @@ tr:hover {background-color: yellow;}
     border: 1px solid cyan;
     font-family: "Lucida Console", "Courier New", monospace;
     font-size: 0.8em;
-background-color: #abcdef;
+    background-color: #abcdef;
 }
 
 .details {
@@ -139,7 +158,7 @@ background-color: #abcdef;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     border: 0px;
-    padding: 8px;
+    padding: 5px;
     margin: 0.5%;
     border-radius: 10px;
     background-color: #a0c0f0;
@@ -157,7 +176,7 @@ background-color: #abcdef;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     border: 0px;
-    padding: 8px;
+    padding: 5px;
     margin: 0.5%;
     border-radius: 10px;
     background-color: #a0c0f0;

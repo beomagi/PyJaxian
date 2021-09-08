@@ -8,7 +8,7 @@
 <script src="dragging.js"></script>
 <script type="text/javascript">
 
-    function DivUpdateContinuous(request,divname,recurring=0){
+    function DivUpdate(request,divname,recurring=0){
         //continually update a div every "recurring" milliseconds
         if (divname !== null) {
             var xreq = new XMLHttpRequest();
@@ -59,7 +59,7 @@
     <div class="cascadediv" onclick="draggers_cascade()">C</div>
     <div id="alwaysthere" class="floaterdiv">
     <div class="titlebar" id="alwaysthere_drag">Main Menu</div>
-    <div class="smolhalf" onclick="newDivWindow('test','newtitle')">login nonprod</div>
+    <div class="smolhalf" onclick="newDivWindow('test','newtitle');DivUpdate('script_ls_-l','test_content')">login nonprod</div>
     <div class="smolhalf" onclick="xmlreq('loginprod',true)">login prod</div>
     <div class="smolthird" onclick="xmlreq('setregion_amers',false)">us-east-1</div>
     <div class="smolthird" onclick="xmlreq('setregion_emea',false)">eu-west-1</div>
