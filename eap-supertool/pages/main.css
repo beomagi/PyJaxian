@@ -1,0 +1,190 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    cursor: pointer;
+    background-color: #252015;
+    overflow : hidden;
+}
+
+tr:hover {background-color: yellow;}
+
+.floaterdiv {
+    float: left;
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    padding: 0px;
+    margin: 0px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 0px solid #ffffff;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 0.8em;
+    background-color: #204060;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.titlebar {
+    float: left;
+    width: 100%;
+    height: 6%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 0px;
+    padding: 4px;
+    margin: 0px;
+    background-color: #1020cf;
+    color: #ffffff;
+    text-align: center;
+    font-weight:700;
+}
+.titlebar:hover {
+    background-color: #3070ff;
+}
+
+.titleF {
+    float: left;
+    width: 3%;
+    height: 6%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 0px;
+    padding: 4px;
+    margin: 0px;
+    background-color: #55f00f;
+    color: #002040;
+    text-align: center;
+    font-weight: 900;
+}
+.titleF:hover {
+    background-color: #f06090;
+}
+
+.titleX {
+    float: left;
+    width: 3%;
+    height: 6%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 0px;
+    padding: 4px;
+    margin: 0px;
+    background-color: #f0200f;
+    color: #002040;
+    text-align: center;
+    font-weight: 900;
+}
+.titleX:hover {
+    background-color: #f06090;
+}
+
+.windowcontent {
+    float: right;
+    width: 100%;
+    height: 94%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 0px;
+    padding: 1px;
+    margin: 0px;
+    background-color: #000010;
+    color: #aabbff;
+    text-align: left;
+	overflow: auto;
+}
+.windowcontent:hover {
+    background-color: #080815;
+}
+
+.cascadediv {
+    width: 2%;
+    height: 2%;
+    margin: 0.5%;
+    padding: 1px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 3px solid #000000;
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-align: center;
+    font-size: 0.8em;
+    background-color: #ff88ff;
+    float: none;
+    position: absolute;
+    z-index: 32767;
+}
+
+.therest {
+    float: left;
+    width: 100%;
+    padding: 1px;
+    margin: 0px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid cyan;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 0.8em;
+    background-color: #abcdef;
+}
+
+.details {
+    float: left;
+    width: 100%;
+    padding: 1px;
+    margin: 0px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 0px;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 0.8em;
+    background-color: #001122;
+    color: #ffffff;
+}
+
+
+.smolhalf {
+    float: left;
+    width: 49%;
+    height: 6%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 0px;
+    padding: 5px;
+    margin: 0.5%;
+    border-radius: 10px;
+    background-color: #a0c0f0;
+    font-weight: 900;
+	color:#000000;
+}
+.smolhalf:hover {
+    background-color: #a0ffd0;
+}
+
+.smolthird {
+    float: left;
+    width: 32.33%;
+    height: 6%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 0px;
+    padding: 5px;
+    margin: 0.5%;
+    border-radius: 10px;
+    background-color: #a0c0f0;
+    font-weight: 900;
+	color:#000000;
+}
+.smolthird:hover {
+    background-color: #a0ffd0;
+}

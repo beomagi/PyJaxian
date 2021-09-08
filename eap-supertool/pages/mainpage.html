@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="main.css" type="text/css" />
+</head>
+
+<script src="jquery-3.6.0.min.js"></script>
+<script src="dragging.js"></script>
+<script type="text/javascript">
+
+    function DivUpdate(request,divname,recurring=0){
+        //continually update a div every "recurring" milliseconds
+        if (divname !== null) {
+            var xreq = new XMLHttpRequest();
+			xreq.timeout = 120000;
+            xreq.onreadystatechange = function () {
+                if(xreq.readyState === XMLHttpRequest.DONE) {
+                    var status = xreq.status;
+                    if (status === 0 || (status >= 200 && status < 400)) {
+                        console.log(xreq.responseText);
+                        if (divname > "") {
+                            divid=document.getElementById(divname);
+                            if (divid !== null) {
+                                divid.innerHTML = xreq.responseText;
+                                if (recurring >= 1000) {            
+                                    setTimeout(function(){ DivUpdate(request,divname,recurring)},recurring);
+                                }
+                            }                        
+                        }
+                    }
+                }
+            }
+            xreq.open("GET",request,true);
+            xreq.send();
+        }
+    }
+
+    function SendAndCallback(request,callbackfunction=null){
+        //to sent a request to the server and NOT trigger and run a callback function
+        var xreq = new XMLHttpRequest();
+		xreq.timeout = 120000;
+        xreq.onreadystatechange = function () {
+            if(xreq.readyState === XMLHttpRequest.DONE) {
+                var status = xreq.status;
+                if (status === 0 || (status >= 200 && status < 400)) {
+                    console.log(xreq.responseText);
+                }
+                if (callbackfunction!==null){
+                    callbackfunction(xreq.responseText);
+                }
+            }
+        };
+        xreq.open("GET",request,true);
+        xreq.send();
+    }
+
+</script>
+
+<script>
+	var ec2windowinfos=new Object();
+
+	function rID(){
+		return Math.floor(Math.random()*1000000);
+	}
+	function striphtml(htmlstring){
+		var fakediv = document.createElement("div");
+		fakediv.innerHTML=htmlstring;
+		var text=fakediv.textContent || fakediv.innerText || "";
+		return text;
+	}
+    function udetail(){
+		DivUpdate('script|details/details.sh','maindetails');
+	};
+	function getMainDetailProfileRegion(){
+		var maindetails = $("#maindetails").html();
+		var detailsarray = maindetails.split("<br>")
+		var limitedarray = [];
+	    for (var i = 0; i < detailsarray.length; i++) {
+				if (detailsarray[i].includes("current profile")) { 
+					limitedarray.push(striphtml(detailsarray[i].replace("current profile : ","Profile:")));
+				}
+				if (detailsarray[i].includes("current region")) { 
+					limitedarray.push(striphtml(detailsarray[i].replace("current region : ","Region:")));
+				}
+		}
+		var limitedhtml=limitedarray.join("<br>");
+		return limitedhtml
+	}
+	function tfilter(ec2window){
+		var filterinput=ec2window+"_filtertext";
+		var contentsection2=ec2window+"_content2";
+		var tableid=ec2window+"_table";
+		$("#"+contentsection2).find("table").attr("id",tableid);
+		var filtertext=$("#"+filterinput).val();
+		$("#"+tableid).find("tr").each(function(){
+			rowtext=this.innerText.replace(/\n/g, " ").toLowerCase();            
+    	    if (rowtext.includes(filtertext.toLowerCase())) {
+        	    this.hidden=false;
+        	} else {
+           		this.hidden=true;
+        	}
+		});
+	}
+	function ec2window(){
+		a=rID();
+		newDivWindow('ec2-'+a,'ec2-'+a);
+		var contentsection='ec2-'+a+'_content';
+		var contentsection2='ec2-'+a+'_content2';
+		var profileregioninfo=getMainDetailProfileRegion();
+		var filterinput="ec2-"+a+"_filtertext";
+		var divhtml="<div>"+profileregioninfo+"</div>";
+		divhtml+="<div class='smolhalf' onclick=\"DivUpdate('script|ec2/ec2grab.py|"+btoa(profileregioninfo)+"','"+contentsection2+"')\">Grab Data</div>";
+		divhtml+="<div class='smolhalf' onclick='tfilter(\"ec2-"+a+"\")'>Filter Data <input id=\""+filterinput+"\" style='height:100%;outline: none; border:hidden;' type='text'></div>";
+		divhtml+="<div id='"+contentsection2+"'></div>";
+		$("#"+contentsection).html(divhtml);
+	    $("#"+contentsection2).find("table").attr("id",filterinput);
+	}
+</script>
+
+<body onload="candrag2('alwaysthere','alwaysthere_drag');DivUpdate('script|details/details.sh','maindetails',10000);">
+    <div class="cascadediv" onclick="draggers_cascade()">C</div>
+    <div id="alwaysthere" class="floaterdiv">
+    <div class="titlebar" id="alwaysthere_drag">Main Menu</div>
+    <div class="smolhalf" onclick="newDivWindow('login-ct','login-nonprod');DivUpdate('script|login/login-eap-np.sh','login-nonprod_content')">login nonprod</div>
+    <div class="smolhalf" onclick="newDivWindow('login-ct','login-prod');DivUpdate('script|login/login-eap-p.sh','login-prod_content')">login prod</div>
+    <div class="smolthird" onclick="SendAndCallback('script|login/setregion.sh|amers',udetail);">us-east-1</div>
+    <div class="smolthird" onclick="SendAndCallback('script|login/setregion.sh|emea',udetail);">eu-west-1</div>
+    <div class="smolthird" onclick="SendAndCallback('script|login/setregion.sh|sing',udetail);">ap-southeast-1</div>
+    <div class="smolhalf" onclick="SendAndCallback('script|login/setprofile.sh|tr-central-preprod',udetail);">NON-Prod</div>
+    <div class="smolhalf" onclick="SendAndCallback('script|login/setprofile.sh|tr-central-prod',udetail);">PRODUCTION</div>
+    <div class="smolhalf" onclick="ec2window()">EC2 Info</div>
+    <div class="smolhalf" onclick="xmlreq('alarm',true)">Alarms</div>
+    <div id="maindetails" class="details">details</div>
+    </div>
+</body>
+
+</html>
