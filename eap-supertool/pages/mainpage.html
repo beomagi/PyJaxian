@@ -57,6 +57,7 @@
 </script>
 
 <script>
+	
 	var ec2windowinfos=new Object();
 
 	function rID(){
@@ -86,50 +87,70 @@
 		var limitedhtml=limitedarray.join("<br>");
 		return limitedhtml
 	}
-	function tfilter(ec2window){
-		var filterinput=ec2window+"_filtertext";
-		var contentsection2=ec2window+"_content2";
-		var tableid=ec2window+"_table";
-		$("#"+contentsection2).find("table").attr("id",tableid);
+	function tfilter(windowid){
+		var filterinput=windowid+"_filtertext";
+		var contentsection2=windowid+"_content2";
+		var tableid=windowid+"_table";
 		var filtertext=$("#"+filterinput).val();
-		$("#"+tableid).find("tr").each(function(){
-			rowtext=this.innerText.replace(/\n/g, " ").toLowerCase();            
-    	    if (rowtext.includes(filtertext.toLowerCase())) {
-        	    this.hidden=false;
-        	} else {
-           		this.hidden=true;
-        	}
-		});
+		$("#"+tableid+" tr").filter(function() {
+		    $(this).toggle($(this).text().toLowerCase().indexOf(filtertext) > -1)
+		})
+
 	}
 	function ec2window(){
 		a=rID();
-		newDivWindow('ec2-'+a,'ec2-'+a);
-		var contentsection='ec2-'+a+'_content';
-		var contentsection2='ec2-'+a+'_content2';
+		windowid='ec2-'+a;
+		newDivWindow(windowid,windowid);
 		var profileregioninfo=getMainDetailProfileRegion();
-		var filterinput="ec2-"+a+"_filtertext";
+		ec2windowinfos[windowid]=profileregioninfo;
+		var contentsection=windowid+'_content';
+		var contentsection2=windowid+'_content2';
+		var filterinput=windowid+"_filtertext";
 		var divhtml="<div>"+profileregioninfo+"</div>";
-		divhtml+="<div class='smolhalf' onclick=\"DivUpdate('script|ec2/ec2grab.py|"+btoa(profileregioninfo)+"','"+contentsection2+"')\">Grab Data</div>";
-		divhtml+="<div class='smolhalf' onclick='tfilter(\"ec2-"+a+"\")'>Filter Data <input id=\""+filterinput+"\" style='height:100%;outline: none; border:hidden;' type='text'></div>";
+		divhtml+="<div class='smolhalf' onclick=\"DivUpdate('script|ec2/ec2grab.py|"+btoa(profileregioninfo)+"|"+windowid+"','"+contentsection2+"')\">Grab Data</div>";
+		divhtml+="<div class='smolhalf' onkeyup='tfilter(\""+windowid+"\")'>Filter Data <input id=\""+filterinput+"\" style='height:100%;outline: none; border:hidden;' type='text'></div>";
 		divhtml+="<div id='"+contentsection2+"'></div>";
 		$("#"+contentsection).html(divhtml);
-	    $("#"+contentsection2).find("table").attr("id",filterinput);
 	}
+	function ec2AMIwindow(data){
+		a=rID();
+		windowid='ec2AMI-'+a;
+		newDivWindow(windowid,windowid);
+		var contentsection=windowid+'_content';
+		$("#"+contentsection).html(data);
+	}
+
+	function alarmwindow(){
+		a=rID();
+		windowid='alarm-'+a;
+		newDivWindow(windowid,windowid);
+		var profileregioninfo=getMainDetailProfileRegion();
+		ec2windowinfos[windowid]=profileregioninfo;
+		var contentsection=windowid+'_content';
+		var contentsection2=windowid+'_content2';
+		var filterinput=windowid+"_filtertext";
+		var divhtml="<div>"+profileregioninfo+"</div>";
+		divhtml+="<div class='smolhalf' onclick=\"DivUpdate('script|alarms/alarmgrab.py|"+btoa(profileregioninfo)+"|"+windowid+"','"+contentsection2+"')\">Grab Data</div>";
+		divhtml+="<div class='smolhalf' onkeyup='tfilter(\""+windowid+"\")'>Filter Data <input id=\""+filterinput+"\" style='height:100%;outline: none; border:hidden;' type='text'></div>";
+		divhtml+="<div id='"+contentsection2+"'></div>";
+		$("#"+contentsection).html(divhtml);
+	}
+
 </script>
 
 <body onload="candrag2('alwaysthere','alwaysthere_drag');DivUpdate('script|details/details.sh','maindetails',10000);">
     <div class="cascadediv" onclick="draggers_cascade()">C</div>
     <div id="alwaysthere" class="floaterdiv">
     <div class="titlebar" id="alwaysthere_drag">Main Menu</div>
-    <div class="smolhalf" onclick="newDivWindow('login-ct','login-nonprod');DivUpdate('script|login/login-eap-np.sh','login-nonprod_content')">login nonprod</div>
-    <div class="smolhalf" onclick="newDivWindow('login-ct','login-prod');DivUpdate('script|login/login-eap-p.sh','login-prod_content')">login prod</div>
+    <div class="smolhalf" onclick="newDivWindow('login-nonprod','login-nonprod');DivUpdate('script|login/login-eap-np.sh','login-nonprod_content')">login nonprod</div>
+    <div class="smolhalf" onclick="newDivWindow('login-prod','login-prod');DivUpdate('script|login/login-eap-p.sh','login-prod_content')">login prod</div>
     <div class="smolthird" onclick="SendAndCallback('script|login/setregion.sh|amers',udetail);">us-east-1</div>
     <div class="smolthird" onclick="SendAndCallback('script|login/setregion.sh|emea',udetail);">eu-west-1</div>
     <div class="smolthird" onclick="SendAndCallback('script|login/setregion.sh|sing',udetail);">ap-southeast-1</div>
     <div class="smolhalf" onclick="SendAndCallback('script|login/setprofile.sh|tr-central-preprod',udetail);">NON-Prod</div>
     <div class="smolhalf" onclick="SendAndCallback('script|login/setprofile.sh|tr-central-prod',udetail);">PRODUCTION</div>
     <div class="smolhalf" onclick="ec2window()">EC2 Info</div>
-    <div class="smolhalf" onclick="xmlreq('alarm',true)">Alarms</div>
+    <div class="smolhalf" onclick="alarmwindow()">Alarms</div>
     <div id="maindetails" class="details">details</div>
     </div>
 </body>

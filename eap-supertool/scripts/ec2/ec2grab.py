@@ -6,6 +6,7 @@ import json
 import os
 
 rawparam=sys.argv[1]
+ec2window=sys.argv[2]
 
 rawparams=base64.b64decode(rawparam).decode('UTF-8')
 
@@ -29,17 +30,26 @@ os.environ['AWS_DEFAULT_REGION'] = region
 
 def ec2organize(jdata,filterid):
     retlines=[]
-    retlines.append("<table>")
+    tableID=ec2window+"_table"
+    retlines.append("<table id='"+tableID+"'>")
     for instanceinfo in jdata:
         ec2id=instanceinfo["InstanceId"]
         ec2ippriv=instanceinfo.get("PrivateIpAddress","")
         ec2ami=instanceinfo["ImageId"]
         ec2tags=instanceinfo.get("Tags",[])
+        ec2launchtime=str(instanceinfo.get("LaunchTime",""))
+        ec2state=instanceinfo.get("State",{}).get("Name","")
         ec2name=""
         for kv in ec2tags:
             if kv.get("Key","")=="Name":
                 ec2name=kv.get("Value")
-        line="<tr><td>"+ec2id+"</td><td>"+ec2name+"</td><td><div class='smoldyn' onclick=\"svrupdate('loginto_"+ec2ippriv+"')\">"+ec2ippriv+"<div></td><td>"+ec2ami+"</tr>"
+        col1="<td>"+ec2id+"</td>"
+        col2="<td>"+ec2name+"</td>"
+        col25="<td>"+ec2state+"</td>"
+        col3="<td><div class='smoldyn' onclick=\"SendAndCallback('loginto|"+ec2ippriv+"')\">"+ec2ippriv+"<div></td>"
+        col4="<td><div class='smoldyn' onclick=\"SendAndCallback('script|ec2/amiInfo.py|"+ec2ami+"|"+rawparam+"',ec2AMIwindow)\">"+ec2ami+"</div></td>"
+        col5="<td>"+ec2launchtime+"</td>"
+        line="<tr>"+col1+col2+col25+col3+col4+col5+"</tr>"
         if filterid=="":
             retlines.append(line)
         else:

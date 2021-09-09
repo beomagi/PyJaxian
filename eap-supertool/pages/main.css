@@ -188,3 +188,13 @@ tr:hover {background-color: yellow;}
 .smolthird:hover {
     background-color: #a0ffd0;
 }
+
+.smoldyn {
+    background-color: #000000;
+    font-weight: 900;
+	color:#bbbbbb;
+}
+.smoldyn:hover {
+    background-color: #550000;
+	color: #ffff00;
+}
