@@ -43,7 +43,7 @@ def ec2organize(jdata,filterid):
         for kv in ec2tags:
             if kv.get("Key","")=="Name":
                 ec2name=kv.get("Value")
-        col1="<td>"+ec2id+"</td>"
+        col1="<td><div class='smoldyn' onclick=\"SendAndCallback('script|ec2/ec2IDInfo.py|"+ec2id+"|"+rawparam+"',ec2IDwindow)\">"+ec2id+"</div></td>"
         col2="<td>"+ec2name+"</td>"
         col25="<td>"+ec2state+"</td>"
         col3="<td><div class='smoldyn' onclick=\"SendAndCallback('loginto|"+ec2ippriv+"')\">"+ec2ippriv+"<div></td>"
