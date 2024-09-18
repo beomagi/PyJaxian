@@ -108,6 +108,15 @@ function draggers_cascade(){
 }
 
 
+function slowflip(divname,angle){
+	if (angle > 0) {
+		document.getElementById(divname).style.transform="rotate3d(1,1,1,"+angle+"deg)";
+		setTimeout(function(){ slowflip(divname,angle-5) },3);
+	} else {
+		document.getElementById(divname).style.transform="rotate3d(1,1,1,0deg)";
+	}
+}
+
 function newDivWindow(idname,titletext){
     
     if (windowlist.includes(idname)) {
@@ -123,6 +132,7 @@ function newDivWindow(idname,titletext){
     var tempdiv = document.createElement("div");
     tempdiv.id = idname;
     tempdiv.className = "floaterdiv";
+	tempdiv.style.transform="rotate3d(1,0,0,90deg)";
 
     var tempdivtitle = document.createElement("div");
     tempdivtitle.id = idname+"_drag";
@@ -177,6 +187,7 @@ function newDivWindow(idname,titletext){
     tempdiv.style.top="10%";
     tempdiv.style.left="10%";
     candrag2(idname,idname+"_drag");
+	slowflip(idname,90);
 }
 
 
